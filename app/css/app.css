@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: "montserrat";
+        src: url("/public/assets/template/fonts/montserrat.woff") format('woff');
+    }
+}
+
+body {
+    @apply w-screen h-screen font-mont
+}
+
+/*  nav bar  */
+.nav-area {
+    @apply w-full mx-auto px-2 py-1 flex
+    lg:px-0 lg:py-2 lg:w-[1024px]
+}
+
+.head-logo {
+    @apply block w-1/2
+}
+.head-logo div {
+    @apply inline-block align-middle
+}
+.head-logo-img {
+    @apply h-12 bg-cover
+    w-14 bg-[url(/public/assets/template/img/logo.svg)]
+    lg:w-28 lg:bg-[url(/public/assets/template/img/logo_xl.svg)]
+    transition-all duration-300
+}
+.head-logo-title {
+    @apply text-xs
+    md:text-sm
+    lg:text-base
+}
+/*  end nav bar  */

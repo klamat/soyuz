@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100px" height="90px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 0.051 0.046"  xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   .fil0 {fill:#125490;fill-rule:nonzero}
+  </style>
+ </defs>
+ <g>
+  <path class="fil0" d="M0 0l0 0.006c0.016,0 0.039,0 0.051,0l0 -0.006 -0.051 0z"/>
+  <path class="fil0" d="M0 0.046l0 -0.006c0.007,0 0.033,0 0.051,0l0 0.006 -0.051 0z"/>
+  <polygon class="fil0" points="0.027,0.009 0.045,0.009 0.045,0.015 0.038,0.023 0.045,0.031 0.045,0.037 0.027,0.037 0.027,0.031 0.038,0.031 0.031,0.023 0.038,0.015 0.027,0.015 "/>
+  <path class="fil0" d="M0.006 0.009l0.018 0 0 0.006c-0.004,0 -0.008,0 -0.012,0l0 0.016 0.012 0 0 0.006 -0.018 0 0 -0.028z"/>
+ </g>
+</svg>
