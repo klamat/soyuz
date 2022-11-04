@@ -21,30 +21,38 @@
     @tailwind  components;
     @tailwind  utilities;
 
-    .menu-burger {
-        @apply h-8 w-8 bg-[url(/public/assets/template/img/burger.svg)] bg-cover float-right
-        lg:hidden
-    }
+
 </style>
+
+<script type="text/javascript">
+    window.addEventListener("load", function() {
+
+        document.querySelectorAll('.head-menu li').forEach((li) => {
+            li.addEventListener('mouseenter', function() {this.classList.add('active')});
+            li.addEventListener('mouseleave', function() {this.classList.remove('active')});
+        });
+    });
+</script>
 
 <div class="main-page">
 
     <!----- navigation chunk ----->
-    <nav class="sticky -top-0.5 bg-white/80 shadow-md">
+    <nav class="top-navigation">
         <div class="nav-area">
-            <a href="/" class="head-logo">
-                <div class="head-logo-img"></div>
-                <div class="head-logo-title">Производство рекламы<br>от А до Я</div>
+            <a href="/">
+                <div class="head-logo">
+                    <div class="head-logo-img"></div>
+                    <div class="head-logo-title">Производство рекламы<br>от А до Я</div>
+                </div>
             </a>
             <div class="head-menu">
-                <div class="menu-burger"></div>
-                <ul class="float-right">
+                <div class="menu-burger" onclick="this.parentNode.classList.toggle('menu-open')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g stroke-width="6.5" stroke-linecap="round" stroke="#000"><path d="M72 82.286h28.75" fill="#009100" fill-rule="evenodd" /><path d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554" fill="none" /><path d="M72 125.143h28.75" fill="#009100" fill-rule="evenodd" /><path d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554" fill="none" /><path d="M100.75 82.286h28.75" fill="#009100" fill-rule="evenodd" /><path d="M100.75 125.143h28.75" fill="#009100" fill-rule="evenodd" /></g></svg>
+                </div>
+                <ul>
                     <li>
-                        <button>
-                            <span>Услуги</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg></span>
-                        </button>
-                        <ul>
+                        <button>Услуги <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg></button>
+                        <ul class="submenu">
                             <li><a href="index.php?id=5">Дизайн</a></li>
                             <li><a href="index.php?id=6">Монтаж, демонтаж</a></li>
                             <li><a href="index.php?id=9">Проектирование</a></li>
@@ -53,11 +61,8 @@
                         </ul>
                     </li>
                     <li>
-                        <button>
-                            <span>Виды работ</span>
-                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg></span>
-                        </button>
-                        <ul>
+                        <button>Виды работ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg></button>
+                        <ul class="submenu">
                             <li><a href="index.php?id=13">Символы из нержавеющей стали</a></li>
                             <li><a href="index.php?id=14">Интерьерные вывески</a></li>
                             <li><a href="index.php?id=15">Информационные таблички</a></li>
@@ -79,8 +84,7 @@
     </nav>
     <!----- navigation chunk ----->
 
-
-
+<!--    <img src="https://pksoyuz.ru/docs/images/carousel/slider/2.jpg" class="w-80 h-[200vh]">-->
 
     <!-----  chunk ----->
     <!-----  chunk ----->
