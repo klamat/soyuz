@@ -142,24 +142,22 @@
 		</div>
 		<div  class="nav-menu" id="menu">
 			<button class="group nav-menu-button"
-			        onmouseenter="menuus.classList.add('nav-menu-pro-o')"
-			        onclick="menuus.classList.toggle('nav-menu-pro-o')">
+			        onmouseenter="menuus.classList.add('nav-menu-pro-o');menupro.classList.remove('nav-menu-pro-o');narrus.classList.add('hover-nav-arrow');narrpro.classList.remove('hover-nav-arrow')"
+			        onclick="menuus.classList.toggle('nav-menu-pro-o');narrus.classList.toggle('hover-nav-arrow')">
 				<span class="">Услуги</span>
-				<span><svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 			</button>
 			<button class="group nav-menu-button"
-			        onmouseenter="menupro.classList.add('nav-menu-pro-o')"
-			        onclick="menupro.classList.toggle('nav-menu-pro-o')">
+			        onmouseenter="menupro.classList.add('nav-menu-pro-o');menuus.classList.remove('nav-menu-pro-o');narrus.classList.remove('hover-nav-arrow');narrpro.classList.add('hover-nav-arrow')"
+			        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
 				<span class="">Производство</span>
-				<span><svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 			</button>
 			<button><a class="nav-menu-button" href="#">О нас</a></button>
 			<button><a class="nav-menu-button" href="#">Галерея</a></button>
 			<button><a class="nav-menu-button" href="#">Контакты</a></button>
 		</div>
-
-		<div class="nav-menu-pro" id="menuus"
-		     onmouseleave="menuus.classList.remove('nav-menu-pro-o')">
+		<div class="nav-menu-pro" id="menuus">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Дизайн</a>
 				<ul class="">
@@ -191,9 +189,7 @@
 				</ul>
 			</div>
 		</div>
-
-		<div class="nav-menu-pro" id="menupro"
-		     onmouseleave="menupro.classList.remove('nav-menu-pro-o')">
+		<div class="nav-menu-pro" id="menupro">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
 				<ul class="">
