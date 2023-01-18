@@ -141,21 +141,26 @@
 			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
 		</div>
 		<div  class="nav-menu" id="menu">
-			<button class="group nav-menu-button"
+			<button class="group nav-button"
 			        onmouseenter="menuus.classList.add('nav-menu-pro-o');menupro.classList.remove('nav-menu-pro-o');narrus.classList.add('hover-nav-arrow');narrpro.classList.remove('hover-nav-arrow')"
 			        onclick="menuus.classList.toggle('nav-menu-pro-o');narrus.classList.toggle('hover-nav-arrow')">
 				<span class="">Услуги</span>
 				<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 			</button>
-			<button class="group nav-menu-button"
+			<button class="group nav-button"
 			        onmouseenter="menupro.classList.add('nav-menu-pro-o');menuus.classList.remove('nav-menu-pro-o');narrus.classList.remove('hover-nav-arrow');narrpro.classList.add('hover-nav-arrow')"
 			        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
 				<span class="">Производство</span>
 				<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 			</button>
-			<button><a class="nav-menu-button" href="#">О нас</a></button>
-			<button><a class="nav-menu-button" href="#">Галерея</a></button>
-			<button><a class="nav-menu-button" href="#">Контакты</a></button>
+			<button class="nav-button"
+			        onmouseenter="this.classList.toggle('hover-nav-button')"
+			        onmouseleave="this.classList.toggle('hover-nav-button')"
+			        href="#">
+				О нас
+			</button>
+			<button class="nav-button" href="#">Галерея</button>
+			<button class="nav-button" href="#">Контакты</button>
 		</div>
 		<div class="nav-menu-pro" id="menuus">
 			<div class="nav-menu-col">
@@ -192,38 +197,96 @@
 		<div class="nav-menu-pro" id="menupro">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
-				<ul class="">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Лифтовые холлы</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Оформление МОП</div>
+				</div>
+<!--				<ul class="">
 					<li class="nav-menu-button">Лифтовые холлы</li>
 					<li class="nav-menu-button">Оформление МОП</li>
-				</ul>
+				</ul>-->
 			</div>
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Рекламная продукция</a>
-				<ul class="">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Объемные буквы</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Световые панели</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Символы из нержавеющей стали</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Интерьерные вывески</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Информационные таблички</div>
+				</div>
+<!--				<ul class="">
 					<li class="nav-menu-button">Объемные буквы</li>
 					<li class="nav-menu-button">Световые панели</li>
 					<li class="nav-menu-button">Символы из нержавеющей стали</li>
 					<li class="nav-menu-button">Интерьерные вывески</li>
 					<li class="nav-menu-button">Информационные таблички</li>
-				</ul>
+				</ul>-->
 			</div>
 			<div class="nav-menu-col">
 				<div class="nav-main-menu-button">Офис продаж</div>
-				<ul class="">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Строительство</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Отделка</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Реставрация</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Транспортировка</div>
+				</div>
+<!--				<ul class="">
 					<li class="nav-menu-button">Строительство</li>
 					<li class="nav-menu-button">Отделка</li>
 					<li class="nav-menu-button">Реставрация</li>
 					<li class="nav-menu-button">Транспортировка</li>
-				</ul>
+				</ul>-->
 			</div>
 			<div class="nav-menu-col">
 				<div class="nav-main-menu-button">Оформление строительных объектов</div>
-				<ul class="">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Паспорт объекта</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Банерные указатели</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Навигация</div>
+				</div>
+				<!--<ul class="">
 					<li class="nav-menu-button">Паспорт объекта</li>
 					<li class="nav-menu-button">Банерные указатели</li>
 					<li class="nav-menu-button">Навигация</li>
-				</ul>
+				</ul>-->
 			</div>
+<!--			<div class="flex w-1/3"> </div>
+			<div class="flex w-1/3"> </div>-->
 		</div>
 </nav>
 <!--========-->
