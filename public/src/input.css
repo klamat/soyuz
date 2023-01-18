@@ -24,10 +24,10 @@ body {
 	@apply
 	text-gray-600
 }
-/*.navbar{
+.navbar{
 	@apply
 	z-[101] fixed w-full  bg-white/80 shadow-md
-}*/
+}
 .nav-content{
 	@apply
 	z-[102] w-full px-2 flex flex-wrap items-center  max-w-screen-lg mx-auto
@@ -39,46 +39,11 @@ body {
 .nav-menu{
 	@apply
 	hidden md:flex flex-col md:flex-row md:items-center md:w-auto w-full
-}/*
-.nav-menu-drop-usl{
-	@apply
-	hidden flex-col w-full cursor-pointer ml-5
-	md:transition
-	md:duration-150
-	md:ease-in-out
-	md:origin-top
-	md:w-auto
-	md:ml-0
-	md:absolute
-	md:translate-y-[152px]
-	md:text-left
-	md:items-start
-	md:bg-white/80
 }
-.nav-menu-drop-pro{
-	@apply
-	hidden flex-col w-full cursor-pointer ml-5
-	md:transition
-	md:duration-150
-	md:ease-in-out
-	md:origin-top
-	md:w-auto
-	md:ml-0
-	md:absolute
-	md:translate-y-[110px]
-	md:translate-x-[65px]
-	md:text-left
-	md:items-start
-	md:bg-white/80
-}
-*/
 .nav-phone{
 
 }
-/*.nav-menu-1{
-	@apply
-	md:flex flex-col items-center justify-between text-base text-gray-700
-}*/
+
 .nav-menu-button{
 	@apply
 	flex flex-row items-center w-full cursor-pointer border-b-2 border-transparent hover:border-[rgba(13,62,105)] whitespace-nowrap
@@ -86,13 +51,16 @@ body {
 	md:px-2
 	md:text-left
 }
-.nav-menu-drop{
+.nav-main-menu-button{
 	@apply
-	flex flex-col h-9 hover:h-auto w-full cursor-pointer border-b-2 border-transparent hover:border-[rgba(13,62,105)] whitespace-nowrap
+	flex flex-row items-center w-full cursor-pointer border-b-2 border-transparent hover:border-[rgba(13,62,105)] whitespace-nowrap
 	md:py-1
 	md:px-2
 	md:text-left
+	text-base
+	font-semibold
 }
+
 .nav-arrow{
 	@apply
 	fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out
@@ -101,10 +69,47 @@ body {
 	@apply
 	fill-current h-4 w-4 transition duration-150 ease-in-out
 }
-.nav-drop{
+/*.nav-drop{
+	@apply
+	flex  bg-white w-full  border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top
+}*/
+.nav-drop-1{
+	@apply
+	flex w-full scale-0 group-hover:scale-100
+}
+.nav-menu-col{
+	@apply
+	flex flex-col h-[100%]
+}
+.nav-menu-row{
+	@apply
+	flex flex-row
+}
+.nav-menu-pro{
+	@apply
+	z-[100]
+	flex flex-row justify-between items-start absolute
+	w-full h-auto mx-auto top-0
+	bg-gray-200
+	divide-x
+	divide-gray-300
+	border rounded-sm
+	transform
+	scale-y-0
+	translate-y-12
+	transition duration-150 ease-in-out origin-top
+}
+.nav-menu-pro-o{
+	@apply
+	scale-y-100 transition duration-150 ease-in-out origin-top
+}
+
+
+
+/*.nav-drop{
 	@apply
 	bg-white/80 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top
-}
+}*/
 .nav-drop-2{
 	@apply
 	transform scale-0 top-0 right-0 transition duration-150 ease-in-out origin-top
@@ -113,17 +118,17 @@ body {
 	@apply
 	bg-white/80 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left
 }*/
-.nav-menu-drop-but{
+/*.nav-menu-drop-but{
 	@apply
 	flex w-full justify-between items-center
-}
+}*/
 /*drop-2*/
-li>ul                 { transform: translatex(0%) scale(0) }
+/*li>ul                 { transform: translatex(0%) scale(0) }
 li:hover>ul           { transform: translatex(0%) scale(1) }
 li > button svg       { transform: rotate(-0deg) }
 li:hover > button svg { transform: rotate(-180deg) }
 .group:hover .group-hover\:scale-100 { transform: scale(1) }
-.group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+.group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }*/
 /*drop-2 end*/
 .header-cont{
 	@apply
