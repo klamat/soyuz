@@ -60,15 +60,18 @@ body {
 	text-base
 	font-semibold
 }
-
 .nav-arrow{
 	@apply
-	fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out
+	h-4 w-4 transform transition duration-150 ease-in-out
 }
-.nav-arrow-w{
+.hover-nav-arrow{
 	@apply
-	fill-current h-4 w-4 transition duration-150 ease-in-out
+	-rotate-180 transition duration-150 ease-in-out
 }
+/*.nav-arrow-w{
+	@apply
+	h-4 w-4 transition duration-150 ease-in-out
+}*/
 /*.nav-drop{
 	@apply
 	flex  bg-white w-full  border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top
