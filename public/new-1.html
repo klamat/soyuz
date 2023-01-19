@@ -10,11 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
-
 	<link href="./dist/output.css" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 	<!--Carousel-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
@@ -101,28 +97,6 @@
 			}
 		});
 	</script>
-
-	<!--	<style>
-			/* since nested groupes are not supported we have to use
-			   regular css for the nested dropdowns
-			*/
-			li>ul                 { transform: translatex(100%) scale(0) }
-			li:hover>ul           { transform: translatex(101%) scale(1) }
-			li > button svg       { transform: rotate(-90deg) }
-			li:hover > button svg { transform: rotate(-270deg) }
-
-			/* Below styles fake what can be achieved with the tailwind config
-			   you need to add the group-hover variant to scale and define your custom
-			   min width style.
-				 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
-				 for implementation with config file
-			*/
-			.group:hover .group-hover\:scale-100 { transform: scale(1) }
-			.group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
-			.scale-0 { transform: scale(0) }
-			.min-w-32 { min-width: 8rem }
-		</style>-->
-
 </head>
 <body>
 <!--Navbar+-->
@@ -137,30 +111,60 @@
 				</div>
 			</a>
 		</div>
-		<div onclick="menu.classList.toggle('block');menuus.classList.remove('nav-menu-us-o');menupro.classList.remove('nav-menu-pro-o')">
+		<div onclick="menu.classList.toggle('block');menuus.classList.remove('nav-menu-us-o');menupro.classList.remove('nav-menu-pro-o');aboutus.classList.remove('nav-menu-us-o')">
 			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
 		</div>
 		<div  class="nav-menu" id="menu">
-			<button class="group nav-button"
-			        onmouseenter="menuus.classList.add('nav-menu-us-o');menupro.classList.remove('nav-menu-pro-o');narrus.classList.add('hover-nav-arrow');narrpro.classList.remove('hover-nav-arrow')"
-			        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
-				<span class="">Услуги</span>
-				<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
-			</button>
-			<button class="group nav-button"
-			        onmouseenter="menupro.classList.add('nav-menu-pro-o');menuus.classList.remove('nav-menu-us-o');narrus.classList.remove('hover-nav-arrow');narrpro.classList.add('hover-nav-arrow')"
-			        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
-				<span class="">Производство</span>
-				<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
-			</button>
-			<button class="nav-button"
-			        onmouseenter="this.classList.toggle('hover-nav-button')"
-			        onmouseleave="this.classList.toggle('hover-nav-button')"
-			        href="#">
-				О нас
-			</button>
-			<button class="nav-button" href="#">Галерея</button>
-			<button class="nav-button" href="#">Контакты</button>
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menuus.classList.add('nav-menu-us-o');
+				                      menupro.classList.remove('nav-menu-pro-o');
+				                      aboutus.classList.remove('nav-menu-us-o');
+				                      narrus.classList.add('hover-nav-arrow');
+				                      narrpro.classList.remove('hover-nav-arrow');
+									  narrabus.classList.remove('hover-nav-arrow')"
+				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
+					<span class="">Услуги</span>
+					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menupro.classList.add('nav-menu-pro-o');
+				                      menuus.classList.remove('nav-menu-us-o');
+				                      aboutus.classList.remove('nav-menu-us-o');
+				                      narrus.classList.remove('hover-nav-arrow');
+				                      narrpro.classList.add('hover-nav-arrow');
+				                      narrabus.classList.remove('hover-nav-arrow')"
+				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
+					<span class="">Производство</span>
+					<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menuus.classList.remove('nav-menu-us-o');
+				                      menupro.classList.remove('nav-menu-pro-o');
+				                      aboutus.classList.add('nav-menu-us-o');
+				                      narrus.classList.remove('hover-nav-arrow');
+				                      narrpro.classList.remove('hover-nav-arrow');
+				                      narrabus.classList.add('hover-nav-arrow')"
+				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow')">
+					<span class="">О нас</span>
+					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			<div class="group nav-b-cont">
+				<button class="nav-button" href="#">Контакты</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			<div class="group nav-b-cont">
+				<button class="nav-button" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</button>
+				<div class="nav-b-uline"></div>
+			</div>
 		</div>
 		<div class="nav-menu-us" id="menuus">
 			<div class="">
@@ -252,6 +256,32 @@
 				</div>
 			</div>
 		</div>
+		<div class="nav-menu-aboutus" id="aboutus">
+			<div class="">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">О компании</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Наши проекты</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Галерея</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Реквизиты</div>
+				</div>
+				<div>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
 </nav>
 <!--========-->
 <!--Header+-->

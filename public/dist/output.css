@@ -506,9 +506,7 @@ video {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity))
+  font-weight: 400;
 }
 
 .h1 {
@@ -580,6 +578,13 @@ body {
 .nav-phone{
 }
 
+.nav-b-cont {
+  display: flex;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+}
+
 .nav-button {
   display: flex;
   width: 100%;
@@ -596,28 +601,28 @@ body {
     margin-bottom: 0.25rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    justify-content: flex-start;
     text-align: left;
   }
 }
 
-/*Проблема, не могу настроить раскрывающеиеся линии*/
-
-.hover-nav-button {
-  transform-origin: left;
+.nav-b-uline {
+  display: flex;
+  height: 3px;
+  width: 100%;
+  transform-origin: center;
   --tw-scale-x: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-bottom-width: 1px;
-  border-color: transparent;
-  --tw-border-opacity: 1;
-  border-color: rgb(13 62 105 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 62 105 / var(--tw-bg-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hover-nav-button:hover {
+.group:hover .nav-b-uline {
   --tw-scale-x: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -702,7 +707,7 @@ body {
   line-height: 1.5rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(13 62 105 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -781,17 +786,16 @@ body {
 
 .nav-menu-pro {
   position: absolute;
-  top: 3rem;
+  top: 3.5rem;
   right: 0px;
   left: 0px;
-  z-index: 100;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   height: auto;
   width: 100%;
   transform-origin: top;
-  --tw-translate-y: 2.75rem;
+  --tw-translate-y: 3rem;
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-direction: column;
@@ -833,14 +837,15 @@ body {
 
 .nav-menu-us {
   position: absolute;
+  top: 75px;
   right: 0px;
   z-index: 100;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  height: auto;
   width: 100%;
   transform-origin: top;
-  --tw-translate-y: 2.5rem;
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-wrap: wrap;
@@ -864,7 +869,58 @@ body {
 @media (min-width: 768px) {
   .nav-menu-us {
     top: 0px;
-    width: 50%;
+    width: 66.666667%;
+    --tw-translate-y: 3rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.nav-menu-us-o {
+  transform-origin: top;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-menu-aboutus {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: auto;
+  width: 100%;
+  transform-origin: top;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 0.125rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(13 62 105 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .nav-menu-aboutus {
+    top: 0px;
+    width: 33.333333%;
     --tw-translate-y: 3rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
@@ -2165,10 +2221,6 @@ img {
 }
 
 /*---*/
-
-body {
-  font-family: "Roboto", sans-serif;
-}
 
 .header, .footer {
   background: #2e2e2e;
