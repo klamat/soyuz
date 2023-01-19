@@ -46,7 +46,9 @@ body {
 
 .nav-button{
 	@apply
-	flex flex-row items-center w-full cursor-pointer whitespace-nowrap
+	flex flex-row items-center justify-between w-full
+	cursor-pointer
+	whitespace-nowrap
 	md:my-1
 	md:mx-2
 	md:text-left
@@ -66,7 +68,7 @@ body {
 }
 .nav-m-b-line{
 	@apply
-	flex w-4 h-[3px] mb-3
+	flex w-4 h-[3px] mb-1.5 md:mb-3
 	bg-[rgba(13,62,105)]
 	scale-x-0 group-hover:scale-x-100
 	transition duration-500 ease-in-out origin-left
@@ -121,7 +123,7 @@ body {
 	@apply
 	z-[100]
 	absolute
-	flex flex-col md:flex-wrap
+	flex flex-col md:flex-row md:flex-wrap
 	justify-start items-start
 	md:w-auto w-full h-auto mx-auto
 	top-12 md:top-0 right-0 left-0
