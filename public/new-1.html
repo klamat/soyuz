@@ -122,7 +122,8 @@
 				                      aboutus.classList.remove('nav-menu-us-o');
 				                      narrus.classList.add('hover-nav-arrow');
 				                      narrpro.classList.remove('hover-nav-arrow');
-									  narrabus.classList.remove('hover-nav-arrow')"
+									  narrabus.classList.remove('hover-nav-arrow');
+									  closedropus.classList.add('close-line-o')"
 				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
 					<span class="">Услуги</span>
 					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
@@ -136,8 +137,10 @@
 				                      aboutus.classList.remove('nav-menu-us-o');
 				                      narrus.classList.remove('hover-nav-arrow');
 				                      narrpro.classList.add('hover-nav-arrow');
-				                      narrabus.classList.remove('hover-nav-arrow')"
-				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
+				                      narrabus.classList.remove('hover-nav-arrow');
+									  closedrop.classList.add('close-line-o')"
+
+				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow');closedrop.classList.toggle('close-line-o')">
 					<span class="">Производство</span>
 					<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
@@ -151,8 +154,9 @@
 				                      aboutus.classList.add('nav-menu-us-o');
 				                      narrus.classList.remove('hover-nav-arrow');
 				                      narrpro.classList.remove('hover-nav-arrow');
-				                      narrabus.classList.add('hover-nav-arrow')"
-				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow')">
+				                      narrabus.classList.add('hover-nav-arrow');
+									  closedropab.classList.add('close-line-o')"
+				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow');closedropab.classList.toggle('close-line-o')">
 					<span class="">О нас</span>
 					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
@@ -168,7 +172,7 @@
 			</div>
 		</div>
 		<div class="nav-menu-us" id="menuus">
-			<div class="">
+			<div class="p-2">
 				<div class="group nav-menu-but-st">
 					<div class="nav-m-b-line"> </div>
 					<div class="nav-menu-button">Дизайн</div>
@@ -186,8 +190,19 @@
 					<div class="nav-menu-button">Сервисное обслуживание</div>
 				</div>
 			</div>
+			<div class="group nav-close-but"
+			     onclick="menupro.classList.remove('nav-menu-pro-o');
+				          menuus.classList.remove('nav-menu-us-o');
+				          aboutus.classList.remove('nav-menu-us-o');
+				          narrus.classList.remove('hover-nav-arrow');
+				          narrpro.classList.remove('hover-nav-arrow');
+				          narrabus.classList.remove('hover-nav-arrow');">
+				<div class="close-line" id="closedropus">
+					<div class="close-dec">close</div>
+				</div>
+			</div>
 		</div>
-		<div class="nav-menu-pro nav-menu-pro-o" id="menupro">
+		<div class="nav-menu-pro" id="menupro">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
 				<div class="group nav-menu-but-st">
@@ -256,22 +271,29 @@
 					<div class="nav-menu-button">Навигация</div>
 				</div>
 			</div>
-			<div class="flex justify-center w-full h-5">
-				<div class="flex bg-white h-5 w-full"></div>
-				<div class="flex justify-content-center w-[150px]">
-					<svg class="">
+			<div class="group nav-close-but"
+			     onclick="menupro.classList.remove('nav-menu-pro-o');
+				          menuus.classList.remove('nav-menu-us-o');
+				          aboutus.classList.remove('nav-menu-us-o');
+				          narrus.classList.remove('hover-nav-arrow');
+				          narrpro.classList.remove('hover-nav-arrow');
+				          narrabus.classList.remove('hover-nav-arrow')">
+				<div class="close-line" id="closedrop">
+					<div class="close-dec">close</div>
+				</div>
+<!--				<div class="flex bg-white h-5 w-full"></div>
+				<div class="flex w-52"><svg class="">
 						<polygon points="0,0 70,0 70,12 35,8 0,12" fill="white" stroke-width="1" stroke="rgb(0,0,0)"/>
-					</svg>
+					</svg>-->
 <!--					<svg>
 						<polygon points="0,0 10,0 10,10 0,0" fill="white" stroke-width="1" stroke="rgb(0,0,0)"/>
 					</svg>-->
-				</div>
-				<div class="flex bg-white h-5 w-full"></div>
+<!--				</div>
+				<div class="flex bg-white h-5 w-full"></div>-->
 			</div>
-
 		</div>
 		<div class="nav-menu-aboutus" id="aboutus">
-			<div class="">
+			<div class="p-2">
 				<div class="group nav-menu-but-st">
 					<div class="nav-m-b-line"> </div>
 					<div class="nav-menu-button">О компании</div>
@@ -288,9 +310,16 @@
 					<div class="nav-m-b-line"> </div>
 					<div class="nav-menu-button">Реквизиты</div>
 				</div>
-				<div>
-
-
+				</div>
+			<div class="group nav-close-but"
+			     onclick="menupro.classList.remove('nav-menu-pro-o');
+				          menuus.classList.remove('nav-menu-us-o');
+				          aboutus.classList.remove('nav-menu-us-o');
+				          narrus.classList.remove('hover-nav-arrow');
+				          narrpro.classList.remove('hover-nav-arrow');
+				          narrabus.classList.remove('hover-nav-arrow')">
+				<div class="close-line" id="closedropab">
+					<div class="close-dec">close</div>
 				</div>
 			</div>
 		</div>
