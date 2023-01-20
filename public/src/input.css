@@ -228,7 +228,12 @@ font-weight: 400;
 }
 .header-cont{
 	@apply
-	fixed relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3
+	relative
+	flex flex-col items-center justify-center
+	fixed h-screen
+	py-0 px-3
+	text-white text-center
+	overflow-hidden
 }
 .header-vid-bg{
 	@apply
@@ -236,7 +241,7 @@ font-weight: 400;
 }
 .header-vid-bg-st{
 	@apply
-	min-w-full min-h-full absolute object-cover
+	min-w-full min-h-full absolute object-cover overflow-hidden
 }
 .header-vid-cont{
 	@apply
@@ -399,25 +404,6 @@ font-weight: 400;
 	@apply
 	text-lg text-black font-normal
 }
-/*.carousel {
-	@apply
-	relative flex flex-row h-[80vh] w-full mx-auto px-5
-}*/
-
-
-/*<!--Drop menu-->*/
-/*    #menu-toggle:checked + #menu {
-	    display: block;
-    }
-!*<!--Nav arrows-->*!
-    li>ul                 { transform: translatex(100%) scale(0) }
-li:hover>ul           { transform: translatex(100%) scale(1) }
-li > button svg       { transform: rotate(-0deg) }
-li:hover > button svg { transform: rotate(-180deg) }
-.group:hover .group-hover\:scale-100 { transform: scale(1) }
-.group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
-.scale-0 { transform: scale(0) }
-.min-w-32 { min-width: 8rem }*/
 /*<!--full Hero Video-->*/
 .video-docker video {
 	    top: 50%;
@@ -1001,6 +987,5 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	.block-four__item img {
 		position: initial;
 	}
-
 	/*================================================================*/
 }
