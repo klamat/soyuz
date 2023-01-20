@@ -115,7 +115,6 @@
 			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
 		</div>
 		<div  class="nav-menu" id="menu">
-			<!--Услуги-->
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menuus.classList.add('nav-menu-us-o');
@@ -123,14 +122,16 @@
 				                      aboutus.classList.remove('nav-menu-us-o');
 				                      narrus.classList.add('hover-nav-arrow');
 				                      narrpro.classList.remove('hover-nav-arrow');
-									  narrabus.classList.remove('hover-nav-arrow');"
-				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
+									  narrabus.classList.remove('hover-nav-arrow');
+									  closedropus.classList.add('close-line-o');
+									  closedrop.classList.remove('close-line-o');
+									  closedropab.classList.remove('close-line-o')"
+				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow');closedropus.classList.toggle('close-line-o')">
 					<span class="">Услуги</span>
 					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
 				<div class="nav-b-uline"></div>
 			</div>
-			<!--Производство-->
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menupro.classList.add('nav-menu-pro-o');
@@ -138,15 +139,17 @@
 				                      aboutus.classList.remove('nav-menu-us-o');
 				                      narrus.classList.remove('hover-nav-arrow');
 				                      narrpro.classList.add('hover-nav-arrow');
-				                      narrabus.classList.remove('hover-nav-arrow')"
-				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
+				                      narrabus.classList.remove('hover-nav-arrow');
+									  closedropus.classList.remove('close-line-o');
+									  closedrop.classList.add('close-line-o');
+									  closedropab.classList.remove('close-line-o')"
+				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow');closedrop.classList.toggle('close-line-o')">
 					<span class="">Производство</span>
 					<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
 				<div class="nav-b-uline"></div>
 
 			</div>
-			<!--О нас-->
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menuus.classList.remove('nav-menu-us-o');
@@ -154,28 +157,26 @@
 				                      aboutus.classList.add('nav-menu-us-o');
 				                      narrus.classList.remove('hover-nav-arrow');
 				                      narrpro.classList.remove('hover-nav-arrow');
-				                      narrabus.classList.add('hover-nav-arrow');"
-				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow')">
+				                      narrabus.classList.add('hover-nav-arrow');
+									  closedropus.classList.remove('close-line-o');
+									  closedrop.classList.remove('close-line-o');
+									  closedropab.classList.add('close-line-o')"
+				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow');closedropab.classList.toggle('close-line-o')">
 					<span class="">О нас</span>
 					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
 				<div class="nav-b-uline"></div>
 			</div>
-			<!--Контакты-->
 			<div class="group nav-b-cont">
 				<button class="nav-button" href="#">Контакты</button>
 				<div class="nav-b-uline"></div>
 			</div>
-			<!--Телефон-->
 			<div class="group nav-b-cont">
-
-				<a class="scale-90 hover:scale-100 hover:text-[rgba(13,62,105)]  duration-150 ease-in-out origin-top" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</a>
-				<a class="scale-90 hover:scale-100 hover:text-[rgba(13,62,105)] duration-150 ease-in-out origin-bottom" href="mailto:info@pksoyuz.ru" class="nav-phone">info@pksoyuz.ru</a>
-
+				<button class="nav-button" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</button>
+				<div class="nav-b-uline"></div>
 			</div>
 		</div>
-		<!--Услуги - меню-->
-		<div class="nav-menu-us" id="menuus" onmouseleave="this.classList.remove('nav-menu-us-o')">
+		<div class="nav-menu-us" id="menuus">
 			<div class="p-2">
 				<div class="group nav-menu-but-st">
 					<div class="nav-m-b-line"> </div>
@@ -194,7 +195,7 @@
 					<div class="nav-menu-button">Сервисное обслуживание</div>
 				</div>
 			</div>
-<!--			<div class="group nav-close-but"
+			<div class="group nav-close-but"
 			     onclick="menupro.classList.remove('nav-menu-pro-o');
 				          menuus.classList.remove('nav-menu-us-o');
 				          aboutus.classList.remove('nav-menu-us-o');
@@ -204,10 +205,9 @@
 				<div class="close-line" id="closedropus">
 					<div class="close-dec">close</div>
 				</div>
-			</div>-->
+			</div>
 		</div>
-		<!--Производство - меню-->
-		<div class="nav-menu-pro" id="menupro" onmouseleave="this.classList.remove('nav-menu-pro-o')">
+		<div class="nav-menu-pro" id="menupro">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
 				<div class="group nav-menu-but-st">
@@ -276,7 +276,7 @@
 					<div class="nav-menu-button">Навигация</div>
 				</div>
 			</div>
-<!--			<div class="group nav-close-but"
+			<div class="group nav-close-but"
 			     onclick="menupro.classList.remove('nav-menu-pro-o');
 				          menuus.classList.remove('nav-menu-us-o');
 				          aboutus.classList.remove('nav-menu-us-o');
@@ -286,10 +286,18 @@
 				<div class="close-line" id="closedrop">
 					<div class="close-dec">close</div>
 				</div>
-			</div>-->
+<!--				<div class="flex bg-white h-5 w-full"></div>
+				<div class="flex w-52"><svg class="">
+						<polygon points="0,0 70,0 70,12 35,8 0,12" fill="white" stroke-width="1" stroke="rgb(0,0,0)"/>
+					</svg>-->
+<!--					<svg>
+						<polygon points="0,0 10,0 10,10 0,0" fill="white" stroke-width="1" stroke="rgb(0,0,0)"/>
+					</svg>-->
+<!--				</div>
+				<div class="flex bg-white h-5 w-full"></div>-->
+			</div>
 		</div>
-		<!--О нас - меню-->
-		<div class="nav-menu-aboutus" id="aboutus" onmouseleave="this.classList.remove('nav-menu-us-o')">
+		<div class="nav-menu-aboutus" id="aboutus">
 			<div class="p-2">
 				<div class="group nav-menu-but-st">
 					<div class="nav-m-b-line"> </div>
@@ -308,7 +316,7 @@
 					<div class="nav-menu-button">Реквизиты</div>
 				</div>
 				</div>
-<!--			<div class="group nav-close-but"
+			<div class="group nav-close-but"
 			     onclick="menupro.classList.remove('nav-menu-pro-o');
 				          menuus.classList.remove('nav-menu-us-o');
 				          aboutus.classList.remove('nav-menu-us-o');
@@ -318,7 +326,7 @@
 				<div class="close-line" id="closedropab">
 					<div class="close-dec">close</div>
 				</div>
-			</div>-->
+			</div>
 		</div>
 
 	</div>
@@ -707,7 +715,7 @@
 <!--Footer-->
 <footer class="footer-sec">
 	<div class="footer-sec-1">
-		<div class="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-300 divide-y-2 md:divide-x-2 md:divide-y-0 ">
+		<div class="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-300 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8">
 			<div class="col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0">
 				<h5 class="text-xl">Компания</h5>
 				<nav class="mt-4">

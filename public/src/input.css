@@ -159,9 +159,8 @@ font-weight: 400;
 }
 .nav-menu-col{
 	@apply
-	flex flex-col h-full w-auto md:w-1/3
+	flex flex-col h-full md:w-1/3
 	px-2
-	overflow-hidden
 }
 .nav-menu-row{
 	@apply
@@ -170,7 +169,7 @@ font-weight: 400;
 .nav-menu-pro{
 	@apply
 	absolute
-	flex flex-col md:flex-row flex-wrap
+	flex flex-col md:flex-row md:flex-wrap
 	justify-start items-start
 	md:w-auto w-full h-auto mx-auto
 	top-14 md:top-0 right-0 left-0
@@ -229,7 +228,7 @@ font-weight: 400;
 }
 .header-cont{
 	@apply
-	fixed relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3 overflow-hidden
+	fixed relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3
 }
 .header-vid-bg{
 	@apply
@@ -516,7 +515,7 @@ li:hover > button svg { transform: rotate(-180deg) }
 }
 .footer-sec-1{
 	@apply
-	max-w-screen-lg px-2
+	max-w-screen-lg mx-auto px-2
 }
 .request1{
 	@apply
@@ -944,4 +943,64 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	60% {
 		transform: translateY(-10px);
 	}
+}
+/*================================================================*/
+@media only screen and (max-width: 991px) {
+	.two-blocks > div.two-blocks__item:nth-of-type(2) {
+		padding-right: 0;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.nav-phone {
+		position: absolute;
+		left: calc(50% - 100px);
+		top: 12px;
+	}
+
+	.nav-phone:hover:before {
+		display: none;
+	}
+
+	.two-blocks {
+		display: block;
+	}
+
+	.two-blocks > div.two-blocks__item:nth-of-type(1), .two-blocks > div.two-blocks__item:nth-of-type(2) {
+		width: 100%;
+		padding: 0 12px;
+	}
+
+	.title-sec {
+		margin-bottom: 0;
+	}
+
+	.block-three, .block-four {
+		display: block;
+		padding: 20px;
+	}
+
+	.block-three__item {
+		width: 100%;
+		margin-bottom: 30px;
+		padding-left: 0;
+		background: none;
+	}
+
+	.block-three__item-title {
+		margin-bottom: 12px;
+		text-align: left;
+	}
+
+	.block-four__item {
+		width: 100%;
+		margin-bottom: 12px;
+		height: auto;
+		padding-bottom: 0;
+	}
+
+	.block-four__item img {
+		position: initial;
+	}
+
+	/*================================================================*/
 }
