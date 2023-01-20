@@ -259,6 +259,15 @@ font-weight: 400;
 	clr3
 	-translate-y-[8px]
 }
+
+.title_border2 {
+	@apply
+	flex h-[3px] w-11 md:w-[60px]
+	mr-2
+	clr3
+	-translate-y-[8px]
+}
+
 .sec_title{
 	@apply
 	flex max-w-screen-lg text-2xl sm:text-4xl text-left text-gray-800
