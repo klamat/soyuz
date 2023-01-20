@@ -1097,6 +1097,23 @@ body {
   }
 }
 
+.title_border2 {
+  margin-right: 0.5rem;
+  display: flex;
+  height: 3px;
+  width: 2.75rem;
+  --tw-translate-y: -8px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 62 105 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .title_border2 {
+    width: 60px;
+  }
+}
+
 .sec_title {
   display: flex;
   max-width: 1024px;
