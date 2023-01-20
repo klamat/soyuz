@@ -141,7 +141,7 @@ font-weight: 400;
 	justify-start items-start
 	md:w-auto w-full h-auto mx-auto
 	top-14 md:top-0 right-0 left-0
-	p-2
+
 	bg-gray-200
 	border-b-2 border-[rgba(13,62,105)] rounded-sm
 	transform
