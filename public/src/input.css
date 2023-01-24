@@ -4,16 +4,39 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
+@layer base {
+	h1 {
+		@apply
+		text-2xl;
+	}
+	h2 {
+		@apply
+		text-3xl;
+	}
+
+	h3 {
+		@apply
+		text-lg;
+	}
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 font-weight: 400;
 }
 
-.h1{
+/*h1{
 	@apply
-	font-semibold text-2xl text-gray-800 leading-tight
+	font-bold text-2xl text-gray-800 leading-tight
+}
+h2{
+	@apply font-bold text-xl text-black
 }
 
+h3{
+	@apply
+	font-bold text-base text-gray-800
+}*/
 .tex1{
 	@apply
 	text-gray-600 text-justify mb-2
@@ -696,11 +719,11 @@ img {vertical-align: middle;}
 }
 .content-1{
 	@apply
-	items-center text-gray-800 text-justify max-w-screen-lg mx-auto px-3
+	items-center text-gray-800 text-justify max-w-screen-lg mx-auto py-5 px-3
 }
 .content-1w{
 	@apply
-	items-center text-white text-justify indent-8  max-w-screen-lg mx-auto px-3
+	items-center text-white text-justify  max-w-screen-lg mx-auto py-5 px-3
 }
 .content-2{
 	@apply
@@ -960,9 +983,21 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	overflow-hidden
 	cursor-pointer
 }
+.g-card-2{
+	@apply
+	flex justify-center items-center
+	h-28 w-full mx-auto
+	overflow-hidden
+	cursor-pointer
+}
 .g-card-cont-pic{
 	@apply
 	flex w-full h-48 mx-4 mt-1
+	overflow-hidden
+}
+.g-card-cont-pic-2{
+	@apply
+	flex w-full
 	overflow-hidden
 }
 .g-card-pic{
@@ -1016,7 +1051,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 }
 .title-sec {
 	@apply
-	font-bold
+	font-bold text-gray-400
 }
 .block-b{
 	@apply
@@ -1035,8 +1070,12 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	flex flex-col
 	md:flex-row gap-5 py-5
 }
-.bock-4-pic{
+.block-4-pic{
 	@apply flex h-full md:h-48 justify-center mx-auto
+}
+.gal-img{
+	@apply
+	flex h-36 w-auto
 }
 /*================================================================*//*
 @media only screen and (max-width: 991px) {

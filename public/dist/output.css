@@ -410,6 +410,21 @@ video {
   height: auto;
 }
 
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -509,14 +524,18 @@ body {
   font-weight: 400;
 }
 
-.h1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
-  line-height: 1.25;
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+/*h1{
+	@apply
+	font-bold text-2xl text-gray-800 leading-tight
 }
+h2{
+	@apply font-bold text-xl text-black
+}
+
+h3{
+	@apply
+	font-bold text-base text-gray-800
+}*/
 
 .tex1 {
   margin-bottom: 0.5rem;
@@ -2022,6 +2041,8 @@ img {
   margin-right: auto;
   max-width: 1024px;
   align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   text-align: justify;
@@ -2034,10 +2055,11 @@ img {
   margin-right: auto;
   max-width: 1024px;
   align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   text-align: justify;
-  text-indent: 2rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -2492,12 +2514,30 @@ img {
   padding: 1.25rem;
 }
 
+.g-card-2 {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 7rem;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .g-card-cont-pic {
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 0.25rem;
   display: flex;
   height: 12rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.g-card-cont-pic-2 {
+  display: flex;
   width: 100%;
   overflow: hidden;
 }
@@ -2620,16 +2660,18 @@ img {
 
 .title-sec {
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .block-b {
   justify-content: space-between;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
   align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   text-align: justify;
@@ -2668,7 +2710,7 @@ img {
   }
 }
 
-.bock-4-pic {
+.block-4-pic {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -2677,9 +2719,15 @@ img {
 }
 
 @media (min-width: 768px) {
-  .bock-4-pic {
+  .block-4-pic {
     height: 12rem;
   }
+}
+
+.gal-img {
+  display: flex;
+  height: 9rem;
+  width: auto;
 }
 
 /*================================================================*/

@@ -23,7 +23,26 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<!--Card selector-->
+	<script>
+		window.addEventListener('load', function() {
 
+			let getButtons = document.querySelectorAll('[data-type="ml"] button');
+			let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');
+
+			getButtons.forEach((el) => {
+
+				el.addEventListener('click', () => {
+
+					getLayers.forEach((layer) => {
+
+						if (layer.dataset.id === el.dataset.id) layer.classList.remove('hidden');
+						else layer.classList.add('hidden');
+					});
+				});
+			});
+		})
+	</script>
 
 </head>
 
