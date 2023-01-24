@@ -410,21 +410,6 @@ video {
   height: auto;
 }
 
-h1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-h3 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
