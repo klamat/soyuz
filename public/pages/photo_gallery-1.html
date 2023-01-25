@@ -22,82 +22,57 @@
 	<link href="../dist/output.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-	<!--Card selector-->
-	<script>
-		window.addEventListener('load', function() {
-
-			let getButtons = document.querySelectorAll('[data-type="ml"] button');
-			let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');
-
-			getButtons.forEach((el) => {
-
-				el.addEventListener('click', () => {
-
-					getLayers.forEach((layer) => {
-
-						if (layer.dataset.id === el.dataset.id) layer.classList.remove('hidden');
-						else layer.classList.add('hidden');
-					});
-				});
-			});
-		})
-	</script>
-
+	<!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">-->
 </head>
 
 
 <body>
 <div class="pt-10">
-<div class="title_flex">
-	<div class="title_border"></div>
-	<div class="sec_title">Наши проекты</div>
-</div>
+	<div class="title_flex">
+		<div class="title_border"></div>
+		<div class="sec_title">НАШИ ПРОЕКТЫ</div>
+	</div>
 	<div class="g-card-cont">
 		<div class="group g-card" href="/">
 			<div class="g-card-cont-pic" >
-				<img src="../docs/images/aboutus/1.jpg" alt="project-1" class="g-card-pic">
+				<img src="../docs/images/ourpojecs/astramarine/astra_main.jpg" alt="astramarine" class="g-card-pic">
 			</div>
 			<div class="g-card-title-cont">
 				<div class="g-card-title">
+					<div class="g-card-title-1">ЖК Astramarine</div>
 					<div class="title_border2"></div>
-					<div class="g-card-title-1">TheONE</div>
 				</div>
 			</div>
-			<div class="g-card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+			<div class="g-card-txt">Представительство отдела продаж.</div>
 			<div class="g-card-bg"></div>
 		</div>
 		<div class="group g-card" href="/">
 			<div class="g-card-cont-pic" >
-				<img src="../docs/images/aboutus/1.jpg" alt="project-1" class="g-card-pic">
+				<img src="../docs/images/ourpojecs/theone/theone_main.jpg" alt="theone" class="g-card-pic">
 			</div>
 			<div class="g-card-title-cont">
 				<div class="g-card-title">
+					<div class="g-card-title-1">ЖК TheONE</div>
 					<div class="title_border2"></div>
-					<div class="g-card-title-1">Astramarine</div>
 				</div>
 			</div>
-			<div class="g-card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+			<div class="g-card-txt">Система навигации жилого комплекса.</div>
 			<div class="g-card-bg"></div>
 		</div>
 		<div class="group g-card" href="/">
 			<div class="g-card-cont-pic" >
-				<img src="../docs/images/aboutus/1.jpg" alt="project-1" class="g-card-pic">
+				<img src="../docs/images/ourpojecs/panorama/panorama_main.jpg" alt="panorama" class="g-card-pic">
 			</div>
 			<div class="g-card-title-cont">
 				<div class="g-card-title">
+					<div class="g-card-title-1">ЖК Панорама парк</div>
 					<div class="title_border2"></div>
-					<div class="g-card-title-1">Панорама парк</div>
 				</div>
 			</div>
-			<div class="g-card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+			<div class="g-card-txt">Имиджевые логотипы в парадных.</div>
 			<div class="g-card-bg"></div>
 		</div>
 	</div>
-
-	<dev>
-
-	</dev>
 
 
 </div>
