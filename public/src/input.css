@@ -978,11 +978,12 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	mx-auto px-2
 	gap-5 max-w-screen-lg
 }
+
 .g-card{
 	@apply
 	relative
 	flex flex-col items-center
-	h-auto w-80 p-5
+	h-full w-80 p-5
 	overflow-hidden
 	cursor-pointer
 }
@@ -1027,7 +1028,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 .g-card-txt{
 	@apply
 	py-5 px-8
-	text-justify
+	text-start
 	text-2xl
 	font-extrabold
 	group-hover:text-white
@@ -1066,11 +1067,11 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 }
 .gcl-2{
 	@apply
-	flex flex-col md:flex-row gap-5
+	flex flex-col md:flex-row gap-5 max-w-screen-lg mx-auto
 }
 .title-sec {
 	@apply
-	font-bold text-gray-700
+	font-bold text-gray-700 max-w-screen-lg mx-auto
 }
 .block-b{
 	@apply
