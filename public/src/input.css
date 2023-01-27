@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:wght@100;200;400;500);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
 
 
 
@@ -538,11 +538,11 @@ h3{
 }
 .request1{
 	@apply
-	z-10 flex w-full h-[350px] bg-white/70 flex-col items-center justify-center mx-auto
-
-}
-.request1-grid{
-
+	relative
+	z-10
+	flex flex-col md:flex-row w-full h-auto
+	items-center justify-between mx-auto
+	overflow-hidden
 }
 .request1tit{
 	@apply
@@ -550,14 +550,48 @@ h3{
 }
 .request1txt{
 	@apply
-	text-gray-900 text-center
+	text-gray-900 text-center overflow-hidden
 }
-.request1-vid{
+.request-vid-bg{
 	@apply
-	z-[-1] min-w-full h-[350px] absolute object-cover overflow-hidden
+	z-[-1] video-docker-req absolute top-0 left-0 w-full h-full overflow-hidden
 }
+.request-vid-bg-st{
+	@apply
+	min-w-full min-h-full absolute object-cover overflow-hidden
+}
+.video-docker-req video {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.video-docker-req::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 1;
+}
+.request1-form{
+	@apply
+	relative
+	flex h-auto min-w-[300px] max-w-[400px]
+	bg-white
+}
+.request1-bot{
+	@apply
+	absolute
+	flex w-full h-7
+	bg-white
+	bottom-0
+}
+
 .request2{
 	@apply
+	relative
 	z-10 flex w-full h-[350px] bg-[rgba(36,43,52,0.85)] flex-col items-center justify-center mx-auto
 }
 .request2tit{

@@ -1701,19 +1701,23 @@ h3{
 }
 
 .request1 {
+  position: relative;
   z-index: 10;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  height: 350px;
+  height: auto;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: rgb(255 255 255 / 0.7);
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-.request1-grid{
+@media (min-width: 768px) {
+  .request1 {
+    flex-direction: row;
+  }
 }
 
 .request1tit {
@@ -1732,22 +1736,87 @@ h3{
 }
 
 .request1txt {
+  overflow: hidden;
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
-.request1-vid {
+.request-vid-bg {
   position: absolute;
+  top: 0px;
+  left: 0px;
   z-index: -1;
-  height: 350px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.request-vid-bg video {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.request-vid-bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.request-vid-bg-st {
+  position: absolute;
+  min-height: 100%;
   min-width: 100%;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.video-docker-req video {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-docker-req::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.request1-form {
+  position: relative;
+  display: flex;
+  height: auto;
+  min-width: 300px;
+  max-width: 400px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.request1-bot {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  height: 1.75rem;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .request2 {
+  position: relative;
   z-index: 10;
   margin-left: auto;
   margin-right: auto;
