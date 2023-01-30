@@ -287,39 +287,8 @@ h3{
 	video-content w-5/6 mx-auto space-y-2 justify-start
 }
 
-.title_flex{
-	@apply
-	flex px-2 py-10 mx-auto items-end max-w-screen-lg
-}
-.title_border {
-	@apply
-	flex h-[5px] w-11 md:w-[90px]
-	mr-2
-	clr3
-	-translate-y-[8px]
-}
 
-.title_border2 {
-	@apply
-	flex h-[3px] w-11 md:w-[60px]
-	mr-2
-	clr4
-	-translate-y-[8px]
-}
-.title_border4 {
-	@apply
-	flex h-[3px] w-11 md:w-[90px]
-	clr4
-	-translate-y-[8px]
-}
-.title-4{
-	@apply
-	text-xl font-normal text-gray-300 ml-[60px] mb-3
-}
-.sec_title{
-	@apply
-	flex max-w-screen-lg text-2xl sm:text-4xl text-left text-gray-800
-}
+
 .serv-sec{
 	@apply
 	flex px-2 justify-center items-start pb-20
@@ -336,10 +305,7 @@ h3{
 	@apply
 	my-2 border-b-2 border-[rgba(13,62,105)]
 }
-.serv-sec-title{
-	@apply
-	flex flex-row justify-between items-center p-3 cursor-pointer
-}
+
 .serv-arrow{
 	@apply
 	fill-current text-[rgba(13,62,105)] h-6 w-6 transform transition-transform duration-500
@@ -1152,91 +1118,6 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	}
 }
 
-.g-card-cont{
-	@apply
-	flex flex-row flex-wrap
-	mx-auto px-2
-	gap-5 max-w-screen-lg
-}
-
-.g-card{
-	@apply
-	relative
-	flex flex-col items-center
-	h-full w-80 p-5
-	overflow-hidden
-	cursor-pointer
-}
-.g-card-2{
-	@apply
-	flex justify-center items-center
-	h-28 w-full mx-auto
-	overflow-hidden
-	cursor-pointer
-}
-.g-card-cont-pic{
-	@apply
-	flex w-full h-48 mx-4 mt-1
-	overflow-hidden
-}
-.g-card-cont-pic-2{
-	@apply
-	flex w-full
-	overflow-hidden
-}
-.g-card-pic{
-	@apply
-	scale-110 group-hover:scale-125
-	delay-100
-	transition duration-[2000ms] ease-in-out origin-center
-}
-.g-card-title-cont{
-	@apply
-	flex w-full justify-start
-	-translate-x-3
-}
-.g-card-title{
-	@apply
-	flex flex-col pt-5
-}
-.g-card-title-1{
-	@apply
-	text-lg ml-10 mb-5
-	group-hover:text-white
-	transition duration-700 ease-in-out
-}
-.g-card-txt{
-	@apply
-	py-5 px-8
-	text-start
-	text-2xl
-	font-extrabold
-	group-hover:text-white
-	group-hover:-translate-y-1
-	transition duration-700 ease-in-out origin-center
-}
-.g-card-bg{
-	@apply
-	z-[-1]
-	absolute top-0 left-0
-	flex h-full w-full
-	bg-white
-	group-hover:bg-[rgba(36,43,52)]
-	group-hover:scale-95
-	transition duration-700 ease-in-out origin-center
-	overflow-hidden
-}
-.g-card-title-w{
-	@apply
-	flex flex-row-reverse pb-5 mx-auto
-	max-w-screen-lg
-	text-sm text-white font-extralight
-}
-.g-card-title-g{
-	@apply
-	flex flex-row-reverse pb-5 mx-auto
-	max-w-screen-lg text-sm text-[rgba(49,79,111)]
-}
 .g-gallery{
 	@apply
 	grid grid-cols-1 md:grid-cols-4 gap-2 max-w-screen-lg mx-auto overflow-hidden h-full
@@ -1333,3 +1214,160 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 		position: initial;
 	}*/
 	/*================================================================*/
+
+
+/*refactored*/
+
+/*titles*/
+/*all_main_sections*/
+.title_flex{
+	@apply
+	flex px-2 py-10 mx-auto items-end max-w-screen-lg
+}
+/*main_title*/
+.sec_title{
+	@apply
+	flex max-w-screen-lg text-2xl sm:text-4xl text-left text-gray-800
+}
+/*big_blue*/
+.title_border {
+	@apply
+	flex h-[5px] w-11 md:w-[90px]
+	mr-2
+	clr3
+	-translate-y-[8px]
+}
+/*all_section-2*/
+.section-title-2{
+	@apply
+	g-card-title-1 font-bold
+}
+/*small_red*/
+.title_border2 {
+	@apply
+	flex h-[3px] w-11 md:w-[60px]
+	mr-2
+	clr4
+	-translate-y-[8px]
+}
+/*big_red*/
+.title_border4 {
+	@apply
+	flex h-[3px] w-11 md:w-[90px]
+	clr4
+	-translate-y-[8px]
+}
+
+.title-4{
+	@apply
+	text-xl font-normal text-gray-300 ml-[60px] mb-3
+}
+
+.serv-sec-title{
+	@apply
+	flex flex-row justify-between items-center p-3 cursor-pointer
+}
+
+.g-card-title-cont{
+	@apply
+	flex w-full justify-start
+	-translate-x-3
+}
+.g-card-title{
+	@apply
+	flex flex-col pt-5
+}
+.g-card-title-1{
+	@apply
+	text-lg ml-10 mb-5
+	group-hover:text-white
+	transition duration-700 ease-in-out
+}
+.card-title{
+	@apply
+	text-base ml-10 mb-5
+	font-bold
+}
+.g-card-txt{
+	@apply
+	py-5 px-8
+	text-start
+	text-2xl
+	font-extrabold
+	group-hover:text-white
+	group-hover:-translate-y-1
+	transition duration-700 ease-in-out origin-center
+}
+
+.g-card-title-w{
+	@apply
+	flex flex-row-reverse pb-5 mx-auto
+	max-w-screen-lg
+	text-sm text-white font-extralight
+}
+.g-card-title-g{
+	@apply
+	flex flex-row-reverse pb-5 mx-auto
+	max-w-screen-lg text-sm text-[rgba(49,79,111)]
+}
+
+/*g-card*/
+
+.g-card-cont{
+	@apply
+	flex flex-row flex-wrap
+	mx-auto px-2
+	gap-5 max-w-screen-lg
+}
+
+.g-card{
+	@apply
+	relative
+	flex flex-col items-center
+	h-full w-80 p-5
+	overflow-hidden
+	cursor-pointer
+}
+.g-card-2{
+	@apply
+	flex justify-center items-center
+	h-28 w-full mx-auto
+	overflow-hidden
+	cursor-pointer
+}
+.g-card-3{
+	@apply
+	relative
+	flex flex-col items-start
+	h-auto w-80 p-5
+	overflow-hidden
+	hover:bg-gray-200
+	transition duration-700 ease-in-out origin-center
+}
+.g-card-cont-pic{
+	@apply
+	flex w-full h-48 mx-4 mt-1
+	overflow-hidden
+}
+.g-card-cont-pic-2{
+	@apply
+	flex w-full
+	overflow-hidden
+}
+.g-card-pic{
+	@apply
+	scale-110 group-hover:scale-125
+	delay-100
+	transition duration-[2000ms] ease-in-out origin-center
+}
+.g-card-bg{
+	@apply
+	z-[-1]
+	absolute top-0 left-0
+	flex h-full w-full
+	bg-white
+	group-hover:bg-[rgba(36,43,52)]
+	group-hover:scale-95
+	transition duration-700 ease-in-out origin-center
+	overflow-hidden
+}
