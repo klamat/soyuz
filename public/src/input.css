@@ -1341,8 +1341,8 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	flex flex-col items-start
 	h-auto w-80 p-5
 	overflow-hidden
-	hover:bg-gray-200
-	transition duration-700 ease-in-out origin-center
+/*	hover:bg-gray-200
+	transition duration-700 ease-in-out origin-center*/
 }
 .g-card-cont-pic{
 	@apply
@@ -1367,6 +1367,17 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	flex h-full w-full
 	bg-white
 	group-hover:bg-[rgba(36,43,52)]
+	group-hover:scale-95
+	transition duration-700 ease-in-out origin-center
+	overflow-hidden
+}
+.g-card-bg-2{
+	@apply
+	z-[-1]
+	absolute top-0 left-0
+	flex h-full w-full
+	bg-white
+	group-hover:bg-gray-200
 	group-hover:scale-95
 	transition duration-700 ease-in-out origin-center
 	overflow-hidden
