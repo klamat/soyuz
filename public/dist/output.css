@@ -1775,7 +1775,7 @@ h3{
   position: absolute;
   bottom: 0px;
   display: flex;
-  height: 1.75rem;
+  height: 2rem;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2867,6 +2867,40 @@ img {
 
 /*================================================================*/
 
+.one-block {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.two-block {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .two-block {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+  }
+}
+
+.three-block {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .three-block {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /*refactored*/
 
 /*titles*/
@@ -2947,6 +2981,7 @@ img {
 
 .title_border2 {
   margin-right: 0.5rem;
+  margin-bottom: 1.25rem;
   display: flex;
   height: 3px;
   width: 2.75rem;
@@ -3209,4 +3244,32 @@ img {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
   background-color: rgb(36 43 52 / var(--tw-bg-opacity));
+}
+
+.mop-req-num {
+  margin-bottom: 0.75rem;
+  font-size: 8rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.mop-req-tab {
+  position: absolute;
+  bottom: 0px;
+  left: 3rem;
+  right: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem;
+  background-color: rgb(249 250 251 / 0.6);
+  padding: 0.5rem;
+  text-align: center;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
