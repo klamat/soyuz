@@ -150,7 +150,7 @@ h3{
 }
 .nav-m-b-line{
 	@apply
-	flex w-4 h-[3px] mb-1.5 md:mb-3
+	flex w-4 h-[3px] mb-1.5 md:mb-2.5
 	bg-[rgba(13,62,105)]
 	scale-x-0
 	group-hover:scale-x-100
@@ -1216,16 +1216,86 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	/*================================================================*/
 .one-block {
 	@apply
-	grid grid-cols-1 gap-5
+	grid grid-cols-1
 }
 .two-block{
 	@apply
 	grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-16 py-5
 }
-.three-block{
+/*.three-block{
 	@apply
-	grid grid-cols-1 md:grid-cols-3 gap-5 pb-5
+	grid grid-cols-1 gap-5 pb-5
+}*/
+@media (min-width: 768px){
+	.three-block{
+		@apply
+		grid  grid-cols-2 gap-5 pb-5
 }
+}
+@media (min-width: 1024px){
+	.three-block{
+		@apply
+		grid grid-cols-3 gap-5 pb-5
+	}
+
+}
+
+
+.footer-block{
+	@apply
+	relative
+	three-block px-5 md:px-20 py-10
+
+}
+.rights{
+	@apply
+	relative
+	flex flex-row flex-wrap
+	justify-between
+	text-[10px] text-white px-20 py-10 mt-2
+	border-t-[1px] border-stone-600
+}
+
+/*footer btns*/
+
+.f-menu-but-st{
+	@apply
+	flex flex-row items-end w-auto
+}
+.f-m-b-line{
+	@apply
+	flex w-4 h-[3px] mb-1 md:mb-2.5
+	bg-[rgba(255,0,0)]
+	scale-x-0
+	group-hover:scale-x-100
+	transition duration-500 ease-in-out origin-left
+}
+.f-menu-button{
+	@apply
+	flex flex-row items-center w-full
+	md:py-1
+	md:text-left
+	cursor-pointer
+	-translate-x-4
+	hover:translate-x-0.5
+	transition duration-500 ease-in-out
+	whitespace-nowrap
+	text-white font-bold
+}
+.f-tel{
+	@apply
+	flex flex-row items-center w-full
+	md:py-1
+	md:text-left
+	cursor-pointer
+	-translate-x-4
+	hover:translate-x-0.5
+	transition duration-500 ease-in-out
+	whitespace-nowrap
+	text-white
+
+}
+
 /*refactored*/
 
 /*titles*/
@@ -1391,3 +1461,4 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	@apply
 	absolute flex items-center justify-center p-2 h-1/2 bg-gray-50/60 rounded-sm shadow-lg  bottom-0 left-12 right-0 text-center my-auto
 }
+
