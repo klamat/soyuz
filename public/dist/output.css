@@ -578,7 +578,7 @@ h3{
   margin-right: auto;
   display: flex;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-wrap: wrap;
   align-items: center;
   padding-left: 0.5rem;
@@ -1170,7 +1170,7 @@ h3{
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: column;
 }
 
@@ -1214,7 +1214,7 @@ h3{
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  max-width: 1024px;
+  max-width: 1280px;
   grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 2.5rem;
   padding-left: 0.5rem;
@@ -1301,7 +1301,7 @@ h3{
   display: flex;
   height: 500px;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 0.75rem;
@@ -1463,7 +1463,7 @@ h3{
   margin-right: auto;
   height: auto;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -1473,7 +1473,7 @@ h3{
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -1670,7 +1670,7 @@ h3{
 .footer-sec-1 {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1280px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -2247,7 +2247,7 @@ img {
 .content-1 {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1280px;
   align-items: center;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -2261,7 +2261,7 @@ img {
 .content-1w {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1280px;
   align-items: center;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -2277,7 +2277,7 @@ img {
   margin-right: auto;
   display: flex;
   width: auto;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: column;
   align-items: center;
   padding-top: 1.25rem;
@@ -2341,7 +2341,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
@@ -2357,7 +2357,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: row;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -2696,7 +2696,7 @@ img {
   margin-right: auto;
   display: grid;
   height: 100%;
-  max-width: 1024px;
+  max-width: 1280px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 0.5rem;
   overflow: hidden;
@@ -2712,7 +2712,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: column;
   gap: 1.25rem;
 }
@@ -2721,7 +2721,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: column;
   gap: 1.25rem;
 }
@@ -2735,7 +2735,7 @@ img {
 .title-sec {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1280px;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -2745,7 +2745,7 @@ img {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1280px;
   align-items: center;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -3072,7 +3072,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   align-items: flex-end;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -3084,7 +3084,7 @@ img {
 
 .sec_title {
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   text-align: left;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -3229,9 +3229,21 @@ img {
 .card-title {
   margin-left: 2.5rem;
   margin-bottom: 1.25rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 700;
+}
+
+@media (min-width: 1024px){
+  .card-title {
+    margin-left: 2.5rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
 }
 
 .g-card-txt {
@@ -3262,7 +3274,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: row-reverse;
   padding-bottom: 1.25rem;
   font-size: 0.875rem;
@@ -3276,7 +3288,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: row-reverse;
   padding-bottom: 1.25rem;
   font-size: 0.875rem;
@@ -3291,10 +3303,10 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1024px;
+  max-width: 1280px;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  justify-content: space-between;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -3435,3 +3447,65 @@ img {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.txt-borded {
+  margin-left: 2.5rem;
+  display: flex;
+  width: auto;
+  border-left-width: 3px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 1024px){
+  .txt-borded {
+    margin-left: 2.5rem;
+    display: flex;
+    width: auto;
+    border-left-width: 3px;
+    --tw-border-opacity: 1;
+    border-color: rgb(255 0 0 / var(--tw-border-opacity));
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.content-f {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  align-items: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: justify;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.q-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px){
+  .q-block {
+    display: flex;
+    width: 66.666667%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .q-block {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -61,7 +61,7 @@ h3{
 	z-[102]
 	flex flex-wrap items-center
 	w-full px-2 mx-auto
-	max-w-screen-lg
+	max-w-screen-xl
 }
 .nav-content-1{
 	@apply
@@ -299,7 +299,7 @@ h3{
 }
 .serv-sec-block{
 	@apply
-	flex flex-col max-w-screen-lg mx-auto
+	flex flex-col max-w-screen-xl mx-auto
 }
 .serv-sec-array{
 	@apply
@@ -320,7 +320,7 @@ h3{
 }
 .about-grid{
 	@apply
-	grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-10 px-2 pb-10 max-w-screen-lg mx-auto
+	grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-10 px-2 pb-10 max-w-screen-xl mx-auto
 }
 .comp_card_more{
 	@apply
@@ -352,7 +352,7 @@ h3{
 }
 .advant-sec{
 	 @apply
-	 flex flex-row justify-between h-[500px] w-full px-3 max-w-screen-lg mx-auto
+	 flex flex-row justify-between h-[500px] w-full px-3 max-w-screen-xl mx-auto
  }
 .advant-left {
 	@apply
@@ -404,11 +404,11 @@ h3{
 }
 .contact-content{
 	@apply
-	flex-wrap w-full h-auto justify-center items-center max-w-screen-lg mx-auto
+	flex-wrap w-full h-auto justify-center items-center max-w-screen-xl mx-auto
 }
 .contact-content-1{
 	@apply
-	flex flex-col lg:flex-row max-w-screen-lg p-2 md:py-10 mx-auto justify-center items-start
+	flex flex-col lg:flex-row max-w-screen-xl p-2 md:py-10 mx-auto justify-center items-start
 }
 .contact-content-2{
 	@apply
@@ -527,7 +527,7 @@ h3{
 }
 .footer-sec-1{
 	@apply
-	max-w-screen-lg mx-auto px-2
+	max-w-screen-xl mx-auto px-2
 }
 /*Req! Requests*/
 
@@ -868,15 +868,15 @@ img {vertical-align: middle;}
 }
 .content-1{
 	@apply
-	items-center text-gray-800 text-justify max-w-screen-lg mx-auto py-5 px-3
+	items-center text-gray-800 text-justify max-w-screen-xl mx-auto py-5 px-3
 }
 .content-1w{
 	@apply
-	items-center text-white text-justify  max-w-screen-lg mx-auto py-5 px-3
+	items-center text-white text-justify  max-w-screen-xl mx-auto py-5 px-3
 }
 .content-2{
 	@apply
-	flex flex-col items-center md:items-start md:flex-row w-auto max-w-screen-lg mx-auto py-5 px-3
+	flex flex-col items-center md:items-start md:flex-row w-auto max-w-screen-xl mx-auto py-5 px-3
 }
 .content-pic{
 	@apply
@@ -892,11 +892,11 @@ img {vertical-align: middle;}
 }
 .content-2pic{
 	@apply
-	flex flex-col gap-5 md:flex-row max-w-screen-lg mx-auto justify-center
+	flex flex-col gap-5 md:flex-row max-w-screen-xl mx-auto justify-center
 }
 .building-card{
 @apply
-flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
+flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 }
 .building-card2 {
 	@apply
@@ -1120,19 +1120,19 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 
 .g-gallery{
 	@apply
-	grid grid-cols-1 md:grid-cols-4 gap-2 max-w-screen-lg mx-auto overflow-hidden h-full
+	grid grid-cols-1 md:grid-cols-4 gap-2 max-w-screen-xl mx-auto overflow-hidden h-full
 }
 .gcl-1 {
 	@apply
-	flex flex-col gap-5 max-w-screen-lg mx-auto
+	flex flex-col gap-5 max-w-screen-xl mx-auto
 }
 .gcl-2{
 	@apply
-	flex flex-col md:flex-row gap-5 max-w-screen-lg mx-auto
+	flex flex-col md:flex-row gap-5 max-w-screen-xl mx-auto
 }
 .title-sec {
 	@apply
-	font-bold text-gray-700 max-w-screen-lg mx-auto
+	font-bold text-gray-700 max-w-screen-xl mx-auto
 }
 .block-b{
 	@apply
@@ -1302,12 +1302,13 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 /*all_main_sections*/
 .title_flex{
 	@apply
-	flex px-2 py-10 mx-auto items-end max-w-screen-lg
+	flex px-2 py-10 mx-auto items-end max-w-screen-xl
 }
+
 /*main_title*/
 .sec_title{
 	@apply
-	flex max-w-screen-lg text-2xl sm:text-4xl text-left text-gray-800
+	flex max-w-screen-xl text-2xl sm:text-4xl text-left text-gray-800
 }
 /*big_blue*/
 .title_border {
@@ -1366,8 +1367,17 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 }
 .card-title{
 	@apply
-	text-base ml-10 mb-5
+	text-xl ml-10 mb-5
 	font-bold
+	text-left
+}
+@media (min-width: 1024px){
+.card-title{
+	@apply
+	text-2xl ml-10 mb-5
+	font-bold
+	text-left
+}
 }
 .g-card-txt{
 	@apply
@@ -1383,13 +1393,13 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 .g-card-title-w{
 	@apply
 	flex flex-row-reverse pb-5 mx-auto
-	max-w-screen-lg
+	max-w-screen-xl
 	text-sm text-white font-extralight
 }
 .g-card-title-g{
 	@apply
 	flex flex-row-reverse pb-5 mx-auto
-	max-w-screen-lg text-sm text-[rgba(49,79,111)]
+	max-w-screen-xl text-sm text-[rgba(49,79,111)]
 }
 
 /*g-card*/
@@ -1397,8 +1407,9 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 .g-card-cont{
 	@apply
 	flex flex-row flex-wrap
+	justify-between
 	mx-auto px-2
-	gap-5 max-w-screen-lg
+	max-w-screen-xl
 }
 
 .g-card{
@@ -1462,3 +1473,34 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-lg mx-auto
 	absolute flex items-center justify-center p-2 h-1/2 bg-gray-50/60 rounded-sm shadow-lg  bottom-0 left-12 right-0 text-center my-auto
 }
 
+.txt-borded{
+	@apply
+	flex w-auto ml-10 pl-2 border-l-[3px] border-[rgba(255,0,0)]
+}
+@media (min-width: 1024px){
+.txt-borded{
+	@apply
+	text-xl
+	flex w-auto ml-10 pl-2
+	border-l-[3px] border-[rgba(255,0,0)]
+}}
+.content-f{
+	@apply
+	items-center text-gray-800 text-justify mx-auto py-5 max-w-screen-xl px-3
+}
+.q-block{
+	@apply
+	flex flex-col w-full items-start
+}
+@media (min-width: 768px){
+.q-block{
+	@apply
+	flex flex-col w-2/3 items-start
+}
+}
+
+@media (min-width: 1024px) {
+	.q-block {
+		@apply flex flex-col w-1/2 items-start
+	}
+}

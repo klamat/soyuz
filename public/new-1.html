@@ -11,6 +11,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
 	<link href="./dist/output.css" rel="stylesheet">
+	<script src="../public/js/script.js"></script>
 	<!--Carousel-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
@@ -26,7 +27,7 @@
 		});
 	</script>
 	<!--Accordeon-->
-	<script>
+<!--	<script>
 		document.addEventListener('alpine:init', () => {
 			Alpine.store('accordion', {
 				tab: 0
@@ -48,29 +49,11 @@
 				}
 			}));
 		}, 'alpine:init')
-	</script>
-	<!--Card selector-->
-	<script>
-		window.addEventListener('load', function() {
-			let get_ml = document.querySelector('[data-type="ml"]').querySelectorAll('[data-id]');
-			let get_cl = document.querySelector('[data-type="cl"]').querySelectorAll('[data-id]');
-			Array.from(get_ml, function (el) {
-				el.addEventListener('click', function (event) {
-					let getId = event.composedPath()[0].dataset.id;
-					for ( let i = 0; i < get_cl.length; i++ ) {
-						let row = get_cl[i];
-						if (row.dataset.id === getId) {
-							row.classList.remove('hidden');
-						} else {
-							row.classList.add('hidden');
-						}
-					}
-				})
-			})
-		})
-	</script>
+	</script>-->
+
+
 	<!--zakaz zvon-->
-	<script>
+<!--	<script>
 		var toggleInputContainer = function (input) {
 			if (input.value != "") {
 				input.classList.add('filled');
@@ -96,7 +79,7 @@
 				toggleInputContainer(inputs[i]);
 			}
 		});
-	</script>
+	</script>-->
 </head>
 <body>
 <!--Navbar+-->
@@ -1041,7 +1024,7 @@
 					<div class="f-tel">т : +7 (812) 339-09-71</div>
 				</div>
 			</a>
-			<a href="/">
+			<a href="[[~23]]">
 				<div class="group f-menu-but-st">
 					<div class="f-m-b-line"> </div>
 					<div class="f-menu-button">Контакты</div>
