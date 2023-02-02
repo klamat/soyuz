@@ -1132,7 +1132,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 }
 .title-sec {
 	@apply
-	font-bold text-gray-700 max-w-screen-xl mx-auto
+	font-bold text-gray-700 max-w-screen-xl mx-auto text-left
 }
 .block-b{
 	@apply
@@ -1371,7 +1371,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	font-bold
 	text-left
 }
-@media (min-width: 1024px){
+@media (min-width: 1350px){
 .card-title{
 	@apply
 	text-2xl ml-10 mb-5
@@ -1379,6 +1379,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	text-left
 }
 }
+
 .g-card-txt{
 	@apply
 	py-5 px-8
@@ -1477,10 +1478,10 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	@apply
 	flex w-auto ml-10 pl-2 border-l-[3px] border-[rgba(255,0,0)]
 }
-@media (min-width: 1024px){
+@media (min-width: 1350px){
 .txt-borded{
 	@apply
-	text-xl
+	text-lg
 	flex w-auto ml-10 pl-2
 	border-l-[3px] border-[rgba(255,0,0)]
 }}
@@ -1499,8 +1500,8 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1350px) {
 	.q-block {
-		@apply flex flex-col w-1/2 items-start
+		@apply flex flex-col w-2/3 items-start
 	}
 }
