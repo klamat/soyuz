@@ -11,6 +11,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
 	<link href="./dist/output.css" rel="stylesheet">
+	<script src="../public/js/script.js"></script>
 	<!--Carousel-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
@@ -26,7 +27,7 @@
 		});
 	</script>
 	<!--Accordeon-->
-	<script>
+<!--	<script>
 		document.addEventListener('alpine:init', () => {
 			Alpine.store('accordion', {
 				tab: 0
@@ -48,29 +49,11 @@
 				}
 			}));
 		}, 'alpine:init')
-	</script>
-	<!--Card selector-->
-	<script>
-		window.addEventListener('load', function() {
-			let get_ml = document.querySelector('[data-type="ml"]').querySelectorAll('[data-id]');
-			let get_cl = document.querySelector('[data-type="cl"]').querySelectorAll('[data-id]');
-			Array.from(get_ml, function (el) {
-				el.addEventListener('click', function (event) {
-					let getId = event.composedPath()[0].dataset.id;
-					for ( let i = 0; i < get_cl.length; i++ ) {
-						let row = get_cl[i];
-						if (row.dataset.id === getId) {
-							row.classList.remove('hidden');
-						} else {
-							row.classList.add('hidden');
-						}
-					}
-				})
-			})
-		})
-	</script>
+	</script>-->
+
+
 	<!--zakaz zvon-->
-	<script>
+<!--	<script>
 		var toggleInputContainer = function (input) {
 			if (input.value != "") {
 				input.classList.add('filled');
@@ -96,11 +79,11 @@
 				toggleInputContainer(inputs[i]);
 			}
 		});
-	</script>
+	</script>-->
 </head>
 <body>
 <!--Navbar+-->
-<nav class="navbar">
+<!--<nav class="navbar">
 	<div class="relative nav-content">
 		<div class="nav-content-1">
 			<a href ="/" class="flex flex-wrap items-center">
@@ -115,7 +98,7 @@
 			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
 		</div>
 		<div  class="nav-menu nav-txt" id="menu">
-			<!--Услуги-->
+			&lt;!&ndash;Услуги&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menuus.classList.add('nav-menu-us-o');
@@ -131,7 +114,7 @@
 				</button>
 				<div class="nav-b-uline"></div>
 			</div>
-			<!--Производство-->
+			&lt;!&ndash;Производство&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menupro.classList.add('nav-menu-pro-o');
@@ -149,7 +132,7 @@
 				<div class="nav-b-uline"></div>
 
 			</div>
-			<!--О нас-->
+			&lt;!&ndash;О нас&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menuus.classList.remove('nav-menu-us-o');
@@ -165,12 +148,12 @@
 				</button>
 				<div class="nav-b-uline"></div>
 			</div>
-			<!--Контакты-->
+			&lt;!&ndash;Контакты&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="nav-button" href="#">Контакты</button>
 				<div class="nav-b-uline"></div>
 			</div>
-			<!--Телефон-->
+			&lt;!&ndash;Телефон&ndash;&gt;
 			<div class="group nav-b-cont">
 
 				<a class="nav-tel" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</a>
@@ -178,7 +161,7 @@
 
 			</div>
 		</div>
-		<!--Услуги - меню-->
+		&lt;!&ndash;Услуги - меню&ndash;&gt;
 		<div class="nav-menu-us" id="menuus" onmouseleave="this.classList.remove('nav-menu-us-o');narrus.classList.remove('hover-nav-arrow')">
 			<div class="p-2">
 				<div class="group nav-menu-but-st">
@@ -199,7 +182,7 @@
 				</div>
 			</div>
 		</div>
-		<!--Производство - меню-->
+		&lt;!&ndash;Производство - меню&ndash;&gt;
 		<div class="nav-menu-pro" id="menupro" onmouseleave="this.classList.remove('nav-menu-pro-o');narrpro.classList.remove('hover-nav-arrow')">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
@@ -271,7 +254,7 @@
 			</div>
 
 		</div>
-		<!--О нас - меню-->
+		&lt;!&ndash;О нас - меню&ndash;&gt;
 		<div class="nav-menu-aboutus" id="aboutus" onmouseleave="this.classList.remove('nav-menu-us-o');narrabus.classList.remove('hover-nav-arrow')">
 			<div class="p-2">
 				<div class="group nav-menu-but-st">
@@ -294,7 +277,7 @@
 		</div>
 
 	</div>
-</nav>
+</nav>-->
 
 <!--На сайте-->
 <nav class="navbar">
@@ -1028,7 +1011,50 @@
 </section>
 <!--========-->
 <!--Footer-->
-<footer class="footer-sec">
+<footer class="clr5">
+	<div class="footer-block">
+		<img src="../public/docs/images/dots/dots-bg-1.svg" class="select-none absolute top-0 right-0" width="200" height="200" alt="dots">
+
+		<div class="one-block">
+			<p class="text-lg text-white text-left font-bold mb-5">Наш офис в Санкт-Петербурге</p>
+			<p class="text-sm text-white text-left">ул. Седова, д. 13, оф. 215</p>
+			<a href="tel:+7 (812) 339-09-71">
+				<div class="group f-menu-but-st">
+					<div class="f-m-b-line"> </div>
+					<div class="f-tel">т : +7 (812) 339-09-71</div>
+				</div>
+			</a>
+			<a href="[[~23]]">
+				<div class="group f-menu-but-st">
+					<div class="f-m-b-line"> </div>
+					<div class="f-menu-button">Контакты</div>
+				</div>
+			</a>
+		</div>
+		<div class="one-block">
+			<p class="text-lg text-white text-left font-bold mb-5">Примеры наших работ</p>
+		</div>
+		<div class="one-block">
+			<p class="text-lg text-white text-left font-bold mb-5">Давайте обсудим</p>
+			<p class="text-sm text-white text-left">Есть проект или остались вопросы?</p>
+			<p class="text-sm text-white text-left">С удовольствием ответим.</p>
+			<a href="/">
+				<div class="group f-menu-but-st">
+					<div class="f-m-b-line"> </div>
+					<div class="f-menu-button">Заполнить форму</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="rights">
+		<img src="../public/docs/images/dots/dots-bg-2.svg" class="select-none absolute bottom-0 left-0" width="95" height="95" alt="dots">
+		<p>&copy;2022 ООО "ПК "СОЮЗ". Все права защищены.</p>
+		<p>ООО "ПК "СОЮЗ"</p>
+
+	</div>
+
+</footer>
+<!--<footer class="footer-sec">
 	<div class="footer-sec-1">
 		<div class="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-300 divide-y-2 md:divide-x-2 md:divide-y-0">
 			<div class="col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0">
@@ -1106,8 +1132,12 @@
 		</nav>
 		<p class="text-sm text-center md:text-right">&copy;2022 ООО "ПК "СОЮЗ". Все права защищены.</p>
 	</div>
-</footer>
+</footer>-->
 <!--========-->
+<!--
+Это карта на всю ширину экрана
 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf671e37a6444263fd7c8c1d1df3170b0ff7c54de9551be46bfa0ea945ad64d6&amp;width=100%25&amp;height=357&amp;lang=ru_RU&amp;scroll=true"></script>
+-->
+
 </body>
 </html>
