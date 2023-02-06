@@ -1505,3 +1505,25 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 		@apply flex flex-col w-2/3 items-start
 	}
 }
+
+.slider-h{
+	@apply
+flex flex-row h-96 w-full
+	bg-gray-200
+}
+.slider-l{
+	@apply
+	flex w-1/2
+	bg-yellow-200
+	cursor-pointer
+}
+.slider-r{
+	@apply
+	flex w-1/2
+	bg-yellow-400
+	cursor-pointer
+}
+.slider-cont{
+	@apply
+	flex flex-row
+}
