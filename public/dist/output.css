@@ -3510,3 +3510,33 @@ img {
     align-items: flex-start;
   }
 }
+
+.slider-h {
+  display: flex;
+  height: 24rem;
+  width: 100%;
+  flex-direction: row;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.slider-l {
+  display: flex;
+  width: 50%;
+  cursor: pointer;
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
+.slider-r {
+  display: flex;
+  width: 50%;
+  cursor: pointer;
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+.slider-cont {
+  display: flex;
+  flex-direction: row;
+}

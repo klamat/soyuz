@@ -17,6 +17,9 @@ window.addEventListener('load', function() {
 	});
 })
 
+/*slider theONE*/
+
+
 /*accordeon услуги*/
 document.addEventListener('alpine:init', () => {
 	Alpine.store('accordion', {
