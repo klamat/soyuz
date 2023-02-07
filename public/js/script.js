@@ -17,9 +17,6 @@ window.addEventListener('load', function() {
 	});
 })
 
-/*slider theONE*/
-
-
 /*accordeon услуги*/
 document.addEventListener('alpine:init', () => {
 	Alpine.store('accordion', {
@@ -43,15 +40,43 @@ document.addEventListener('alpine:init', () => {
 	}));
 }, 'alpine:init')
 
-/*ymaps*/
+/*Slider all*/
+let slideIndex = 1;
+showSlides(slideIndex);
 
-/*
-ymaps.ready(function() {
-	var myMap = new ymaps.Map('map', {
-		center: [59.897812, 30.405960],
-		zoom: 16
-	});
-});
-*/
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+function showSlides(n) {
+	let i;
+	let slides = document.getElementsByClassName("mySlides");
+	let dots = document.getElementsByClassName("dot");
+	let slidericons = document.getElementsByClassName("slidericon");
 
-/*Slider*/
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+
+	for (i = 0; i < slidericons.length; i++) {
+		slidericons[i].className = slidericons[i].className.replace(" active", "");
+	}
+
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+	slidericons[slideIndex-1].className += " active";
+}
+
+
+
+
+
