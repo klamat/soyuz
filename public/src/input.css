@@ -1323,7 +1323,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 /*small_red*/
 .title_border2 {
 	@apply
-	flex h-[3px] w-11 md:w-[60px]
+	flex h-[2px] w-11 md:w-[60px]
 	mr-2 mb-5
 	clr4
 	-translate-y-[8px]

@@ -585,8 +585,8 @@
 	</script>&ndash;&gt;
 &lt;!&ndash;<script>
 	window.addEventListener('load', function() {
-	document.querySelector('b24-form-sign').classList.add('hidden');
-	console.log()
+	let bit = document.getElementsByClassName('b24-form-sign');
+	console.log(bit)
 	})
 </script>&ndash;&gt;
 &lt;!&ndash;	<script>
@@ -639,7 +639,7 @@
 <!--==========-->
 <!--Slider+-->
 <div class="slideshow-container">
-	<div class="mySlides block">
+	<div class="mySlides fade">
 		<div class="numbertext"></div>
 		<img src="./docs/images/carousel/slider/2.jpg" style="width:100%">
 		<div class="text">Caption Text</div>
@@ -667,12 +667,12 @@
 	<a class="prev" onclick="plusSlides(-1)">❮</a>
 	<a class="next" onclick="plusSlides(1)">❯</a>
 	<div class="slider-nav-but">
-		<div style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
-			<span class="dot" onclick="currentSlide(5)"></span>
+		<div type="dots" style="text-align:center">
+<!--			<span class="dot" onclick="currentSlide(1)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(2)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(3)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(4)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(5)"></span>-->
 		</div>
 	</div>
 </div>
