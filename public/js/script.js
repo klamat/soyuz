@@ -17,29 +17,6 @@ window.addEventListener('load', function() {
 	});
 
 
-/*accordeon услуги*/
-document.addEventListener('alpine:init', () => {
-	Alpine.store('accordion', {
-		tab: 0
-	});
-
-	Alpine.data('accordion', (idx) => ({
-		init() {
-			this.idx = idx;
-		},
-		idx: -1,
-		handleClick() {
-			this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
-		},
-		handleRotate() {
-			return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
-		},
-		handleToggle() {
-			return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
-		}
-	}));
-}, 'alpine:init')
-
 	/*Slider all*/
 	let slideIndex = 0;
 	showSlides(slideIndex);
@@ -55,14 +32,19 @@ document.addEventListener('alpine:init', () => {
 		slideIndex = +num;
 		showSlides(slideIndex);
 	};
+	
 	function showSlides(n) {
 
 		let i;
 		// let slides = document.getElementsByClassName("mySlides");
 		let slides = document.querySelectorAll(".mySlides");
-		console.log('\n slides ', slides, slides.length, slides[n]);
+		console.log(
+			'\n slides', slides,
+		);
+		// console.log('\n slides ', slides, slides.length, slides[n]);
 		// let dots = document.getElementsByClassName("dot");
 		let dots = "";
+
 		// console.log('\n dots ', dots, dots[n]);
 		// let slidericons = document.getElementsByClassName("slidericon");
 
@@ -76,53 +58,50 @@ document.addEventListener('alpine:init', () => {
 		// }
 
 		slides.forEach((el,id) => {
-
 			let dot = "";
-
 			if (id !== n) {
 				
-				console.log('\n ', el.style);
-
+				// console.log('\n dot?', el.style);
 				// el.classList.add("hidden");
 				el.style.display = "";
-
 				dot += '<span class="dot" onclick="currentSlide(' + id + ')"></span>';
 			}
 			else {
-
 				// el.classList.remove("hidden");
 				el.style.display = "block";
-
 				dot += '<span class="dot active" onclick="currentSlide(' + id + ')"></span>';
 			}
-
-
-
 			dots += dot;
+			// let getBtnnext = document.querySelectorAll('.next');
+			//
+			// getBtnnext.forEach((el) => {
+			// 	el.addEventListener('click',()=>{
+			// 		console.log('\n el', el);
+			// 	})
 		});
+		i = (slides);
+		alert(child_nodes[1])
+		console.log(
+			'\n i', i,
+		);
 
 		// for (i = 0; i < dots.length; i++) {
 		// 	console.log('\n i', i,dots[i],dots[i].classList);
 		// 	dots[i].classList.remove("active");
 		// 	// dots[i].className = dots[i].className.replace(" active", "");
 		// }
-
 		// for (i = 0; i < slidericons.length; i++) {
 		// 	slidericons[i].className = slidericons[i].className.replace(" active", "");
 		// }
-
 		// console.log('\n dots[slideIndex-1]', dots[slideIndex-1]);
 		// console.log('\n slideIndex', slideIndex);
 		// console.log('\n slides', slides);
-
 		// slides[slideIndex-1].style.display = "block";
 		// dots[slideIndex-1].className += " active";
-		/*	slidericons[slideIndex-1].className += " active";*/
-
+		// slidericons[slideIndex-1].className += " active";
 		document.querySelector('.slider-nav-but [type="dots"]').innerHTML = dots;
 	}
 	/*setInterval(showSlides, 2000, 1);*/ // call plusSlider, with 1 as parameter
-
 });
 
 

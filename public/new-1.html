@@ -27,7 +27,7 @@
 		});
 	</script>
 	<!--Accordeon-->
-<!--	<script>
+	<script>
 		document.addEventListener('alpine:init', () => {
 			Alpine.store('accordion', {
 				tab: 0
@@ -49,7 +49,7 @@
 				}
 			}));
 		}, 'alpine:init')
-	</script>-->
+	</script>
 
 
 	<!--zakaz zvon-->
@@ -664,8 +664,8 @@
 		<img src="./docs/images/carousel/slider/5.jpg" style="width:100%">
 		<div class="text">Caption Three</div>
 	</div>
-	<a class="prev" onclick="plusSlides(-1)">❮</a>
-	<a class="next" onclick="plusSlides(1)">❯</a>
+	<div class="prev">❮</div> <!--onclick="plusSlides(-1)"-->
+	<div class="next">❯</div> <!--onclick="plusSlides(1)"-->
 	<div class="slider-nav-but">
 		<div type="dots" style="text-align:center">
 <!--			<span class="dot" onclick="currentSlide(1)"></span>-->
