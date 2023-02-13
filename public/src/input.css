@@ -1294,7 +1294,11 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 
 }
 
-/*refactored*/
+
+
+
+
+
 
 /*titles*/
 /*all_main_sections*/
@@ -1551,16 +1555,6 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	bg-gray-200/70
 	rounded
 }
-/*.formcont{*/
-/*	@apply*/
-/*	absolute*/
-/*	flex*/
-/*	min-w-[250px] max-w-[350px] h-auto right-0 md:right-10*/
-/*	self-center*/
-/*	justify-center*/
-/*	bg-gray-200/70*/
-/*	rounded*/
-/*}*/
 .formbtn{
 	@apply
 	py-2 px-6 mt-8
@@ -1583,6 +1577,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	w-full h-full
 	bg-[url('../docs/images/ourpojecs/theone/theone-4.jpg')]
 	bg-cover
+	bg-right
 }
 
 /*
@@ -1727,13 +1722,19 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 
 .trigs-txt{
 	@apply
+	relative
+	flex flex-row
+
+	justify-around
+	overflow-hidden
 	text-center
 	text-white
 	text-[15px]
-	font-bold
+	font-semibold
 	bg-black/20 m-2 p-2
 	rounded-sm
 }
+
 
 @media (min-width: 900px){
 	.trigs-txt{
@@ -1745,3 +1746,115 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 		@apply
 		text-[25px]
 	}}
+.lb-magic-form{
+	@apply
+	flex flex-col justify-center m-5
+}
+
+/*shine*/
+.trig-icon{
+	@apply
+	bg-[url('../docs/images/icons/design.svg')]
+	bg-no-repeat bg-contain bg-center
+	h-full w-12
+}
+.linear-wipe {
+	@apply
+	absolute
+	overflow-hidden
+}
+.linear-wipe {
+
+	width: 300px;
+	height: 300%;
+	border: none ;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translateY(-50%) rotate(35deg);
+
+	background: linear-gradient(90deg,
+	rgba(255,255,255,0) 0%,
+
+	rgba(255,255,255,.20) 50%,
+	rgba(255,255,255,0) 100%);
+	animation: shine 10s infinite;
+}
+
+@keyframes shine {
+	from {
+		left: -250%;
+	}
+	to {
+		left: 1500%;
+	}
+}
+.trig-icon2{
+	@apply
+	bg-[url('../docs/images/icons/variant.svg')]
+	bg-no-repeat bg-contain bg-center
+	h-full w-12
+}
+.linear-wipe2 {
+	@apply
+	absolute
+	overflow-hidden
+}
+.linear-wipe2 {
+
+	width: 300px;
+	height: 300%;
+	border: none ;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translateY(-50%) rotate(35deg);
+
+	background: linear-gradient(90deg,
+	rgba(255,255,255,0) 0%,
+	/*rgba(255,255,255,.5) 25%,*/
+	rgba(255,255,255,.20) 50%,
+	/*rgba(255,255,255,.15) 75%,*/
+	rgba(255,255,255,0) 100%);
+
+	animation: shine 8s infinite;
+
+}
+.trig-icon3{
+	@apply
+	bg-[url('../docs/images/icons/reference.svg')]
+	bg-no-repeat bg-contain bg-center
+	h-full w-12
+
+}
+.linear-wipe3 {
+	@apply
+	absolute
+	overflow-hidden
+
+}
+.linear-wipe3 {
+
+	width: 300px;
+	height: 300%;
+	border: none ;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translateY(-50%) rotate(35deg);
+
+	background: linear-gradient(90deg,
+	rgba(255,255,255,0) 0%,
+
+	rgba(255,255,255,.20) 50%,
+	rgba(255,255,255,0) 100%);
+
+	animation: shine 12s infinite;
+}
+
+
+
+
+
+
+/*End shine*/

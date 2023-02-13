@@ -3077,8 +3077,6 @@ img {
   }
 }
 
-/*refactored*/
-
 /*titles*/
 
 /*all_main_sections*/
@@ -3629,26 +3627,6 @@ img {
   background-color: rgb(229 231 235 / 0.7);
 }
 
-/*.formcont{*/
-
-/*	@apply*/
-
-/*	absolute*/
-
-/*	flex*/
-
-/*	min-w-[250px] max-w-[350px] h-auto right-0 md:right-10*/
-
-/*	self-center*/
-
-/*	justify-center*/
-
-/*	bg-gray-200/70*/
-
-/*	rounded*/
-
-/*}*/
-
 .formbtn {
   margin-top: 2rem;
   border-radius: 0.25rem;
@@ -3682,6 +3660,7 @@ img {
   justify-content: space-between;
   background-image: url('../docs/images/ourpojecs/theone/theone-4.jpg');
   background-size: cover;
+  background-position: right;
 }
 
 /*
@@ -3855,13 +3834,18 @@ img {
 }
 
 .trigs-txt {
+  position: relative;
   margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
   border-radius: 0.125rem;
   background-color: rgb(0 0 0 / 0.2);
   padding: 0.5rem;
   text-align: center;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -3877,3 +3861,103 @@ img {
     font-size: 25px;
   }
 }
+
+.lb-magic-form {
+  margin: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*shine*/
+
+.trig-icon {
+  height: 100%;
+  width: 3rem;
+  background-image: url('../docs/images/icons/design.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.linear-wipe {
+  overflow: hidden;
+  width: 300px;
+  height: 300%;
+  border: none ;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%) rotate(35deg);
+  background: linear-gradient(90deg,
+	rgba(255,255,255,0) 0%,
+
+	rgba(255,255,255,.20) 50%,
+	rgba(255,255,255,0) 100%);
+  animation: shine 10s infinite;
+}
+
+@keyframes shine {
+  from {
+    left: -250%;
+  }
+
+  to {
+    left: 1500%;
+  }
+}
+
+.trig-icon2 {
+  height: 100%;
+  width: 3rem;
+  background-image: url('../docs/images/icons/variant.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.linear-wipe2 {
+  overflow: hidden;
+  width: 300px;
+  height: 300%;
+  border: none ;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%) rotate(35deg);
+  background: linear-gradient(90deg,
+	rgba(255,255,255,0) 0%,
+	/*rgba(255,255,255,.5) 25%,*/
+	rgba(255,255,255,.20) 50%,
+	/*rgba(255,255,255,.15) 75%,*/
+	rgba(255,255,255,0) 100%);
+  animation: shine 8s infinite;
+}
+
+.trig-icon3 {
+  height: 100%;
+  width: 3rem;
+  background-image: url('../docs/images/icons/reference.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.linear-wipe3 {
+  overflow: hidden;
+  width: 300px;
+  height: 300%;
+  border: none ;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%) rotate(35deg);
+  background: linear-gradient(90deg,
+	rgba(255,255,255,0) 0%,
+
+	rgba(255,255,255,.20) 50%,
+	rgba(255,255,255,0) 100%);
+  animation: shine 12s infinite;
+}
+
+/*End shine*/
