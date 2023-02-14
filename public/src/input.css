@@ -1297,7 +1297,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 
 
 
-
+/*Refactored*/
 
 
 /*titles*/
@@ -1570,8 +1570,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 
 .offer-cont{
 	@apply
-	/*absolute*/
-	/*place-self-center*/
+
 	flex flex-col
 	justify-between
 	w-full h-full
@@ -1580,13 +1579,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	bg-right
 }
 
-/*
-@media (min-width: 920px){
-	.offer-cont{
-		@apply
-		mx-[10%] my-[10%]
-	}}
-*/
+
 
 .offer-form-cont{
 	@apply
@@ -1598,11 +1591,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	@apply
 	flex flex-row h-[85%]
 }}
-/*@media (min-width: 800px){*/
-/*.offer-form-cont{*/
-/*	@apply*/
-/*	flex flex-row*/
-/*}}*/
+
 
 .offer-cont-2{
 	@apply
@@ -1816,25 +1805,20 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	rgba(255,255,255,.20) 50%,
 	/*rgba(255,255,255,.15) 75%,*/
 	rgba(255,255,255,0) 100%);
-
 	animation: shine 8s infinite;
-
 }
 .trig-icon3{
 	@apply
 	bg-[url('../docs/images/icons/reference.svg')]
 	bg-no-repeat bg-contain bg-center
 	h-full w-12
-
 }
 .linear-wipe3 {
 	@apply
 	absolute
 	overflow-hidden
-
 }
 .linear-wipe3 {
-
 	width: 300px;
 	height: 300%;
 	border: none ;
@@ -1842,19 +1826,30 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	left: 0%;
 	top: 50%;
 	transform: translateY(-50%) rotate(35deg);
-
 	background: linear-gradient(90deg,
 	rgba(255,255,255,0) 0%,
-
 	rgba(255,255,255,.20) 50%,
 	rgba(255,255,255,0) 100%);
-
 	animation: shine 12s infinite;
 }
-
-
-
-
-
-
 /*End shine*/
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.sl{
+	@apply
+	text-3xl
+	font-bold
+}
+.button-left{
+	@apply
+	pl-5
+	text-5xl
+	cursor-pointer
+}
+.button-right{
+	@apply
+	pr-5
+	text-5xl
+	cursor-pointer
+}

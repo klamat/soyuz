@@ -3077,6 +3077,8 @@ img {
   }
 }
 
+/*Refactored*/
+
 /*titles*/
 
 /*all_main_sections*/
@@ -3663,14 +3665,6 @@ img {
   background-position: right;
 }
 
-/*
-@media (min-width: 920px){
-	.offer-cont{
-		@apply
-		mx-[10%] my-[10%]
-	}}
-*/
-
 .offer-form-cont {
   margin-left: auto;
   margin-right: auto;
@@ -3686,16 +3680,6 @@ img {
     flex-direction: row;
   }
 }
-
-/*@media (min-width: 800px){*/
-
-/*.offer-form-cont{*/
-
-/*	@apply*/
-
-/*	flex flex-row*/
-
-/*}}*/
 
 .offer-cont-2 {
   margin-top: 1.25rem;
@@ -3954,10 +3938,31 @@ img {
   transform: translateY(-50%) rotate(35deg);
   background: linear-gradient(90deg,
 	rgba(255,255,255,0) 0%,
-
 	rgba(255,255,255,.20) 50%,
 	rgba(255,255,255,0) 100%);
   animation: shine 12s infinite;
 }
 
 /*End shine*/
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.sl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.button-left {
+  cursor: pointer;
+  padding-left: 1.25rem;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.button-right {
+  cursor: pointer;
+  padding-right: 1.25rem;
+  font-size: 3rem;
+  line-height: 1;
+}
