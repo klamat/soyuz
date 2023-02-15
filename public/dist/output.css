@@ -1461,40 +1461,57 @@ h3{
 .contact-content {
   margin-left: auto;
   margin-right: auto;
+  display: flex;
   height: auto;
   width: 100%;
   max-width: 1280px;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+  }
 }
 
 .contact-content-1 {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 1280px;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .contact-content-1 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
 }
 
 @media (min-width: 1024px) {
   .contact-content-1 {
     flex-direction: row;
   }
+}
 
+.contact-content-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
   .contact-content-2 {
-    width: 50%;
+    margin-right: 2.5rem;
   }
+}
+
+.contact-content-3 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
 }
 
 .contact-content-map {
@@ -3661,6 +3678,28 @@ img {
   flex-direction: column;
   justify-content: space-between;
   background-image: url('../docs/images/ourpojecs/theone/theone-4.jpg');
+  background-size: cover;
+  background-position: right;
+}
+
+.offer-cont-elev {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../docs/images/elevatorhall/elev-6.jpg');
+  background-size: cover;
+  background-position: right;
+}
+
+.offer-cont-mop {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../docs/images/ourpojecs/theone/theone-2.jpg');
   background-size: cover;
   background-position: right;
 }

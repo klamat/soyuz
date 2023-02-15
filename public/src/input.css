@@ -404,16 +404,33 @@ h3{
 }
 .contact-content{
 	@apply
-	flex-wrap w-full h-auto justify-center items-center max-w-screen-xl mx-auto
+	flex flex-col md:flex-row
+	flex-wrap
+	w-full h-auto
+	justify-center items-center
+	px-3 py-5
+	max-w-screen-xl mx-auto
 }
 .contact-content-1{
 	@apply
-	flex flex-col lg:flex-row max-w-screen-xl p-2 md:py-10 mx-auto justify-center items-start
+	flex flex-col lg:flex-row
+	w-full
+	justify-center items-start
+	 mx-auto
 }
 .contact-content-2{
 	@apply
-	lg:w-1/2
+	flex flex-col
+	md:mr-10
 }
+.contact-content-3{
+	@apply
+	flex flex-col
+
+	text-justify
+
+}
+
 .contact-content-map{
 	@apply
 	flex h-96 lg:h-72 w-full lg:w-1/2 p-2 lg:p-0 lg:pl-5
@@ -1570,7 +1587,6 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 
 .offer-cont{
 	@apply
-
 	flex flex-col
 	justify-between
 	w-full h-full
@@ -1578,8 +1594,24 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	bg-cover
 	bg-right
 }
-
-
+.offer-cont-elev{
+	@apply
+	flex flex-col
+	justify-between
+	w-full h-full
+	bg-[url('../docs/images/elevatorhall/elev-6.jpg')]
+	bg-cover
+	bg-right
+}
+.offer-cont-mop{
+	@apply
+	flex flex-col
+	justify-between
+	w-full h-full
+	bg-[url('../docs/images/ourpojecs/theone/theone-2.jpg')]
+	bg-cover
+	bg-right
+}
 
 .offer-form-cont{
 	@apply
