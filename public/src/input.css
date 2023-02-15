@@ -1872,7 +1872,6 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	@apply
 	text-3xl
 	font-bold
-	hidden
 }
 
 .button-left{
