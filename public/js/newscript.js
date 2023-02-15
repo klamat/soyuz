@@ -1,24 +1,27 @@
-showSlide = 0;
+window.addEventListener('load',() => {
 
-let n = 0;
-window.currentSlide = (n) => {
-    showSlide(+n);
-};
+    showSlide = 0;
 
-let i = document.querySelectorAll('.slide');
-console.log('\n i', i);
+    let n = 0;
+    window.currentSlide = (n) => {
+        showSlide(+n);
+    };
 
-document.addEventListener("click", function(e) {
-    if (e.target.className=="button-right") {
-        n = n + 1;
-    }
+    let i = document.querySelectorAll('.slide');
+    console.log('\n i', i);
 
-    if (e.target.className=="button-left") {
-        n = n - 1;
-    }
+    document.addEventListener("click", function(e) {
+        if (e.target.className=="button-right") {
+            n = n + 1;
+        }
 
-    showSlide = n;
-    console.log('\n n', n);
-    console.log('\n showSlide', showSlide);
+        if (e.target.className=="button-left") {
+            n = n - 1;
+        }
 
+        showSlide = n;
+        console.log('\n n', n);
+        console.log('\n showSlide', showSlide);
+
+    });
 });
