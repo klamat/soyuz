@@ -11,10 +11,11 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>
 	<link href="./dist/output.css" rel="stylesheet">
+	<script src="../public/js/script.js"></script>
 	<!--Carousel-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
-	<!--Scripts-->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+	--><!--Scripts-->
 	<!--Map-->
 	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script>
@@ -49,28 +50,10 @@
 			}));
 		}, 'alpine:init')
 	</script>
-	<!--Card selector-->
-	<script>
-		window.addEventListener('load', function() {
-			let get_ml = document.querySelector('[data-type="ml"]').querySelectorAll('[data-id]');
-			let get_cl = document.querySelector('[data-type="cl"]').querySelectorAll('[data-id]');
-			Array.from(get_ml, function (el) {
-				el.addEventListener('click', function (event) {
-					let getId = event.composedPath()[0].dataset.id;
-					for ( let i = 0; i < get_cl.length; i++ ) {
-						let row = get_cl[i];
-						if (row.dataset.id === getId) {
-							row.classList.remove('hidden');
-						} else {
-							row.classList.add('hidden');
-						}
-					}
-				})
-			})
-		})
-	</script>
+
+
 	<!--zakaz zvon-->
-	<script>
+<!--	<script>
 		var toggleInputContainer = function (input) {
 			if (input.value != "") {
 				input.classList.add('filled');
@@ -96,17 +79,17 @@
 				toggleInputContainer(inputs[i]);
 			}
 		});
-	</script>
+	</script>-->
 </head>
 <body>
 <!--Navbar+-->
-<nav class="navbar">
+<!--<nav class="navbar">
 	<div class="relative nav-content">
 		<div class="nav-content-1">
 			<a href ="/" class="flex flex-wrap items-center">
-				<img src="docs/images/logo_sm.png" class="block md:hidden h-12 mr-3 py-1">
-				<img src="docs/images/logo_full.png" class="hidden md:block h-12 mr-1 py-1">
-				<div class="text-sm lg:text-base text-gray-900">
+				<img src="docs/images/logo_sm.png" class="nav-logo-sm">
+				<img src="docs/images/logo_full.png" class="nav-logo-xl">
+				<div class="nav-txt">
 					Производство рекламы </br>от А до Я
 				</div>
 			</a>
@@ -114,7 +97,8 @@
 		<div onclick="menu.classList.toggle('block');menuus.classList.remove('nav-menu-us-o');menupro.classList.remove('nav-menu-pro-o');aboutus.classList.remove('nav-menu-us-o')">
 			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
 		</div>
-		<div  class="nav-menu" id="menu">
+		<div  class="nav-menu nav-txt" id="menu">
+			&lt;!&ndash;Услуги&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menuus.classList.add('nav-menu-us-o');
@@ -122,14 +106,15 @@
 				                      aboutus.classList.remove('nav-menu-us-o');
 				                      narrus.classList.add('hover-nav-arrow');
 				                      narrpro.classList.remove('hover-nav-arrow');
-									  narrabus.classList.remove('hover-nav-arrow');
-									  closedropus.classList.add('close-line-o')"
+									  narrabus.classList.remove('hover-nav-arrow');"
 				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
 					<span class="">Услуги</span>
-					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
 				<div class="nav-b-uline"></div>
 			</div>
+			&lt;!&ndash;Производство&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menupro.classList.add('nav-menu-pro-o');
@@ -137,16 +122,17 @@
 				                      aboutus.classList.remove('nav-menu-us-o');
 				                      narrus.classList.remove('hover-nav-arrow');
 				                      narrpro.classList.add('hover-nav-arrow');
-				                      narrabus.classList.remove('hover-nav-arrow');
-									  closedrop.classList.add('close-line-o')"
-
-				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow');closedrop.classList.toggle('close-line-o')">
+				                      narrabus.classList.remove('hover-nav-arrow')"
+				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
 					<span class="">Производство</span>
-					<span><svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+					<span>
+						<svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
 				<div class="nav-b-uline"></div>
 
 			</div>
+			&lt;!&ndash;О нас&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="group nav-button"
 				        onmouseenter="menuus.classList.remove('nav-menu-us-o');
@@ -154,24 +140,29 @@
 				                      aboutus.classList.add('nav-menu-us-o');
 				                      narrus.classList.remove('hover-nav-arrow');
 				                      narrpro.classList.remove('hover-nav-arrow');
-				                      narrabus.classList.add('hover-nav-arrow');
-									  closedropab.classList.add('close-line-o')"
-				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow');closedropab.classList.toggle('close-line-o')">
+				                      narrabus.classList.add('hover-nav-arrow');"
+				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow')">
 					<span class="">О нас</span>
-					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path  fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
 				</button>
 				<div class="nav-b-uline"></div>
 			</div>
+			&lt;!&ndash;Контакты&ndash;&gt;
 			<div class="group nav-b-cont">
 				<button class="nav-button" href="#">Контакты</button>
 				<div class="nav-b-uline"></div>
 			</div>
+			&lt;!&ndash;Телефон&ndash;&gt;
 			<div class="group nav-b-cont">
-				<button class="nav-button" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</button>
-				<div class="nav-b-uline"></div>
+
+				<a class="nav-tel" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</a>
+				<a class="nav-mail" href="mailto:info@pksoyuz.ru" class="nav-phone">info@pksoyuz.ru</a>
+
 			</div>
 		</div>
-		<div class="nav-menu-us" id="menuus" onmouseleave="this.classList.remove('nav-menu-us-o')">
+		&lt;!&ndash;Услуги - меню&ndash;&gt;
+		<div class="nav-menu-us" id="menuus" onmouseleave="this.classList.remove('nav-menu-us-o');narrus.classList.remove('hover-nav-arrow')">
 			<div class="p-2">
 				<div class="group nav-menu-but-st">
 					<div class="nav-m-b-line"> </div>
@@ -190,19 +181,9 @@
 					<div class="nav-menu-button">Сервисное обслуживание</div>
 				</div>
 			</div>
-			<div class="group nav-close-but"
-			     onclick="menupro.classList.remove('nav-menu-pro-o');
-				          menuus.classList.remove('nav-menu-us-o');
-				          aboutus.classList.remove('nav-menu-us-o');
-				          narrus.classList.remove('hover-nav-arrow');
-				          narrpro.classList.remove('hover-nav-arrow');
-				          narrabus.classList.remove('hover-nav-arrow');">
-				<div class="close-line" id="closedropus">
-					<div class="close-dec">close</div>
-				</div>
-			</div>
 		</div>
-		<div class="nav-menu-pro" id="menupro">
+		&lt;!&ndash;Производство - меню&ndash;&gt;
+		<div class="nav-menu-pro" id="menupro" onmouseleave="this.classList.remove('nav-menu-pro-o');narrpro.classList.remove('hover-nav-arrow')">
 			<div class="nav-menu-col">
 				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
 				<div class="group nav-menu-but-st">
@@ -271,28 +252,10 @@
 					<div class="nav-menu-button">Навигация</div>
 				</div>
 			</div>
-			<div class="group nav-close-but"
-			     onclick="menupro.classList.remove('nav-menu-pro-o');
-				          menuus.classList.remove('nav-menu-us-o');
-				          aboutus.classList.remove('nav-menu-us-o');
-				          narrus.classList.remove('hover-nav-arrow');
-				          narrpro.classList.remove('hover-nav-arrow');
-				          narrabus.classList.remove('hover-nav-arrow')">
-				<div class="close-line" id="closedrop">
-					<div class="close-dec">close</div>
-				</div>
-<!--				<div class="flex bg-white h-5 w-full"></div>
-				<div class="flex w-52"><svg class="">
-						<polygon points="0,0 70,0 70,12 35,8 0,12" fill="white" stroke-width="1" stroke="rgb(0,0,0)"/>
-					</svg>-->
-<!--					<svg>
-						<polygon points="0,0 10,0 10,10 0,0" fill="white" stroke-width="1" stroke="rgb(0,0,0)"/>
-					</svg>-->
-<!--				</div>
-				<div class="flex bg-white h-5 w-full"></div>-->
-			</div>
+
 		</div>
-		<div class="nav-menu-aboutus" id="aboutus">
+		&lt;!&ndash;О нас - меню&ndash;&gt;
+		<div class="nav-menu-aboutus" id="aboutus" onmouseleave="this.classList.remove('nav-menu-us-o');narrabus.classList.remove('hover-nav-arrow')">
 			<div class="p-2">
 				<div class="group nav-menu-but-st">
 					<div class="nav-m-b-line"> </div>
@@ -310,17 +273,258 @@
 					<div class="nav-m-b-line"> </div>
 					<div class="nav-menu-button">Реквизиты</div>
 				</div>
+			</div>
+		</div>
+
+	</div>
+</nav>-->
+
+<!--На сайте-->
+<nav class="navbar">
+	<div class="relative nav-content">
+		<div class="nav-content-1">
+			<a href ="/" class="flex flex-wrap items-center">
+				<img src="docs/images/logo_sm.png" class="nav-logo-sm">
+				<img src="docs/images/logo_full.png" class="nav-logo-xl">
+				<div class="nav-txt">
+					Производство рекламы </br>от А до Я
 				</div>
-			<div class="group nav-close-but"
-			     onclick="menupro.classList.remove('nav-menu-pro-o');
-				          menuus.classList.remove('nav-menu-us-o');
-				          aboutus.classList.remove('nav-menu-us-o');
-				          narrus.classList.remove('hover-nav-arrow');
-				          narrpro.classList.remove('hover-nav-arrow');
-				          narrabus.classList.remove('hover-nav-arrow')">
-				<div class="close-line" id="closedropab">
-					<div class="close-dec">close</div>
+			</a>
+		</div>
+		<div onclick="menu.classList.toggle('block');menuus.classList.remove('nav-menu-us-o');menupro.classList.remove('nav-menu-pro-o');aboutus.classList.remove('nav-menu-us-o')">
+			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+		</div>
+		<div  class="nav-menu nav-txt" id="menu">
+			<!--Услуги-->
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menuus.classList.add('nav-menu-us-o');
+				                      menupro.classList.remove('nav-menu-pro-o');
+				                      aboutus.classList.remove('nav-menu-us-o');
+				                      narrus.classList.add('hover-nav-arrow');
+				                      narrpro.classList.remove('hover-nav-arrow');
+									  narrabus.classList.remove('hover-nav-arrow');"
+				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
+					<span class="">Услуги</span>
+					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			<!--Производство-->
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menupro.classList.add('nav-menu-pro-o');
+				                      menuus.classList.remove('nav-menu-us-o');
+				                      aboutus.classList.remove('nav-menu-us-o');
+				                      narrus.classList.remove('hover-nav-arrow');
+				                      narrpro.classList.add('hover-nav-arrow');
+				                      narrabus.classList.remove('hover-nav-arrow')"
+				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
+					<span class="">Производство</span>
+					<span>
+						<svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+
+			</div>
+			<!--О нас-->
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menuus.classList.remove('nav-menu-us-o');
+				                      menupro.classList.remove('nav-menu-pro-o');
+				                      aboutus.classList.add('nav-menu-us-o');
+				                      narrus.classList.remove('hover-nav-arrow');
+				                      narrpro.classList.remove('hover-nav-arrow');
+				                      narrabus.classList.add('hover-nav-arrow');"
+				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow')">
+					<span class="">О нас</span>
+					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path  fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			<!--Контакты-->
+			<a  href="[[~23]]">
+				<div class="group nav-b-cont">
+					<button class="nav-button">Контакты</button>
+					<div class="nav-b-uline"></div>
 				</div>
+			</a>
+			<!--Телефон-->
+			<div class="group nav-b-cont">
+				<a class="nav-tel" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</a>
+				<a class="nav-mail" href="mailto:info@pksoyuz.ru" class="nav-phone">info@pksoyuz.ru</a>
+			</div>
+		</div>
+		<!--Услуги - меню-->
+		<div class="nav-menu-us" id="menuus" onmouseleave="this.classList.remove('nav-menu-us-o');narrus.classList.remove('hover-nav-arrow')">
+			<div class="p-2">
+				<a  href="[[~5]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Дизайн</div>
+					</div>
+				</a>
+				<a href="[[~6]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Монтаж, демонтаж</div>
+					</div>
+				</a>
+				<a href="[[~9]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Проектирование</div>
+					</div>
+				</a>
+				<a href="[[~11]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Сервисное обслуживание</div>
+					</div>
+				</a>
+				<a href="[[~10]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Согласования</div>
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<!--Производство - меню-->
+		<div class="nav-menu-pro" id="menupro" onmouseleave="this.classList.remove('nav-menu-pro-o');narrpro.classList.remove('hover-nav-arrow')">
+			<div class="nav-menu-col">
+				<a href="[[~30]]" class="nav-main-menu-button">Оформление жилых комплексов</a>
+				<a href="[[~16]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Лифтовые холлы</div>
+					</div>
+				</a>
+				<a href="[[~18]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Оформление МОП</div>
+					</div>
+				</a>
+			</div>
+			<div class="nav-menu-col">
+				<a href="/" class="nav-main-menu-button">Рекламная продукция</a>
+				<a href="[[~17]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Фасадные вывески</div>
+					</div>
+				</a>
+				<a href="[[~20]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Световые панели</div>
+					</div>
+				</a>
+				<a href="[[~13]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Символы из нержавеющей стали</div>
+					</div>
+				</a>
+				<a href="[[~14]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Интерьерные вывески</div>
+					</div>
+				</a>
+				<a href="[[~15]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Информационные таблички</div>
+					</div>
+				</a>
+
+			</div>
+			<div class="nav-menu-col">
+				<a href="/">
+					<div class="nav-main-menu-button">Строительство</div>
+				</a>
+				<a href="[[~21]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Офис продаж</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Отделка</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Реставрация</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Транспортировка</div>
+					</div>
+				</a>
+			</div>
+			<div class="nav-menu-col">
+				<a href="[[~19]]">
+					<div class="nav-main-menu-button">Оформление строительных объектов</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Паспорт объекта</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Банерные указатели</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Навигация</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!--О нас - меню-->
+		<div class="nav-menu-aboutus" id="aboutus" onmouseleave="this.classList.remove('nav-menu-us-o');narrabus.classList.remove('hover-nav-arrow')">
+			<div class="p-2">
+				<a href="[[~24]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">О компании</div>
+					</div>
+				</a>
+				<a href="[[~32]]">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Наши проекты</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Галерея</div>
+					</div>
+				</a>
+				<a href="/">
+					<div class="group nav-menu-but-st">
+						<div class="nav-m-b-line"> </div>
+						<div class="nav-menu-button">Реквизиты</div>
+					</div>
+				</a>
 			</div>
 		</div>
 
@@ -344,6 +548,78 @@
 <!--========-->
 <!--request1+-->
 <div class="request1">
+	<div class="request1-vid-bg">
+		<video class="request-vid-bg-st" src="./docs/video/Req1.mp4" type="video/mp4" autoplay muted loop></video>
+	</div>
+<div class="request-txt-cont">
+	<div class="request1-txtblock">
+		<p class="request1-tit">Заказать сейчас!</p>
+		<p class="font-medium">Для расчета стоимости или получения консультации заполните форму обратной связи.</p>
+		<p class="font-medium mt-5">Наш специалист свяжется с вами в ближайшее время.</p>
+	</div>
+</div>
+	<div class="request1-form">
+		<script data-b24-form="inline/9/vhy79c" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');
+			s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+			var h=d.getElementsByTagName('script')[0];
+			h.parentNode.insertBefore(s,h);})
+		(window,document,'https://cdn-ru.bitrix24.ru/b24393964/crm/form/loader_9.js');
+		</script>
+		<div class="request1-bot"></div>
+	</div>
+</div>
+<!--==========-->
+<!--
+<div class="flex h-screen w-screen bg-green-200">
+	<div class="relative flex h-[350px] w-80 bg-blue-400 overflow-hidden">
+		<script data-b24-form="inline/9/vhy79c" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');
+			s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+			var h=d.getElementsByTagName('script')[0];
+			h.parentNode.insertBefore(s,h);})
+		(window,document,'https://cdn-ru.bitrix24.ru/b24393964/crm/form/loader_9.js');
+		</script>
+		<div class="absolute flex w-full h-7 bg-yellow-200 bottom-0"></div>
+	</div>
+
+
+&lt;!&ndash;	<script>
+		window.addEventListener('load', function() {
+			let bit = document.getElementsByClassName('b24-form-sign');
+			bit.classList.add('hidden');
+			console.log(bit)
+
+		})
+	</script>&ndash;&gt;
+&lt;!&ndash;<script>
+	window.addEventListener('load', function() {
+	let bit = document.getElementsByClassName('b24-form-sign');
+	console.log(bit)
+	})
+</script>&ndash;&gt;
+&lt;!&ndash;	<script>
+		var elems = document.getElementsByClassName('b24-form-content b24-form-padding-side');
+		alert(elems.length);
+		console.log(elems);
+
+	</script>&ndash;&gt;
+&lt;!&ndash;	<script>
+		window.addEventListener('load', function() {
+			let getButtons = document.querySelectorAll('[data-type="ml"] button');
+			let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');
+			getButtons.forEach((el) => {
+				console.log(el)
+				el.addEventListener('click', () => {
+					getLayers.forEach((layer) => {
+						if (layer.dataset.id === el.dataset.id) layer.classList.remove('hidden');
+						else layer.classList.add('hidden');
+					});
+				});
+			});
+		})
+	</script>&ndash;&gt;
+</div>-->
+<!--request1+-->
+<!--<div class="request1">
 	<video class="request1-vid" src="./docs/video/Req1.mp4" type="video/mp4" autoplay muted loop></video>
 	<p class="request1tit">Заказать сейчас!</p>
 	<p class="request1txt"> Для расчета стоимости или получения консультации заполните форму обратной связи</p>
@@ -366,11 +642,11 @@
 
 	<p class="request1txt z-10">Наш специалист свяжется с вами в ближайшее время</p>
 
-</div>
+</div>-->
 <!--==========-->
 <!--Slider+-->
 <div class="slideshow-container">
-	<div class="mySlides block">
+	<div class="mySlides fade">
 		<div class="numbertext"></div>
 		<img src="./docs/images/carousel/slider/2.jpg" style="width:100%">
 		<div class="text">Caption Text</div>
@@ -398,16 +674,16 @@
 	<a class="prev" onclick="plusSlides(-1)">❮</a>
 	<a class="next" onclick="plusSlides(1)">❯</a>
 	<div class="slider-nav-but">
-		<div style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
-			<span class="dot" onclick="currentSlide(5)"></span>
+		<div type="dots" style="text-align:center">
+<!--			<span class="dot" onclick="currentSlide(1)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(2)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(3)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(4)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(5)"></span>-->
 		</div>
 	</div>
 </div>
-<script>
+<!--<script>
 	let slideIndex = 1;
 	showSlides(slideIndex);
 
@@ -434,11 +710,28 @@
 		slides[slideIndex-1].style.display = "block";
 		dots[slideIndex-1].className += " active";
 	}
-</script>
+</script>-->
 <!--========-->
 <!--request2+-->
 <div class="request2">
-	<video class="request1-vid" src="./docs/video/Req3.mp4" type="video/mp4" autoplay muted loop></video>
+	<div class="request2-vid-bg">
+		<video class="request-vid-bg-st" src="./docs/video/Req3.mp4" type="video/mp4" autoplay muted loop></video>
+	</div>
+
+	<div class="request2-form">
+		<script data-b24-form="inline/15/5p4sab" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b24393964/crm/form/loader_15.js');</script>
+		<div class="request2-bot"></div>
+	</div>
+	<div class="request-txt-cont">
+		<div class="request2-txtblock">
+			<p class="request2-tit">Заказать сейчас!</p>
+			<p class="font-medium">Для расчета стоимости или получения консультации заполните форму обратной связи.</p>
+			<p class="font-medium mt-5">Наш специалист свяжется с вами в ближайшее время.</p>
+		</div>
+	</div>
+</div>
+<!--<div class="request2">
+	<video class="header-vid-bg-st" src="./docs/video/Req3.mp4" type="video/mp4" autoplay muted loop></video>
 	<p class="request2tit">Заказать сейчас!</p>
 	<p class="request2txt"> Для расчета стоимости или получения консультации заполните форму обратной связи</p>
 	<div class="">
@@ -459,7 +752,7 @@
 	</div>
 
 	<p class="request2txt z-10">Наш специалист свяжется с вами в ближайшее время</p>
-</div>
+</div>-->
 <!--==========-->
 <!--Services+-->
 <section class="clr1">
@@ -471,7 +764,7 @@
 		<div class="serv-sec-1">
 			<ul class="serv-sec-block">
 				<li class="serv-sec-array" x-data="accordion(1)">
-					<h2	@click="handleClick()" class="serv-sec-title"><span class="tit1">ПРОЕКТИРОВАНИЕ</span>
+					<h2	@click="handleClick()" class="serv-sec-title"><span class="">ПРОЕКТИРОВАНИЕ</span>
 						<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
 							<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
 						</svg>
@@ -484,7 +777,7 @@
 				</li>
 				<li class="serv-sec-array" x-data="accordion(2)">
 					<h2 @click="handleClick()" class="serv-sec-title">
-						<span class="tit1">ДИЗАЙН РЕКЛАМЫ</span>
+						<span class="">ДИЗАЙН РЕКЛАМЫ</span>
 						<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
 							<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
 						</svg>
@@ -496,7 +789,7 @@
 				</li>
 				<li class="serv-sec-array" x-data="accordion(3)">
 					<h2 @click="handleClick()" class="serv-sec-title">
-						<span class="tit1">СОГЛАСОВАНИЕ</span>
+						<span class="">СОГЛАСОВАНИЕ</span>
 						<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
 							<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
 						</svg>
@@ -509,7 +802,7 @@
 				</li>
 				<li class="serv-sec-array" x-data="accordion(4)">
 					<h2 @click="handleClick()" class="serv-sec-title">
-						<span class="tit1">МОНТАЖ/ДЕМОНТАЖ</span>
+						<span class="">МОНТАЖ/ДЕМОНТАЖ</span>
 						<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
 							<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
 						</svg>
@@ -521,7 +814,7 @@
 				</li>
 				<li class="serv-sec-array" x-data="accordion(5)">
 					<h2 @click="handleClick()" class="serv-sec-title">
-						<span class="tit1">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</span>
+						<span class="">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</span>
 						<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
 							<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
 						</svg>
@@ -569,6 +862,23 @@
 <!--========-->
 <!--request3+-->
 <div class="request3">
+	<div class="request3-vid-bg">
+		<video class="request-vid-bg-st" src="./docs/video/meet.mp4" type="video/mp4" autoplay muted loop></video>
+	</div>
+
+	<div class="request3-form">
+		<script data-b24-form="inline/13/tje81l" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b24393964/crm/form/loader_13.js');</script>
+		<div class="request3-bot"></div>
+	</div>
+	<div class="request-txt-cont">
+		<div class="request3-txtblock">
+			<p class="request3-tit">Заказать сейчас!</p>
+			<p class="font-medium">Для расчета стоимости или получения консультации заполните форму обратной связи.</p>
+			<p class="font-medium mt-5">Наш специалист свяжется с вами в ближайшее время.</p>
+		</div>
+	</div>
+</div>
+<!--<div class="request3">
 	<video class="request1-vid" src="./docs/video/meet.mp4" type="video/mp4" autoplay muted loop></video>
 	<p class="request3tit">Заказать сейчас!</p>
 	<p class="request3txt"> Для расчета стоимости или получения консультации заполните форму обратной связи</p>
@@ -590,7 +900,7 @@
 	</div>
 
 	<p class="request3txt z-10">Наш специалист свяжется с вами в ближайшее время</p>
-</div>
+</div>-->
 <!--==========-->
 <!--Advantage+-->
 <section class="advant">
@@ -708,9 +1018,52 @@
 </section>
 <!--========-->
 <!--Footer-->
-<footer class="footer-sec">
+<footer class="clr5">
+	<div class="footer-block">
+		<img src="../public/docs/images/dots/dots-bg-1.svg" class="select-none absolute top-0 right-0" width="200" height="200" alt="dots">
+
+		<div class="one-block">
+			<p class="text-lg text-white text-left font-bold mb-5">Наш офис в Санкт-Петербурге</p>
+			<p class="text-sm text-white text-left">ул. Седова, д. 13, оф. 215</p>
+			<a href="tel:+7 (812) 339-09-71">
+				<div class="group f-menu-but-st">
+					<div class="f-m-b-line"> </div>
+					<div class="f-tel">т : +7 (812) 339-09-71</div>
+				</div>
+			</a>
+			<a href="[[~23]]">
+				<div class="group f-menu-but-st">
+					<div class="f-m-b-line"> </div>
+					<div class="f-menu-button">Контакты</div>
+				</div>
+			</a>
+		</div>
+		<div class="one-block">
+			<p class="text-lg text-white text-left font-bold mb-5">Примеры наших работ</p>
+		</div>
+		<div class="one-block">
+			<p class="text-lg text-white text-left font-bold mb-5">Давайте обсудим</p>
+			<p class="text-sm text-white text-left">Есть проект или остались вопросы?</p>
+			<p class="text-sm text-white text-left">С удовольствием ответим.</p>
+			<a href="/">
+				<div class="group f-menu-but-st">
+					<div class="f-m-b-line"> </div>
+					<div class="f-menu-button">Заполнить форму</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="rights">
+		<img src="../public/docs/images/dots/dots-bg-2.svg" class="select-none absolute bottom-0 left-0" width="95" height="95" alt="dots">
+		<p>&copy;2022 ООО "ПК "СОЮЗ". Все права защищены.</p>
+		<p>ООО "ПК "СОЮЗ"</p>
+
+	</div>
+
+</footer>
+<!--<footer class="footer-sec">
 	<div class="footer-sec-1">
-		<div class="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-300 divide-y-2 md:divide-x-2 md:divide-y-0 md:-mx-8">
+		<div class="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-300 divide-y-2 md:divide-x-2 md:divide-y-0">
 			<div class="col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0">
 				<h5 class="text-xl">Компания</h5>
 				<nav class="mt-4">
@@ -786,8 +1139,12 @@
 		</nav>
 		<p class="text-sm text-center md:text-right">&copy;2022 ООО "ПК "СОЮЗ". Все права защищены.</p>
 	</div>
-</footer>
+</footer>-->
 <!--========-->
+<!--
+Это карта на всю ширину экрана
 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf671e37a6444263fd7c8c1d1df3170b0ff7c54de9551be46bfa0ea945ad64d6&amp;width=100%25&amp;height=357&amp;lang=ru_RU&amp;scroll=true"></script>
+-->
+
 </body>
 </html>

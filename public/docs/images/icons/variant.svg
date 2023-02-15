@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="104px" height="110px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 6.765 7.158"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#FEFEFE;stroke-width:0.191;stroke-miterlimit:22.9256}
+    .str1 {stroke:white;stroke-width:0.191;stroke-miterlimit:22.9256}
+    .str2 {stroke:red;stroke-width:0.096;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:red}
+    .fil2 {fill:white;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1253802441680">
+   <path class="fil0 str0" d="M5.527 1.073l0.897 0c0.135,0 0.246,0.118 0.246,0.262l0 4.524c0,0.145 -0.111,0.262 -0.246,0.262l-6.083 0c-0.135,0 -0.245,-0.117 -0.245,-0.262l0 -4.524c0,-0.144 0.11,-0.262 0.245,-0.262l0.854 0"/>
+   <line class="fil0 str1" x1="0.096" y1="5.358" x2="6.67" y2= "5.358" />
+   <path class="fil0 str1" d="M2.437 6.343l1.89 0 0 0.719 -1.89 0 0 -0.719zm-0.502 0.719l2.893 0"/>
+  </g>
+  <polygon class="fil1" points="2.147,1.857 2.147,1.962 2.752,1.962 2.752,1.857 2.524,1.857 2.524,0.425 2.999,0.425 2.999,0.873 3.104,0.873 3.104,0.32 1.793,0.32 1.793,0.873 1.898,0.873 1.898,0.425 2.373,0.425 2.373,1.857 "/>
+  <path class="fil2" d="M1.476 0l2.041 0 0 2.282 -2.137 0 0 -2.282 0.096 0zm1.849 0.191l-1.754 0 0 1.9 1.754 0 0 -1.9z"/>
+  <circle class="fil0 str2" cx="4.157" cy="0.697" r="0.3"/>
+  <polyline class="fil0 str2" points="3.957,2.187 5.092,1.051 5.366,1.329 "/>
+  <polygon class="fil0 str2" points="4.785,3.474 4.115,3.766 4.407,3.096 5.366,2.137 5.366,2.893 "/>
+  <line class="fil0 str2" x1="5.272" y1="4.029" x2="3.761" y2= "4.029" />
+  <rect class="fil0 str1" x="3.421" y="2.187" width="1.945" height="2.091"/>
+  <line class="fil0 str2" x1="1.52" y1="3.058" x2="3.002" y2= "3.058" />
+  <line class="fil0 str2" x1="1.52" y1="3.518" x2="2.723" y2= "3.518" />
+  <line class="fil0 str2" x1="1.52" y1="3.977" x2="2.265" y2= "3.977" />
+  <rect class="fil0 str1" x="1.476" y="2.187" width="1.945" height="2.091"/>
+  <rect class="fil0 str1" x="3.421" y="0.096" width="1.945" height="2.091"/>
+ </g>
+</svg>
