@@ -10,21 +10,6 @@ window.addEventListener('load',() => {
     let slides = document.querySelectorAll('.slide');
     console.log('\n slides', slides);
 
-    // document.addEventListener("click", function(e) {
-    //     if (e.target.className=="button-right") {
-    //         n = n + 1;
-    //     }
-    //
-    //     if (e.target.className=="button-left") {
-    //         n = n - 1;
-    //     }
-    //
-    //     showSlide = n;
-    //     console.log('\n n', n);
-    //     console.log('\n showSlide', showSlide);
-    //
-    // });
-
     window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
         showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
         checkLengthSlides(showSlide); // запускаем функцию checkLengthSlides и передаем в нее результат манипуляций с showSlide
@@ -33,7 +18,9 @@ window.addEventListener('load',() => {
         showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
         checkLengthSlides(showSlide); // запускаем функцию checkLengthSlides и передаем в нее результат манипуляций с showSlide
     }
-    
+
+    classList.remove('hidden')
+
     const checkLengthSlides = (num) => { // запускаем функцию checkLengthSlides из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
         
         // console.log('\n ', slides,num);
@@ -43,4 +30,6 @@ window.addEventListener('load',() => {
         
         console.log('\n ', showSlide); // выводим в консоль результат
     }
+
+
 });

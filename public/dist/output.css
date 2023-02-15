@@ -3986,7 +3986,8 @@ img {
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-.sl {
+.slide {
+  display: none;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
