@@ -1,15 +1,24 @@
-document.addEventListener("click", function(e) {
-    let i = 0;
+showSlide = 0;
 
+let n = 0;
+window.currentSlide = (n) => {
+    showSlide(+n);
+};
+
+let i = document.querySelectorAll('.slide');
+console.log('\n i', i);
+
+document.addEventListener("click", function(e) {
     if (e.target.className=="button-right") {
-        // alert("click right");
-        // //ваши действия
-        i = i + 1;
+        n = n + 1;
     }
+
     if (e.target.className=="button-left") {
-        // alert("click left");
-        // //ваши действия
-        i = i - 1;
+        n = n - 1;
     }
-    console.log('\n i', i);
+
+    showSlide = n;
+    console.log('\n n', n);
+    console.log('\n showSlide', showSlide);
+
 });
