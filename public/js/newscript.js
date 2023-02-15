@@ -25,22 +25,22 @@ window.addEventListener('load',() => {
     //
     // });
 
-    window.clickLeft = () => {
-        showSlide = showSlide - 1;
-        checkLengthSlides(showSlide);
+    window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
+        showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
+        checkLengthSlides(showSlide); // запускаем функцию checkLengthSlides и передаем в нее результат манипуляций с showSlide
     }
-    window.clickRight = () => {
-        showSlide = showSlide + 1;
-        checkLengthSlides(showSlide);
+    window.clickRight = () => { // запускаем функцию clickRight из DOM дерева
+        showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
+        checkLengthSlides(showSlide); // запускаем функцию checkLengthSlides и передаем в нее результат манипуляций с showSlide
     }
     
-    const checkLengthSlides = (num) => {
+    const checkLengthSlides = (num) => { // запускаем функцию checkLengthSlides из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
         
-        console.log('\n ', slides,num);
+        // console.log('\n ', slides,num);
         
-        if (num > (slides.length - 1)) showSlide = 0;
-        else if (num < 0) showSlide = (slides.length - 1);
+        if (num > (slides.length - 1)) showSlide = 0; // если num больше количества слайдов, то showSlide = 0
+        else if (num < 0) showSlide = (slides.length - 1); // иначе если num меньше 0, то showSlide = количеству слайдов
         
-        console.log('\n ', showSlide);
+        console.log('\n ', showSlide); // выводим в консоль результат
     }
 });
