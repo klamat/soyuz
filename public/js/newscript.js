@@ -33,8 +33,8 @@ window.addEventListener('load',() => {
         console.log('\n end', showSlide); // выводим в консоль результат
 
         slides.forEach((slide, id) => {
-            slide.classList.add('hidden');
-            if (showSlide === id) slide.classList.remove('hidden');
+            slide.classList.add('hidden'); // всем добавил hidden
+            if (showSlide === id) slide.classList.remove('hidden'); // тот что соответствует выбранному числу showSlide убираем hidden
         })
     }
 
