@@ -1,8 +1,8 @@
 window.addEventListener('load',() => {
 
-    showSlide = 0;
+    let showSlide = 0;
 
-    let n = 0;
+
     window.currentSlide = (n) => {
         showSlide(+n);
     };
