@@ -17,11 +17,13 @@
 <body>
 <div class="flex w-screen h-screen justify-center items-center">
 
-	<div class="relative flex w-4/5 h-4/5 bg-gray-200 justify-center items-center">
-		<div class="absolute flex flex-row w-full h-full justify-between items-center">
+	<div class="slideBody">
+		<div class="buttonArea">
 			<button class="button-left" id="button-left" onclick="clickLeft()"><</button> <!--слушаем событие клик на данном диве и запускаем по нему функцию clickLeft-->
 			<button class="button-right" id="button-right" onclick="clickRight()">></button> <!--слушаем событие клик на данном диве и запускаем по нему функцию clickRight-->
+			<span type="dots1" class="dot1"></span>
 		</div>
+<!--		<span class="dot1"></span>-->
 		<div class="slide">1</div>
 		<div class="slide">2</div>
 		<div class="slide">3</div>

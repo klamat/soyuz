@@ -798,6 +798,7 @@ img {vertical-align: middle;}
 	transition: background-color 0.6s ease;
 
 }
+
 .slider-cont-bg{
 	@apply
 	clr1 mx-auto
@@ -828,7 +829,7 @@ img {vertical-align: middle;}
 
 }
 
-.active, .dot:hover, .slidericon:hover {
+.active, .dot:hover, .slidericon:hover, .dot1:hover {
 	@apply
 	clr2
 }
@@ -1872,7 +1873,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	@apply
 	text-3xl
 	font-bold
-	hidden
+
 }
 
 .button-left{
@@ -1886,4 +1887,26 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	pr-5
 	text-5xl
 	cursor-pointer
+}
+.slideBody{
+	@apply
+	relative flex w-4/5 h-4/5 bg-gray-200 justify-center items-center
+}
+.buttonArea{
+	@apply
+	absolute flex flex-row w-full h-full justify-between items-center
+}
+.dot1 {
+	position: absolute;
+	justify-self: center;
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	bottom: 0px;
+	left: 50%;
 }
