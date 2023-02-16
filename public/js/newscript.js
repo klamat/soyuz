@@ -37,13 +37,13 @@ window.addEventListener('load',() => {
     let dots = '';
     slides.forEach((slide, id) =>{
 
-        dots +='<span type="dots1" class="dot1"></span>';
+        dots +='<span type="dots1" class="dot"></span>';
 
     });
     console.log(
         '\n dots', dots,
     );
-    document.querySelector('.dot1').innerHTML = dots;
+    document.querySelector('.dotsArea').innerHTML = dots;
     // let slidesLength = slides.length;ы
 
     checkLengthSlides(showSlide);
