@@ -33,7 +33,6 @@ window.addEventListener('load', function() {
 
 	//функция показа слайдов
 	function showSlides(n) {
-		let i;
 		let slides = document.querySelectorAll(".mySlides");
 		// console.log(
 		// 	'\n slides', slides,
