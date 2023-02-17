@@ -241,3 +241,121 @@ document.querySelector('.slider-nav-but [type="dots"]').innerHTML = dots;
 }
 /*setInterval(showSlides, 2000, 1);*/ // call plusSlider, with 1 as parameter
 });
+
+---------------------------------------------------------------------------------------
+
+
+/*Slider all*/
+showSlides(0);
+window.currentSlide = (num) => {
+/* = +num; //перевести в число*/
+showSlides(+num);//запустить функцию показа слайдов
+};
+window.plusSlides = (num) => {
+
+let dots = document.querySelector('.slider-nav-but .active').dataset.num
+console.log('\n ', +dots);
+showSlides(+dots + +num);//запустить функцию показа слайдов
+// console.log('\n num', +num);
+}
+
+//функция показа слайдов
+function showSlides(n) {
+let slides = document.querySelectorAll(".mySlides");
+// console.log(
+// 	'\n slides', slides,
+// );
+let dots = "";
+
+slides.forEach((el,id) => {
+
+let dot = "";
+
+if (id !== n) {
+
+el.style.display = "";
+dot += '<span class="dot" data-num="' + id + '" onclick="currentSlide(' + id + ')"></span>';
+}
+else {
+
+el.style.display = "block";
+dot += '<span class="dot active" data-num="' + id + '" onclick="currentSlide(' + id + ')"></span>';
+}
+dots += dot;
+});
+
+
+
+document.querySelector('.slider-nav-but [type="dots"]').innerHTML = dots;
+}
+/*setInterval(showSlides, 2000, 1);*/ // call plusSlider, with 1 as parameter
+});
+_________________________________________________________________________________________
+
+old slider
+
+<!--<div class="slideshow-container">
+	<div class="mySlides fade">
+		<div class="numberText"></div>
+		<img src="./docs/images/carousel/slider/2.jpg" style="width:100%">
+		<div class="text">Caption Text</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<img src="./docs/images/carousel/slider/1.jpg" style="width:100%">
+		<div class="text">Caption Two</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<img src="./docs/images/carousel/slider/3.jpg" style="width:100%">
+		<div class="text">Caption Three</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<img src="./docs/images/carousel/slider/4.jpg" style="width:100%">
+		<div class="text">Caption Three</div>
+	</div>
+	<div class="mySlides fade">
+		<div class="numbertext"></div>
+		<img src="./docs/images/carousel/slider/5.jpg" style="width:100%">
+		<div class="text">Caption Three</div>
+	</div>
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+	<div class="slider-nav-but">
+		<div type="dots" style="text-align:center">-->
+<!--			<span class="dot" onclick="currentSlide(1)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(2)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(3)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(4)"></span>-->
+<!--			<span class="dot" onclick="currentSlide(5)"></span>-->
+
+<!--<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+	}
+</script>-->
+--------------------------------------------------------------------------------

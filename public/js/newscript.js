@@ -40,3 +40,6 @@ window.addEventListener('load',() => {
     activeSlide(showSlide);}, 3000)// call plusSlider, with 1 as parameter
 });
 /*end Slider All*/
+
+/*Accordeon*/
+

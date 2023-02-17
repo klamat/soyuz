@@ -645,72 +645,39 @@
 </div>-->
 <!--==========-->
 <!--Slider+-->
-<div class="slideshow-container">
-	<div class="mySlides fade">
-		<div class="numbertext"></div>
-		<img src="./docs/images/carousel/slider/2.jpg" style="width:100%">
-		<div class="text">Caption Text</div>
-	</div>
-	<div class="mySlides fade">
-		<div class="numbertext"></div>
-		<img src="./docs/images/carousel/slider/1.jpg" style="width:100%">
-		<div class="text">Caption Two</div>
-	</div>
-	<div class="mySlides fade">
-		<div class="numbertext"></div>
-		<img src="./docs/images/carousel/slider/3.jpg" style="width:100%">
-		<div class="text">Caption Three</div>
-	</div>
-	<div class="mySlides fade">
-		<div class="numbertext"></div>
-		<img src="./docs/images/carousel/slider/4.jpg" style="width:100%">
-		<div class="text">Caption Three</div>
-	</div>
-	<div class="mySlides fade">
-		<div class="numbertext"></div>
-		<img src="./docs/images/carousel/slider/5.jpg" style="width:100%">
-		<div class="text">Caption Three</div>
-	</div>
-	<a class="prev" onclick="plusSlides(-1)">❮</a>
-	<a class="next" onclick="plusSlides(1)">❯</a>
-	<div class="slider-nav-but">
-		<div type="dots" style="text-align:center">
-<!--			<span class="dot" onclick="currentSlide(1)"></span>-->
-<!--			<span class="dot" onclick="currentSlide(2)"></span>-->
-<!--			<span class="dot" onclick="currentSlide(3)"></span>-->
-<!--			<span class="dot" onclick="currentSlide(4)"></span>-->
-<!--			<span class="dot" onclick="currentSlide(5)"></span>-->
-		</div>
-	</div>
+<div class="slideContainer">
+<div class="buttonArea">
+	<button class="slideButton" onclick="clickLeft()">❮</button>
+	<button class="slideButton" onclick="clickRight()">❯</button>
+	<span class="dotsArea"></span>
 </div>
-<!--<script>
-	let slideIndex = 1;
-	showSlides(slideIndex);
-
-	function plusSlides(n) {
-		showSlides(slideIndex += n);
-	}
-
-	function currentSlide(n) {
-		showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-		let i;
-		let slides = document.getElementsByClassName("mySlides");
-		let dots = document.getElementsByClassName("dot");
-		if (n > slides.length) {slideIndex = 1}
-		if (n < 1) {slideIndex = slides.length}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex-1].style.display = "block";
-		dots[slideIndex-1].className += " active";
-	}
-</script>-->
+<div class="slideBody">
+	<div class="slide">
+		<img src="./docs/images/carousel/slider/sldr2.jpg" class="" style="width:100%">
+		<div class="slideText">Малые архитектурные формы</div>
+	</div>
+	<div class="slide">
+		<img src="./docs/images/carousel/slider/sldr3.jpg" class="" style="width:100%">
+		<div class="slideText">Объемные символы любой сложности</div>
+	</div>
+	<div class="slide">
+		<img src="./docs/images/carousel/slider/sldr5.jpg" class="" style="width:100%">
+		<div class="slideText">Изделия из металла</div>
+	</div>
+	<div class="slide">
+		<img src="./docs/images/carousel/slider/sldr6.jpg" class="" style="width:100%">
+		<div class="slideText">Оформление коммерческих помещений под ключ</div>
+	</div>
+	<div class="slide"><img src="./docs/images/carousel/slider/sldr7.jpg" style="width:100%">
+		<div class="slideText">Использование натуральных материалов</div></div>
+	<div class="slide">
+		<img src="./docs/images/carousel/slider/sldr8.jpg" class="" style="width:100%">
+		<div class="slideText">Разработка навигации</div>
+	</div>
+	<div class="slide"><img src="./docs/images/carousel/slider/sldr9.jpg" class="" style="width:100%">
+		<div class="slideText">Внутреннее оформление ЖК</div></div>
+</div>
+</div>
 <!--========-->
 <!--request2+-->
 <div class="request2">
@@ -826,9 +793,74 @@
 					</div>
 				</li>
 			</ul>
+
 		</div>
 	</div>
 </section>
+<!--<ul class="serv-sec-block">
+	<li class="serv-sec-array" x-data="accordion(1)">
+		<h2	@click="handleClick()" class="serv-sec-title"><span class="">ПРОЕКТИРОВАНИЕ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div x-ref="tab" :style="handleToggle()" class="serv-content">
+			<p class="p-3 tex2">
+				Разработка проектов рекламных конструкций осуществляется высокопрофессиональными сотрудниками нашей компании. Которые подходят к каждому проекту, учитывая его функциональные особенности, особенности места размещения и все необходимые нормативные требования. Это позволяет нам с успехом реализовывать рекламные проекты любой сложности и воплощать в жизнь самые оригинальные идеи заказчика.
+			</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(2)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">ДИЗАЙН РЕКЛАМЫ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Одним из не менее важных этапов создания рекламы, является Дизайн. Дизайнеры нашей компании готовы учесть все пожелания по созданию эксклюзивной и самой привлекательной рекламы для вашего бизнеса.</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(3)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">СОГЛАСОВАНИЕ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Наша компания имея огромный опыт, занимается получением разрешений на рекламные конструкции, согласно постановлению Правительства Санкт-Петербурга.
+			</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(4)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">МОНТАЖ/ДЕМОНТАЖ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Компания "ПК"СОЮЗ" осуществляет монтажные и демонтажные работы рекламных конструкций любой сложности, с учетом конструктивных особенностей как самого рекламного объекта, так и места его размещения. Наши специалисты имеют огромный опыт в этом направлении, а это в свою очередь является гарантией того, что монтаж или демонтаж рекламной конструкции будет проведен максимально быстро, качественно и надежно.</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(5)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Нашими специалистами осуществляется комплекс услуг по сервисному обслуживанию рекламоносителей любой сложности, изготовленных на нашем производстве. А также изготовленными другими компаниями.
+			</p>
+		</div>
+	</li>
+</ul>-->
 <!--========-->
 <!--About+-->
 <section class="about-sec">

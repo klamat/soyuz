@@ -16,51 +16,52 @@ window.addEventListener('load', function() {
 		});
 	});
 
+	/*Slider All*/
 
-	/*Slider all*/
-	showSlides(0);
-	window.currentSlide = (num) => {
-		/* = +num; //перевести в число*/
-		showSlides(+num);//запустить функцию показа слайдов
-	};
-	window.plusSlides = (num) => {
-
-	let dots = document.querySelector('.slider-nav-but .active').dataset.num
-		console.log('\n ', +dots);
-		showSlides(+dots + +num);//запустить функцию показа слайдов
-		// console.log('\n num', +num);
+	let showSlide = 0;
+	let slides = document.querySelectorAll('.slide');
+	// console.log('\n slides', slides);
+	window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
+		showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
+		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
 	}
+	window.clickRight = () => { // запускаем функцию clickRight из DOM дерева
+		showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
+		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
+	}
+	window.currentSlide = (n) => {
+		showSlide = +n;
+		activeSlide(showSlide);
+	}
+	const activeSlide = () => { // запускаем функцию activeSlide из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
+		let dots = '';
+		if (showSlide < 0) showSlide = (slides.length - 1); // иначе если num меньше 0, то showSlide = количеству слайдов
+		else if (showSlide > (slides.length - 1)) showSlide = 0; // если num больше количества слайдов, то showSlide = 0
+		// console.log('\n end', showSlide); // выводим в консоль результат
+		slides.forEach((slide, id) => {
+			if (showSlide === id) {
+				slide.classList.remove('hidden');// тот что соответствует выбранному числу showSlide убираем hidden
+				slide.classList.remove('slideTranslate');
+				// slide.classList.add('fade');
 
-	//функция показа слайдов
-	function showSlides(n) {
-		let slides = document.querySelectorAll(".mySlides");
-		// console.log(
-		// 	'\n slides', slides,
-		// );
-		let dots = "";
-
-		slides.forEach((el,id) => {
-
-			let dot = "";
-
-			if (id !== n) {
-
-				el.style.display = "";
-				dot += '<span class="dot" data-num="' + id + '" onclick="currentSlide(' + id + ')"></span>';
+				dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
+			} else {
+				slide.classList.add('hidden');// всем добавил hidden
+				slide.classList.add('slideTranslate');
+				slide.classList.add('z-[900]');
+				dots += '<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
 			}
-			else {
-
-				el.style.display = "block";
-				dot += '<span class="dot active" data-num="' + id + '" onclick="currentSlide(' + id + ')"></span>';
-			}
-			dots += dot;
+			// console.log('\n slide', slide,);
 		});
-
-
-
-		document.querySelector('.slider-nav-but [type="dots"]').innerHTML = dots;
+		document.querySelector('.dotsArea').innerHTML = dots;
 	}
-	/*setInterval(showSlides, 2000, 1);*/ // call plusSlider, with 1 as parameter
-});
+	activeSlide(showSlide);
 
+	setInterval(() => {
+		showSlide = showSlide + 1;
+		activeSlide(showSlide);
+	}, 7000)
+});// call plusSlider, with 1 as parameter
+
+/*end Slider All*/
 
