@@ -47,8 +47,9 @@ window.addEventListener('load', function() {
 				dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
 			} else {
 				slide.classList.add('hidden');// всем добавил hidden
-				slide.classList.add('slideTranslate');
-				slide.classList.add('z-[900]');
+				// slide.classList.add('slideTranslate');
+				slide.classList.add('fade');
+				// slide.classList.add('z-[900]');
 				dots += '<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
 			}
 			// console.log('\n slide', slide,);
@@ -60,7 +61,7 @@ window.addEventListener('load', function() {
 	setInterval(() => {
 		showSlide = showSlide + 1;
 		activeSlide(showSlide);
-	}, 7000)
+	}, 8000)
 });// call plusSlider, with 1 as parameter
 
 /*end Slider All*/

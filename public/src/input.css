@@ -1875,10 +1875,13 @@ bottom-0
 /* Fading animation */
 .slideTranslate{
 	@apply
+	z-[1001]
+	scale-110
 	translate-x-[100%]
 	ease-in-out
 	transform
-	duration-500
+
+	duration-[1s]
 }
 .fade {
 	animation-name: fade;
