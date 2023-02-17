@@ -1,3 +1,4 @@
+/*Slider All*/
 window.addEventListener('load',() => {
     let showSlide = 0;
     let slides = document.querySelectorAll('.slide');
@@ -28,9 +29,14 @@ window.addEventListener('load',() => {
                 slide.classList.add('hidden');// всем добавил hidden}
                 dots +='<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
             }
-            console.log('\n slide', slide,);
+            // console.log('\n slide', slide,);
         });
         document.querySelector('.dotsArea').innerHTML = dots;
     }
     activeSlide(showSlide);
+
+    setInterval(() =>{
+        showSlide = showSlide + 1;
+    activeSlide(showSlide);}, 3000)// call plusSlider, with 1 as parameter
 });
+/*end Slider All*/
