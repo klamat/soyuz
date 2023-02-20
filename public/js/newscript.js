@@ -88,5 +88,4 @@ window.addEventListener('load',() => {
 });
 /*end Slider All*/
 
-/*Accordeon*/
 
