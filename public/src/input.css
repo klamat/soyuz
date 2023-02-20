@@ -1865,8 +1865,8 @@ bottom-0
 	transition: background-color 0.6s ease;
 
 }
-
-.active, .dot:hover{
+/*.active,*/
+.dot:hover{
 	@apply
 	clr2
 }
@@ -1892,75 +1892,46 @@ bottom-0
 	to {opacity: 1}
 }
 
+
 /*from chatGPT*/
-/*.accordion {
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-}
 
-.accordion-item {
-	background-color: #f6f6f6;
-	margin-bottom: 10px;
-}
-
-.accordion-item-header {
-	background-color: #ccc;
-	padding: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	cursor: pointer;
-}
-
-.accordion-item-title {
-	margin: 0;
-}
-
-.accordion-arrow {
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	transform: rotate(45deg);
-	transition: transform 0.2s ease-in-out;
-}
-
-.accordion-item.active .accordion-arrow {
-	transform: rotate(-135deg);
-}
-
-.accordion-content {
-	max-height: 0;
-	overflow: hidden;
-	padding: 10px;
-	transition: max-height 0.2s ease-in-out;
-}*/
-/*2*/
 .accordion {
 	display: flex;
 	flex-direction: column;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.accordion-item {
+/*.accordion-item {
 	border: 1px solid #ccc;
 	margin-bottom: 1px;
 	position: relative;
 	transition: box-shadow 0.3s ease-in-out;
+}*/
+
+.accordion-item {
+@apply
+	relative
+	border-b
+	border-gray-400
 }
 
-.accordion-item.active {
+.accordion-item.active-acord {
 	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 6px -6px black;
 }
-
 .accordion-item-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #f6f6f6;
-	padding: 10px;
-	cursor: pointer;
+	@apply
+	flex
+	p-2.5
+	justify-between
+	mx-2
+	/*items-between*/
+
+	cursor-pointer
+}
+.accordion-item-header {
 	transition: background-color 0.3s ease-in-out;
 }
 
@@ -1984,6 +1955,7 @@ bottom-0
 	transform: rotate(45deg);
 }
 
+
 .accordion-content {
 	max-height: 0;
 	overflow: hidden;
@@ -1996,15 +1968,15 @@ bottom-0
 	max-height: 500px;
 }
 
-.parallax {
+/*.parallax {
 	transform: translate3d(0, -50px, 0);
 	opacity: 0;
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
+}*/
 
-.accordion-item.active .parallax {
+/*.accordion-item.active .parallax {
 	transform: translate3d(0, 0, 0);
 	opacity: 1;
-}
+}*/
 
 

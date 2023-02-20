@@ -1,6 +1,6 @@
 /*Slider All*/
 window.addEventListener('load',() => {
-    let showSlide = 0;
+   /* let showSlide = 0;
     let slides = document.querySelectorAll('.slide');
     // console.log('\n slides', slides);
     window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
@@ -39,18 +39,18 @@ window.addEventListener('load',() => {
         showSlide = showSlide + 1;
     activeSlide(showSlide);}, 3000)// call plusSlider, with 1 as parameter
 
-
+*/
 
 
 
     /*------------------------------------ChatGPT-------------------------------------*/
-
+/*------------------------------------Accordion------------------------------------*/
     // select all accordion items
     const accordionItems = document.querySelectorAll('.accordion-item');
 
 // add click event listener to each accordion item
     accordionItems.forEach((accordionItem) => {
-        const accordionTitle = accordionItem.querySelector('.accordion-item-title');
+        const accordionTitle = accordionItem.querySelector('.accordion-item-header');
         accordionTitle.addEventListener('click', function() {
             // select the content section of the clicked accordion item
             const accordionContent = accordionItem.querySelector('.accordion-content');
@@ -60,7 +60,7 @@ window.addEventListener('load',() => {
 
             // toggle the rotation of the arrow
             const accordionArrow = accordionItem.querySelector('.accordion-arrow');
-            accordionArrow.classList.toggle('active');
+            accordionArrow.classList.toggle('active-acord-arrow');
 
             if (accordionItem.classList.contains('active')) {
                 // if accordion item is active, expand the content section
@@ -81,10 +81,7 @@ window.addEventListener('load',() => {
             }
         });
     });
-
-// add parallax effect to the background image
-    const parallaxContainer = document.querySelector
-
+    /*------------------------------------ end Accordion------------------------------------*/
 });
 /*end Slider All*/
 
