@@ -1,5 +1,13 @@
 /*Переключатель приемуществ*/
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
+
+		let sliderCont = document.querySelector('.slideContainer');
+		sliderCont.classList.add('h-auto');
+		console.log(
+			'\n sliderCont', sliderCont,
+		);
+
+
 
 	let getButtons = document.querySelectorAll('[data-type="ml"] button');
 	let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');

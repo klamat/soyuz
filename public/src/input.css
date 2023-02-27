@@ -707,7 +707,7 @@ h3{
 	flex w-full h-8
 	bg-white
 	bottom-0
-	clr3
+	clr2
 }
 .request3-txtblock{
 	@apply
@@ -1049,62 +1049,6 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	flex h-36 w-auto
 
 }
-/*================================================================*//*
-@media only screen and (max-width: 991px) {
-	.two-blocks > div.two-blocks__item:nth-of-type(2) {
-		padding-right: 0;
-	}
-}
-@media only screen and (max-width: 767px) {
-	.nav-phone {
-		position: absolute;
-		left: calc(50% - 100px);
-		top: 12px;
-	}
-
-	.nav-phone:hover:before {
-		display: none;
-	}
-
-	.two-blocks {
-		display: block;
-	}
-
-	.two-blocks > div.two-blocks__item:nth-of-type(1), .two-blocks > div.two-blocks__item:nth-of-type(2) {
-		width: 100%;
-		padding: 0 12px;
-	}
-
-
-
-	.block-three, .block-four {
-		display: block;
-		padding: 20px;
-	}
-
-	.block-three__item {
-		width: 100%;
-		margin-bottom: 30px;
-		padding-left: 0;
-		background: none;
-	}
-
-	.block-three__item-title {
-		margin-bottom: 12px;
-		text-align: left;
-	}
-
-	.block-four__item {
-		width: 100%;
-		margin-bottom: 12px;
-		height: auto;
-		padding-bottom: 0;
-	}
-
-	.block-four__item img {
-		position: initial;
-	}*/
-	/*================================================================*/
 .one-block {
 	@apply
 	grid grid-cols-1
@@ -1113,10 +1057,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	@apply
 	grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-16 py-5
 }
-/*.three-block{
-	@apply
-	grid grid-cols-1 gap-5 pb-5
-}*/
+
 @media (min-width: 768px){
 	.three-block{
 		@apply
@@ -1440,6 +1381,15 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	outline-none focus:outline-none
 	transform duration-500 ease-in-out
 }
+.inputarea:focus{
+@apply
+placeholder:-translate-y-2
+placeholder:text-[12px]
+placeholder:text-gray-600
+placeholder:ease-in-out
+placeholder:transform
+placeholder:duration-500
+}
 .formcont{
 	@apply
 	flex
@@ -1745,7 +1695,8 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 .slideContainer{
 	@apply
 	relative
-	w-full h-auto
+	w-full h-0
+	overflow-hidden
 }
 .slide{
 	@apply
@@ -1866,6 +1817,10 @@ bottom-0
 
 }
 /*.active,*/
+.active{
+	@apply
+	clr2
+}
 .dot:hover{
 	@apply
 	clr2
@@ -1913,13 +1868,13 @@ bottom-0
 .accordion-item {
 @apply
 	relative
-	border-b
-	border-gray-400
+	border-b-2
+	border-[rgba(49,79,111)]
 }
 
-.accordion-item.active-acord {
-	background-color: #fff;
-	box-shadow: 0 8px 6px -6px black;
+.accordion-item.active {
+	background-color: rgba(237,237,237);
+/*	box-shadow: 0 8px 6px -6px black;*/
 }
 .accordion-item-header {
 	@apply
@@ -1927,8 +1882,6 @@ bottom-0
 	p-2.5
 	justify-between
 	mx-2
-	/*items-between*/
-
 	cursor-pointer
 }
 .accordion-item-header {
@@ -1978,5 +1931,6 @@ bottom-0
 	transform: translate3d(0, 0, 0);
 	opacity: 1;
 }*/
+
 
 

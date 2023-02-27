@@ -9,8 +9,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.tailwindcss.com"></script>
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script>-->
 	<link href="./dist/output.css" rel="stylesheet">
 	<script src="../public/js/script.js"></script>
+	<!--Carousel-->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+	--><!--Scripts-->
+	<!--Map-->
 	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script>
 		ymaps.ready(function() {
@@ -20,14 +26,260 @@
 			});
 		});
 	</script>
+	<!--Accordeon-->
+<!--	<script>
+		document.addEventListener('alpine:init', () => {
+			Alpine.store('accordion', {
+				tab: 0
+			});
 
+			Alpine.data('accordion', (idx) => ({
+				init() {
+					this.idx = idx;
+				},
+				idx: -1,
+				handleClick() {
+					this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+				},
+				handleRotate() {
+					return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+				},
+				handleToggle() {
+					return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+				}
+			}));
+		}, 'alpine:init')
+	</script>-->
 
 
 	<!--zakaz zvon-->
+<!--	<script>
+		var toggleInputContainer = function (input) {
+			if (input.value != "") {
+				input.classList.add('filled');
+			} else {
+				input.classList.remove('filled');
+			}
+		}
 
+		var labels = document.querySelectorAll('.label');
+		for (var i = 0; i < labels.length; i++) {
+			labels[i].addEventListener('click', function () {
+				this.previousElementSibling.focus();
+			});
+		}
+
+		window.addEventListener("load", function () {
+			var inputs = document.getElementsByClassName("input");
+			for (var i = 0; i < inputs.length; i++) {
+				console.log('looped');
+				inputs[i].addEventListener('keyup', function () {
+					toggleInputContainer(this);
+				});
+				toggleInputContainer(inputs[i]);
+			}
+		});
+	</script>-->
 </head>
 <body>
 <!--Navbar+-->
+<!--<nav class="navbar">
+	<div class="relative nav-content">
+		<div class="nav-content-1">
+			<a href ="/" class="flex flex-wrap items-center">
+				<img src="docs/images/logo_sm.png" class="nav-logo-sm">
+				<img src="docs/images/logo_full.png" class="nav-logo-xl">
+				<div class="nav-txt">
+					Производство рекламы </br>от А до Я
+				</div>
+			</a>
+		</div>
+		<div onclick="menu.classList.toggle('block');menuus.classList.remove('nav-menu-us-o');menupro.classList.remove('nav-menu-pro-o');aboutus.classList.remove('nav-menu-us-o')">
+			<svg class="fill-current text-gray-900 md:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+		</div>
+		<div  class="nav-menu nav-txt" id="menu">
+			&lt;!&ndash;Услуги&ndash;&gt;
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menuus.classList.add('nav-menu-us-o');
+				                      menupro.classList.remove('nav-menu-pro-o');
+				                      aboutus.classList.remove('nav-menu-us-o');
+				                      narrus.classList.add('hover-nav-arrow');
+				                      narrpro.classList.remove('hover-nav-arrow');
+									  narrabus.classList.remove('hover-nav-arrow');"
+				        onclick="menuus.classList.toggle('nav-menu-us-o');narrus.classList.toggle('hover-nav-arrow')">
+					<span class="">Услуги</span>
+					<span><svg id="narrus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			&lt;!&ndash;Производство&ndash;&gt;
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menupro.classList.add('nav-menu-pro-o');
+				                      menuus.classList.remove('nav-menu-us-o');
+				                      aboutus.classList.remove('nav-menu-us-o');
+				                      narrus.classList.remove('hover-nav-arrow');
+				                      narrpro.classList.add('hover-nav-arrow');
+				                      narrabus.classList.remove('hover-nav-arrow')"
+				        onclick="menupro.classList.toggle('nav-menu-pro-o');narrpro.classList.toggle('hover-nav-arrow')">
+					<span class="">Производство</span>
+					<span>
+						<svg id="narrpro" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+
+			</div>
+			&lt;!&ndash;О нас&ndash;&gt;
+			<div class="group nav-b-cont">
+				<button class="group nav-button"
+				        onmouseenter="menuus.classList.remove('nav-menu-us-o');
+				                      menupro.classList.remove('nav-menu-pro-o');
+				                      aboutus.classList.add('nav-menu-us-o');
+				                      narrus.classList.remove('hover-nav-arrow');
+				                      narrpro.classList.remove('hover-nav-arrow');
+				                      narrabus.classList.add('hover-nav-arrow');"
+				        onclick="aboutus.classList.toggle('nav-menu-us-o');narrabus.classList.toggle('hover-nav-arrow')">
+					<span class="">О нас</span>
+					<span><svg id="narrabus" class="nav-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+						<path  fill="rgba(88, 88, 88, 1)" d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></span>
+				</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			&lt;!&ndash;Контакты&ndash;&gt;
+			<div class="group nav-b-cont">
+				<button class="nav-button" href="#">Контакты</button>
+				<div class="nav-b-uline"></div>
+			</div>
+			&lt;!&ndash;Телефон&ndash;&gt;
+			<div class="group nav-b-cont">
+
+				<a class="nav-tel" href="tel:+7 (812) 339-09-71" class="nav-phone">+7 (812) 339-09-71</a>
+				<a class="nav-mail" href="mailto:info@pksoyuz.ru" class="nav-phone">info@pksoyuz.ru</a>
+
+			</div>
+		</div>
+		&lt;!&ndash;Услуги - меню&ndash;&gt;
+		<div class="nav-menu-us" id="menuus" onmouseleave="this.classList.remove('nav-menu-us-o');narrus.classList.remove('hover-nav-arrow')">
+			<div class="p-2">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Дизайн</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Монтаж, демонтаж</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Проектирование</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Сервисное обслуживание</div>
+				</div>
+			</div>
+		</div>
+		&lt;!&ndash;Производство - меню&ndash;&gt;
+		<div class="nav-menu-pro" id="menupro" onmouseleave="this.classList.remove('nav-menu-pro-o');narrpro.classList.remove('hover-nav-arrow')">
+			<div class="nav-menu-col">
+				<a class="nav-main-menu-button">Оформление жилых комплексов</a>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Лифтовые холлы</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Оформление МОП</div>
+				</div>
+			</div>
+			<div class="nav-menu-col">
+				<a class="nav-main-menu-button">Рекламная продукция</a>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Объемные буквы</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Световые панели</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Символы из нержавеющей стали</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Интерьерные вывески</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Информационные таблички</div>
+				</div>
+			</div>
+			<div class="nav-menu-col">
+				<div class="nav-main-menu-button">Офис продаж</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Строительство</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Отделка</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Реставрация</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Транспортировка</div>
+				</div>
+			</div>
+			<div class="nav-menu-col">
+				<div class="nav-main-menu-button">Оформление строительных объектов</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Паспорт объекта</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Банерные указатели</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Навигация</div>
+				</div>
+			</div>
+
+		</div>
+		&lt;!&ndash;О нас - меню&ndash;&gt;
+		<div class="nav-menu-aboutus" id="aboutus" onmouseleave="this.classList.remove('nav-menu-us-o');narrabus.classList.remove('hover-nav-arrow')">
+			<div class="p-2">
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">О компании</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Наши проекты</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Галерея</div>
+				</div>
+				<div class="group nav-menu-but-st">
+					<div class="nav-m-b-line"> </div>
+					<div class="nav-menu-button">Реквизиты</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</nav>-->
+
+<!--На сайте-->
 <nav class="navbar">
 	<div class="relative nav-content">
 		<div class="nav-content-1">
@@ -317,6 +569,81 @@
 	</div>
 </div>
 <!--==========-->
+<!--
+<div class="flex h-screen w-screen bg-green-200">
+	<div class="relative flex h-[350px] w-80 bg-blue-400 overflow-hidden">
+		<script data-b24-form="inline/9/vhy79c" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');
+			s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+			var h=d.getElementsByTagName('script')[0];
+			h.parentNode.insertBefore(s,h);})
+		(window,document,'https://cdn-ru.bitrix24.ru/b24393964/crm/form/loader_9.js');
+		</script>
+		<div class="absolute flex w-full h-7 bg-yellow-200 bottom-0"></div>
+	</div>
+
+
+&lt;!&ndash;	<script>
+		window.addEventListener('load', function() {
+			let bit = document.getElementsByClassName('b24-form-sign');
+			bit.classList.add('hidden');
+			console.log(bit)
+
+		})
+	</script>&ndash;&gt;
+&lt;!&ndash;<script>
+	window.addEventListener('load', function() {
+	let bit = document.getElementsByClassName('b24-form-sign');
+	console.log(bit)
+	})
+</script>&ndash;&gt;
+&lt;!&ndash;	<script>
+		var elems = document.getElementsByClassName('b24-form-content b24-form-padding-side');
+		alert(elems.length);
+		console.log(elems);
+
+	</script>&ndash;&gt;
+&lt;!&ndash;	<script>
+		window.addEventListener('load', function() {
+			let getButtons = document.querySelectorAll('[data-type="ml"] button');
+			let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');
+			getButtons.forEach((el) => {
+				console.log(el)
+				el.addEventListener('click', () => {
+					getLayers.forEach((layer) => {
+						if (layer.dataset.id === el.dataset.id) layer.classList.remove('hidden');
+						else layer.classList.add('hidden');
+					});
+				});
+			});
+		})
+	</script>&ndash;&gt;
+</div>-->
+<!--request1+-->
+<!--<div class="request1">
+	<video class="request1-vid" src="./docs/video/Req1.mp4" type="video/mp4" autoplay muted loop></video>
+	<p class="request1tit">Заказать сейчас!</p>
+	<p class="request1txt"> Для расчета стоимости или получения консультации заполните форму обратной связи</p>
+	<div class="">
+		<form class="submit-form">
+			<div class="flex flex-col">
+				<label for="email" class="hidden">Email</label>
+				<input type="email" name="email" placeholder="Email" class="py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-indigo-500 focus:outline-none">
+			</div>
+			<div class="flex flex-col">
+				<label for="tel" class="hidden">Тел.</label>
+				<input type="tel" name="tel"  placeholder="Тел." class="py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-[rgba(13,62,105)] focus:outline-none">
+			</div>
+			<button type="submit" class="submit-btn">
+				Отправить
+			</button>
+		</form>
+
+	</div>
+
+	<p class="request1txt z-10">Наш специалист свяжется с вами в ближайшее время</p>
+
+</div>-->
+<!--==========-->
 <!--Slider+-->
 <div class="slideContainer">
 <div class="buttonArea">
@@ -370,6 +697,29 @@
 		</div>
 	</div>
 </div>
+<!--<div class="request2">
+	<video class="header-vid-bg-st" src="./docs/video/Req3.mp4" type="video/mp4" autoplay muted loop></video>
+	<p class="request2tit">Заказать сейчас!</p>
+	<p class="request2txt"> Для расчета стоимости или получения консультации заполните форму обратной связи</p>
+	<div class="">
+		<form class="submit-form">
+			<div class="flex flex-col">
+				<label for="email" class="hidden">Email</label>
+				<input type="email" name="email" placeholder="Email" class="py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-indigo-500 focus:outline-none">
+			</div>
+			<div class="flex flex-col">
+				<label for="tel" class="hidden">Тел.</label>
+				<input type="tel" name="tel"  placeholder="Тел." class="py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-[rgba(13,62,105)] focus:outline-none">
+			</div>
+			<button type="submit" class="submit-btn">
+				Отправить
+			</button>
+		</form>
+
+	</div>
+
+	<p class="request2txt z-10">Наш специалист свяжется с вами в ближайшее время</p>
+</div>-->
 <!--==========-->
 <!--Services+-->
 <section class="clr1">
@@ -493,6 +843,70 @@
 		</div>-->
 	</div>
 </section>
+<!--<ul class="serv-sec-block">
+	<li class="serv-sec-array" x-data="accordion(1)">
+		<h2	@click="handleClick()" class="serv-sec-title"><span class="">ПРОЕКТИРОВАНИЕ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div x-ref="tab" :style="handleToggle()" class="serv-content">
+			<p class="p-3 tex2">
+				Разработка проектов рекламных конструкций осуществляется высокопрофессиональными сотрудниками нашей компании. Которые подходят к каждому проекту, учитывая его функциональные особенности, особенности места размещения и все необходимые нормативные требования. Это позволяет нам с успехом реализовывать рекламные проекты любой сложности и воплощать в жизнь самые оригинальные идеи заказчика.
+			</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(2)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">ДИЗАЙН РЕКЛАМЫ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Одним из не менее важных этапов создания рекламы, является Дизайн. Дизайнеры нашей компании готовы учесть все пожелания по созданию эксклюзивной и самой привлекательной рекламы для вашего бизнеса.</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(3)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">СОГЛАСОВАНИЕ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Наша компания имея огромный опыт, занимается получением разрешений на рекламные конструкции, согласно постановлению Правительства Санкт-Петербурга.
+			</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(4)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">МОНТАЖ/ДЕМОНТАЖ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Компания "ПК"СОЮЗ" осуществляет монтажные и демонтажные работы рекламных конструкций любой сложности, с учетом конструктивных особенностей как самого рекламного объекта, так и места его размещения. Наши специалисты имеют огромный опыт в этом направлении, а это в свою очередь является гарантией того, что монтаж или демонтаж рекламной конструкции будет проведен максимально быстро, качественно и надежно.</p>
+		</div>
+	</li>
+	<li class="serv-sec-array" x-data="accordion(5)">
+		<h2 @click="handleClick()" class="serv-sec-title">
+			<span class="">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</span>
+			<svg :class="handleRotate()" class="serv-arrow" viewBox="0 0 20 20">
+				<path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+			</svg>
+		</h2>
+		<div class="serv-content" x-ref="tab" :style="handleToggle()">
+			<p class="p-3 text-gray-900">
+				Нашими специалистами осуществляется комплекс услуг по сервисному обслуживанию рекламоносителей любой сложности, изготовленных на нашем производстве. А также изготовленными другими компаниями.
+			</p>
+		</div>
+	</li>
+</ul>-->
 <!--========-->
 <!--About+-->
 <section class="about-sec">
@@ -505,21 +919,21 @@
 			<h1 class="about-tit my-2">Профессионализм</h1>
 			<p>Производственная компания «СОЮЗ» — это компания по производству рекламных конструкций, объединяющая высококвалифицированных специалистов этого направления, обладающих многолетним опытом, навыками и знаниями в области наружной, интерьерной и имиджевой рекламы. Штат наших сотрудников включает в себя творческих и креативных дизайнеров, квалифицированных инженеров-проектировщиков, опытных сборщиков- монтажников.
 			</p>
-<!--			<a class="comp_card_more" href="#">Подробнее...</a>-->
+			<a class="comp_card_more" href="#">Подробнее...</a>
 		</div>
 		<div class="comp_card">
 			<h1 class="about-tit my-2">Собственное производство</h1>
 			<p>
 				Имея собственное производство и современное рекламное оборудование, компания «ПК «СОЮЗ» успешно и профессионально занимается изготовлением всех видов наружной рекламы. Таких как фасадные вывески, объемные буквы, световые панели, интерьерные вывески, отдельно стоящие конструкции, световые короба и т.д.
 			</p>
-<!--			<a class="comp_card_more" href="#">Подробнее...</a>-->
+			<a class="comp_card_more" href="#">Подробнее...</a>
 		</div>
 		<div class="comp_card">
 			<h1 class="about-tit my-2">Технологичность</h1>
 			<p>
 				Мы создаём рекламные конструкции, отвечающие всем современным технологиям, техническим требованиям, с учетом всех пожеланий и требований заказчика. Наша команда поможет Вам реализовать самые смелые и оригинальные идеи в области рекламы. Создать уникальную, запоминающуюся рекламную продукцию, которая станет олицетворениям Вашей компании и несомненно будет способствовать привлечению новых клиентов и покупателей.
 			</p>
-<!--			<a class="comp_card_more" href="#">Подробнее...</a>-->
+			<a class="comp_card_more" href="#">Подробнее...</a>
 		</div>
 	</div>
 </section>
@@ -542,6 +956,29 @@
 		</div>
 	</div>
 </div>
+<!--<div class="request3">
+	<video class="request1-vid" src="./docs/video/meet.mp4" type="video/mp4" autoplay muted loop></video>
+	<p class="request3tit">Заказать сейчас!</p>
+	<p class="request3txt"> Для расчета стоимости или получения консультации заполните форму обратной связи</p>
+	<div class="">
+		<form class="submit-form">
+			<div class="flex flex-col">
+				<label for="email" class="hidden">Email</label>
+				<input type="email" name="email" placeholder="Email" class="py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-indigo-500 focus:outline-none">
+			</div>
+			<div class="flex flex-col">
+				<label for="tel" class="hidden">Тел.</label>
+				<input type="tel" name="tel"  placeholder="Тел." class="py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-[rgba(13,62,105)] focus:outline-none">
+			</div>
+			<button type="submit" class="submit-btn">
+				Отправить
+			</button>
+		</form>
+
+	</div>
+
+	<p class="request3txt z-10">Наш специалист свяжется с вами в ближайшее время</p>
+</div>-->
 <!--==========-->
 <!--Advantage+-->
 <section class="advant">
@@ -702,6 +1139,90 @@
 	</div>
 
 </footer>
+<!--<footer class="footer-sec">
+	<div class="footer-sec-1">
+		<div class="grid grid-cols-8 md:grid-cols-9  lg:grid-cols-8  divide-gray-300 divide-y-2 md:divide-x-2 md:divide-y-0">
+			<div class="col-span-8 md:col-span-3 lg:col-span-2 md:px-8 py-4 md:py-0">
+				<h5 class="text-xl">Компания</h5>
+				<nav class="mt-4">
+					<ul class="space-y-2">
+						<li>
+							<a href="#" class="text-base hover:text-gray-400">Главная</a>
+						</li>
+						<li>
+							<a href="#" class="text-base hover:text-gray-400">Услуги</a>
+						</li>
+						<li>
+							<a href="#" class="text-base hover:text-gray-400">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-span-9 md:col-span-3 lg:col-span-3 md:px-8 py-4 md:py-0">
+				<h5 class="text-xl">Разделы</h5>
+				<nav class="mt-4">
+					<ul class="grid">
+						<li class="mb-2">
+							<a href="#" class="px-2 text-base hover:text-gray-400">Интерьерная реклама</a>
+						</li>
+						<li class="mb-2">
+							<a href="#" class="px-2 text-base hover:text-gray-400">Наружнная реклама</a>
+						</li>
+						<li class="mb-2">
+							<a href="#" class="px-2 text-base hover:text-gray-400">Модульные здания</a>
+						</li>
+						<li class="mb-2">
+							<a href="#" class="px-2 text-base hover:text-gray-400">Навигация</a>
+						</li>
+						<li class="mb-2">
+							<a href="#" class="px-2 text-base hover:text-gray-400">О компании</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-span-8 md:col-span-3 lg:col-span-3 md:px-8 py-4 md:py-0">
+				<div class="flex flex-col">
+					<a class="text-xl text-gray-700">
+						Заказать звонок
+					</a>
+					<form class=" flex flex-col justify-center">
+						<div class="flex flex-col">
+							<label for="name" class="hidden">Ваше Имя</label>
+							<input type="name" name="name" id="name" placeholder="Ваше Имя" class="w-100 mt-2 py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-indigo-500 focus:outline-none">
+						</div>
+
+						<div class="flex flex-col mt-2">
+							<label for="email" class="hidden">Email</label>
+							<input type="email" name="email" id="email" placeholder="Email" class="w-100 mt-2 py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-indigo-500 focus:outline-none">
+						</div>
+
+						<div class="flex flex-col mt-2">
+							<label for="tel" class="hidden">Тел.</label>
+							<input type="tel" name="tel" id="tel" placeholder="Тел." class="w-100 mt-2 py-1 px-3 rounded-lg bg-white  border border-gray-400  text-gray-800 focus:border-[rgba(13,62,105)] focus:outline-none">
+						</div>
+
+						<button type="submit" class="md:w-32 bg-[rgba(13,62,105)] text-white py-1 px-6 rounded-lg mt-3 hover:bg-[rgba(18,84,144)] transition ease-in-out duration-300">
+							Отправить
+						</button>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="max-w-screen-lg mx-auto px-10 flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 lg:mt-12 border-t-2 border-gray-300 pt-8">
+		<nav class="flex flex-wrap justify-center space-x-6">
+			<a href="#" class="text-sm hover:text-gray-400 mb-2">Cookie settings</a>
+		</nav>
+		<p class="text-sm text-center md:text-right">&copy;2022 ООО "ПК "СОЮЗ". Все права защищены.</p>
+	</div>
+</footer>-->
 <!--========-->
+<!--
+Это карта на всю ширину экрана
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf671e37a6444263fd7c8c1d1df3170b0ff7c54de9551be46bfa0ea945ad64d6&amp;width=100%25&amp;height=357&amp;lang=ru_RU&amp;scroll=true"></script>
+-->
+
 </body>
 </html>
