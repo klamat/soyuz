@@ -3137,6 +3137,43 @@ h3{
   padding: 1.25rem;
 }
 
+.g-card-main {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 375px;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 22px;
+}
+
+.g-card-main-cont-pic {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.625rem;
+  display: flex;
+  height: 12rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.g-card-main-txt {
+  margin: 1.25rem;
+  overflow: hidden;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .g-card-main-txt {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .g-card-2 {
   margin-left: auto;
   margin-right: auto;
@@ -3188,6 +3225,8 @@ h3{
 }
 
 .g-card-pic {
+  margin-left: auto;
+  margin-right: auto;
   transform-origin: center;
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -3978,13 +4017,13 @@ h3{
   margin-left: 10px;
   border: solid #333;
   border-width: 0 2px 2px 0;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .accordion-item.active .accordion-arrow {
   border-color: #ff0000;
-  transform: rotate(45deg);
+  transform: rotate(-135deg);
 }
 
 .accordion-content {

@@ -368,7 +368,10 @@ h3{
 }
 .advant-pic{
 	@apply
-	flex w-full lg:w-1/3 h-full bg-cover bg-[url('../docs/images/pic/card-bg-01.jpg')] rounded-md
+	flex
+	w-full lg:w-1/3 h-full
+	bg-cover bg-[url('../docs/images/pic/card-bg-01.jpg')]
+	rounded-md
 }
 .advant-content{
 	@apply
@@ -786,7 +789,10 @@ h3{
 }
 .building-card{
 @apply
-flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
+flex
+flex-row
+md:h-96 py-5 px-3
+max-w-screen-xl mx-auto
 }
 .building-card2 {
 	@apply
@@ -1201,6 +1207,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	group-hover:text-white
 	transition duration-700 ease-in-out
 }
+
 .card-title{
 	@apply
 	text-xl ml-10 mb-5
@@ -1272,6 +1279,28 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 	overflow-hidden
 	cursor-pointer
 }
+.g-card-main{
+	@apply
+	relative
+	flex flex-col items-center
+	h-full w-[375px] p-[22px]
+	overflow-hidden
+	cursor-pointer
+}
+.g-card-main-cont-pic{
+	@apply
+	flex w-full h-48 mx-4 mt-2.5
+	overflow-hidden
+}
+.g-card-main-txt{
+	@apply
+	 m-5
+
+	overflow-hidden
+	group-hover:text-white
+
+	transition duration-700 ease-in-out
+}
 .g-card-2{
 	@apply
 	flex justify-center items-center
@@ -1300,6 +1329,7 @@ flex md:h-96 py-5 px-3 flex-row max-w-screen-xl mx-auto
 }
 .g-card-pic{
 	@apply
+	mx-auto
 	scale-110 group-hover:scale-125
 	delay-100
 	transition duration-[2000ms] ease-in-out origin-center
@@ -1899,13 +1929,13 @@ bottom-0
 	margin-left: 10px;
 	border: solid #333;
 	border-width: 0 2px 2px 0;
-	transform: rotate(-45deg);
+	transform: rotate(45deg);
 	transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .accordion-item.active .accordion-arrow {
 	border-color: #ff0000;
-	transform: rotate(45deg);
+	transform: rotate(-135deg);
 }
 
 
