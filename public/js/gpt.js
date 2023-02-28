@@ -1,11 +1,17 @@
 window.addEventListener('DOMContentLoaded', function() {
-	const burger = document.querySelector('.burger');
-	const navLinks = document.querySelector('.nav-links');
 
-	burger.addEventListener('click', () => {
-		navLinks.classList.toggle('show-nav');
-		console.log(
-			'\n burger', burger,
-		);
+		window.addEventListener('scroll', () => {
+		let blocks = document.querySelectorAll('.block');
+		blocks.forEach((block) => {
+		let blockTop = block.getBoundingClientRect().top;
+		if (blockTop < window.innerHeight && blockTop > 0) {
+		block.classList.add('right');
+	}
+		else {
+		block.classList.remove('right');
+	}
 	});
+	});
+
+
 });
