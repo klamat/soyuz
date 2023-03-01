@@ -352,11 +352,18 @@ h3{
 }
 .advant-sec{
 	 @apply
-	 flex flex-row justify-between h-[500px] w-full px-3 max-w-screen-xl mx-auto
+	 flex flex-row justify-between h-[600px] w-full px-3 max-w-screen-xl mx-auto
  }
 .advant-left {
 	@apply
-	flex w-full md:w-1/3
+	flex w-full md:w-[500px]
+
+
+}
+.advant-but-arr{
+	@apply
+	grid grid-cols-1 grid-rows-5
+	content-center
 }
 .advant-right{
 	@apply
@@ -364,7 +371,10 @@ h3{
 }
 .advant-card{
 	@apply
-	flex w-full
+	relative
+	flex flex-col
+	justify-start
+	w-full
 }
 .advant-pic{
 	@apply
@@ -388,7 +398,9 @@ h3{
 	@apply
 	text-blue-300 hover:text-white lg:pt-20 md:pt-10
 }
-.card-select-array {
+
+
+/*.card-select-array {
 	@apply
 	text-2xl my-5 cursor-pointer outline-none inline-block text-black text-left
 }
@@ -400,7 +412,39 @@ h3{
 .card-select-array:focus {
 	@apply
 	text-2xl my-5 font-bold text-gray-500
+}*/
+
+.card-select-array-2{
+	@apply
+	absolute
+	left-0
+	top-0
+	text-2xl
+	font-bold
+	my-5
+	scale-y-0
+	group-hover:scale-y-100
+	ease-in-out
+	origin-bottom
+	transform
+	duration-300
 }
+.card-select-array-1{
+	@apply
+	absolute
+	left-0
+	top-0
+	text-2xl
+	my-5
+	group-hover:scale-y-0
+	ease-in-out
+	origin-top
+	transform
+	duration-300
+}
+
+
+
 .contacts-sec{
 	@apply
 	flex-wrap justify-center bg-[rgba(237,237,237)]
@@ -546,6 +590,11 @@ h3{
 	@apply
 	max-w-screen-xl mx-auto px-2
 }
+.footer-tit{
+	@apply
+	text-lg text-white text-left font-bold mb-5
+}
+
 /*Req! Requests*/
 
 .request-txt-cont{
@@ -811,6 +860,7 @@ max-w-screen-xl mx-auto
 	flex flex-col justify-center md:w-3/5 pl-5 px-5 py-5 md:py-0 clr1 md:rounded-r-md md:rounded-l-none rounded-md mx-5 md:mx-0 shadow-md shadow-gray-600 md:shadow-none -mt-10 md:mt-0
 }
 /*---*/
+/*
 
 .header, .footer {
 	background: #2e2e2e;
@@ -1013,6 +1063,7 @@ max-w-screen-xl mx-auto
 		transform: translateY(-10px);
 	}
 }
+*/
 
 .g-gallery{
 	@apply
@@ -1903,8 +1954,8 @@ bottom-0
 }
 
 .accordion-item.active {
-	background-color: rgba(237,237,237);
-/*	box-shadow: 0 8px 6px -6px black;*/
+	background-color: rgba(237,237,237,1);
+
 }
 .accordion-item-header {
 	@apply
@@ -1950,17 +2001,4 @@ bottom-0
 .accordion-item.active .accordion-content {
 	max-height: 500px;
 }
-
-/*.parallax {
-	transform: translate3d(0, -50px, 0);
-	opacity: 0;
-	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}*/
-
-/*.accordion-item.active .parallax {
-	transform: translate3d(0, 0, 0);
-	opacity: 1;
-}*/
-
-
 
