@@ -33,7 +33,7 @@ h3{
 }
 .navbar{
 	@apply
-	z-[101]
+	z-[1010]
 	fixed w-full
 	bg-white/80
 	shadow-md
