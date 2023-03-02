@@ -380,7 +380,7 @@ h3{
 	@apply
 	flex
 	w-full lg:w-1/3 h-full
-	bg-cover bg-[url('../docs/images/pic/card-bg-01.jpg')]
+	/*bg-cover bg-[url('../docs/images/pic/card-bg-01.jpg')]*/
 	rounded-md
 }
 .advant-content{

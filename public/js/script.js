@@ -3,14 +3,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
 		let sliderCont = document.querySelector('.slideContainer');
 		sliderCont.classList.add('h-auto');
-		console.log(
+/*		console.log(
 			'\n sliderCont', sliderCont,
-		);
+		);*/
 
 
 
 	let getButtons = document.querySelectorAll('[data-type="ml"] button');
 	let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');
+	let getPictures = document.querySelectorAll('[data-type="pl"] [data-id]')
 
 	getButtons.forEach((el) => {
 
@@ -20,6 +21,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 				if (layer.dataset.id === el.dataset.id) layer.classList.remove('hidden');
 				else layer.classList.add('hidden');
+			});
+			
+			getPictures.forEach((picture) => {
+				if (picture.dataset.id === el.dataset.id) picture.classList.remove('hidden');
+				else picture.classList.add('hidden');
+				console.log(
+					'\n picture', picture,
+				);
 			});
 		});
 	});
