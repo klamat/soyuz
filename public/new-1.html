@@ -12,19 +12,6 @@
 	<link href="./dist/output.css" rel="stylesheet">
 	<script src="../public/js/script.js"></script>
 	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-	<script>
-		ymaps.ready(function() {
-			var myMap = new ymaps.Map('map', {
-				center: [59.897812, 30.405960],
-				zoom: 16
-			});
-		});
-	</script>
-
-
-
-	<!--zakaz zvon-->
-
 </head>
 <body>
 <!--Navbar+-->
@@ -624,22 +611,16 @@
 		</div>
 		<div class="advant-right">
 			<div class="advant-pic" class="">
-				<div data-type="pl" class="w-full h-full">
-					<div data-id="1" class="w-full h-full bg-cover bg-center bg-[url('./docs/images/advant/advant-1.jpg')]">
-						<!--<img src="./docs/images/advant/advant-1.jpg" class="h-full object-cover bg-right"/>-->
-
+				<div data-type="pl" class="relative advant-pic-cont">
+					<div data-id="1" class="absolute top-0 right-0 w-full h-full bg-cover rounded-md lg:bg-[top_right_410px] bg-[url('./docs/images/advant/advant-1.1.jpg')]">
 					</div>
-					<div data-id="2" class="hidden w-full h-full bg-cover bg-center bg-[url('./docs/images/advant/advant-2.jpg')]">
-						<!--<img src="./docs/images/advant/advant-2.jpg" width="" alt=""/>-->
+					<div data-id="2" class="advant-pic-animation-c absolute top-0 right-0 w-full h-full bg-cover rounded-md lg:bg-[top_right_540px] bg-[url('./docs/images/advant/advant-2.jpg')]">
 					</div>
-					<div data-id="3" class="hidden w-full h-full bg-cover bg-center bg-[url('./docs/images/advant/advant-3.jpg')]">
-						<!--<img src="./docs/images/advant/advant-3.jpg" width="" alt=""/>-->
+					<div data-id="3" class="advant-pic-animation-c absolute top-0 right-0 w-full h-full bg-cover rounded-md lg:bg-[top_left_350px] bg-[url('./docs/images/advant/advant-4.jpg')]">
 					</div>
-					<div data-id="4" class="hidden w-full h-full bg-cover bg-center bg-[url('./docs/images/advant/advant-4.jpg')]">
-						<!--<img src="./docs/images/advant/advant-4.jpg" width="" alt=""/>-->
+					<div data-id="4" class="advant-pic-animation-c absolute top-0 right-0 w-full h-full bg-cover rounded-md lg:bg-[top_right_250px] bg-[url('./docs/images/advant/advant-3.jpg')]">
 					</div>
-					<div data-id="5" class="hidden w-full h-full bg-cover bg-center bg-[url('./docs/images/advant/advant-5.jpg')] bg-left">
-						<!--<img src="./docs/images/advant/advant-5.jpg" width="" alt=""/>-->
+					<div data-id="5" class="advant-pic-animation-c absolute top-0 right-0 w-full h-full bg-cover rounded-md lg:bg-[top_right_260px] bg-[url('./docs/images/advant/advant-5.jpg')]">
 					</div>
 				</div>
 			</div>
@@ -717,7 +698,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="contact-content-map">
+
+<div class="contact-content-map">
 				<div id="container">
 					<div id="subcontainer">
 						<div id="map"></div>

@@ -48,17 +48,10 @@ window.addEventListener('DOMContentLoaded', function() {
 				if (layer.dataset.id === el.dataset.id) layer.classList.remove('hidden');
 				else layer.classList.add('hidden');
 			});
-
+			
 			getPictures.forEach((picture) => {
-				if (picture.dataset.id === el.dataset.id){
-					picture.classList.add('advant-pic-animation-o');
-					picture.classList.remove('advant-pic-animation-c')
-
-				}
-				else {
-					picture.classList.add('advant-pic-animation-c')
-					picture.classList.remove('advant-pic-animation-o');
-				}
+				if (picture.dataset.id === el.dataset.id) picture.classList.remove('hidden');
+				else picture.classList.add('hidden');
 			});
 		});
 	});
