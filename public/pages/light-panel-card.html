@@ -1,0 +1,327 @@
+<!--1.head-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>ПК СОЮЗ</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link href="../dist/output.css" rel="stylesheet">
+	<script src="../js/script_test.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<script>
+		window.addEventListener('DOMContentLoaded', function() {
+			let slides = document.querySelectorAll('.slide');
+		});
+
+	</script>
+
+</head>
+<body>
+<div class="pt-20">
+	<div class="title_flex">
+		<div class="title_border"></div>
+		<div class="sec_title">СВЕТОВЫЕ ПАНЕЛИ (CRYSTALLITE)</div>
+	</div>
+	<div class="container max-w-screen-xl mx-auto py-10">
+		<div class="flex flex-col gap-10">
+			<div class="flex flex-row items-end">
+
+				<h1 class="sec_title">Кристаллайт</h1>
+			</div>
+			<div class="flex md:flex-row flex-col">
+				<div class="container_left md:pr-24">
+					<div class="slideContainer">
+						<div class="buttonArea">
+							<button class="slideButton" onclick="clickLeft()">❮</button>
+							<button class="slideButton" onclick="clickRight()">❯</button>
+							<span class="dotsArea"></span>
+						</div>
+						<div class="slideBody max-h-[700px]">
+							<div class="slide">
+								<img src="../docs/images/cards/crystal/crystal-1.jpg" class="object-contain max-h-[600px]" style="width:100%">
+								<div class="slideText"></div>
+							</div>
+							<div class="slide">
+								<img src="../docs/images/cards/crystal/crystal-2.jpg" class="object-contain max-h-[600px]" style="width:100%">
+								<div class="slideText"></div>
+							</div>
+							<div class="slide">
+								<img src="../docs/images/cards/crystal/crystal-3.jpg" class="object-contain max-h-[600px]" style="width:100%">
+								<div class="slideText"></div>
+							</div>
+							<div class="slide">
+								<img src="../docs/images/cards/crystal/crystal-4.jpg" class="object-contain max-h-[600px]" style="width:100%">
+								<div class="slideText"></div>
+							</div>
+							<div class="slide"><img src="../docs/images/cards/crystal/crystal-5.jpg"class="object-contain max-h-[600px]" style="width:100%">
+								<div class="slideText"></div>
+							</div>
+							<div class="slide">
+								<img src="../docs/images/cards/crystal/crystal-6.jpg" class="object-contain max-h-[600px]" style="width:100%">
+								<div class="slideText"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container_right">
+					<div class="features">
+						<h3 class="text-xl font-bold mb-2">Формат <span class="text-sm font-normal">(размер панели, мм / размер постера, мм)</span></h3>
+						<ul>
+							<li>
+								<label>
+									<input type="radio" name="size-a4" value="9000" class="mr-2" checked>
+									А4 (310 х 397 / 210 х 297)
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-a3" value="11000" class="mr-2">
+									А3 (397 х 520 / 297 х 420)
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-a2" value="15000" class="mr-2">
+									А2 (515 х 689 / 420 х 594)
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-a1" value="18000" class="mr-2">
+									А1 (689 х 936 / 594 х 841)
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-a0" value="21000" class="mr-2">
+									А0 (936 х 1284 / 841 х 1189)
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-aa" value="24000" class="mr-2">
+									АА (990 х 1500 / 895 х 1405)
+							</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-2aa" value="30000" class="mr-2">
+									2АА (1200 х 1800 / 1105 х 1705)
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="size-custom" value="50000" class="mr-2">
+									Другой
+								</label>
+							</li>
+						</ul>
+						<h3 class="text-xl font-bold mb-2">Варианты исполнения</h3>
+						<ul>
+							<li>
+								<label>
+									<input type="radio" name="one-sided" value="1" class="mr-2" checked>
+									Односторонняя световая панель
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="radio" name="double-sided" value="2" class="mr-2">
+									Двухсторонняя световая панель
+								</label>
+							</li>
+						</ul>
+						<h3 class="text-xl font-bold mb-2">Варианты установки</h3>
+						<ul>
+							<li>
+								<label>
+										<input type="radio" name="wall" value="1" class="mr-2" checked>
+										На стену
+									</label>
+							</li>
+							<li>
+								<label>
+										<input type="radio" name="ceiling" value="2" class="mr-2">
+										Подвесной
+									</label>
+							</li>
+						</ul>
+						<h3 class="text-xl font-bold">Дополнительные услуги</h3>
+						<ul>
+							<li>
+								<label>
+									<input type="checkbox" name="poster" value="100">
+									Печать постера - 100 руб.
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" name="packing" value="350">
+									Упаковка - 350 руб.
+								</label>
+							</li>
+							<li>
+
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" name="dimmer-install" value="1000">
+									Монтаж - 1 000 руб.
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" name="dimmer-install" value="1500">
+									Доставка в пределах СПб.* - 1 500 руб.
+								</label>
+							</li>
+						</ul>
+						<div class="my-4">
+							<h2 class="font-bold text-xl mb-2">Общая стоимость: <span id="total-price">0</span> руб.*</h2>
+						</div>
+						<div class="flex flex-row items-center">
+								<div class="counter-container py-2  mt-8 pr-10">
+									<label for="quantity" class="text-lg font-bold mr-2">Количество:</label>
+									<input type="number" name="quantity" id="quantity" value="1" min="1" class="w-20 py-1 px-3 border border-gray-400 rounded">
+								</div>
+								<button class="formbtn">ОТПРАВИТЬ ЗАЯВКУ</button>
+							</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="w-full">
+				<h3 class="text-xl font-bold mb-2 mt-5">Описание</h3>
+				<p class=" text-justify"> Наше производство специализируется на создании качественных и надежных светодиодных панелей, которые обеспечивают яркое и равномерное освещение в любом помещении.
+					ПК "СОЮЗ" для производства панелей кристаллайт  использует только самые высококачественные материалы и компоненты для производства своих светодиодных панелей. Кроме того, мы используем передовые технологии и оборудование, чтобы обеспечить высокую точность изготовления и надежность конструкции.
+					Все наши светодиодные панели оснащены специальными оптическими элементами, которые обеспечивают равномерное распределение света и защищают глаза от яркого света и бликов. Наши панели имеют высокий коэффициент воспроизведения цвета (CRI), что гарантирует высокое качество света, а также длительный срок службы благодаря использованию специальных светодиодов.
+					ПК "СОЮЗ" предлагает широкий ассортимент светодиодных панелей кристаллайт различных форм и размеров, что позволяет выбрать наиболее подходящий вариант для конкретного помещения. Наши светодиодные панели идеально подходят для использования в офисах, школах, медицинских учреждениях и других местах, где важно обеспечить комфортное и здоровое освещение.
+					Сделайте свое помещение ярким и комфортным с помощью светодиодных панелей кристаллайт от ПК "СОЮЗ". Наша продукция - это гарантия высокого качества и надежности.</p>
+				<p>* Стоимость изделий уточняйется по тел.</p>
+			</div>
+		</div>
+	</div>
+	<div class="g-card-cont">
+		<a href="[[~33]]">
+			<div class="group g-card">
+				<div class="g-card-cont-pic" >
+					<img src="../docs/images/Light-panel/all1.jpg" alt="Acryllite" class="g-card-pic">
+				</div>
+				<div class="g-card-title-cont">
+					<div class="g-card-title">
+						<div class="g-card-title-1">Акрилайт (Acryllite)</div>
+						<div class="title_border2"></div>
+					</div>
+				</div>
+				<div class="g-card-txt"> Световая панель из акрилового стекла с гравировкой.</div>
+				<div class="g-card-bg"></div>
+			</div>
+		</a>
+		<a href="[[~33]]">
+			<div class="group g-card">
+				<div class="g-card-cont-pic" >
+					<img src="../docs/images/Light-panel/all1.jpg" alt="Magnetic" class="g-card-pic">
+				</div>
+				<div class="g-card-title-cont">
+					<div class="g-card-title">
+						<div class="g-card-title-1">Магнетик</div>
+						<div class="title_border2"></div>
+					</div>
+				</div>
+				<div class="g-card-txt">Световая панель из акрилового стекла с магнитной фиксацией постера.</div>
+				<div class="g-card-bg"></div>
+			</div>
+		</a>
+		<a href="[[~33]]">
+			<div class="group g-card">
+				<div class="g-card-cont-pic" >
+					<img src="../docs/images/Light-panel/all1.jpg" alt="Framelite" class="g-card-pic">
+				</div>
+				<div class="g-card-title-cont">
+					<div class="g-card-title">
+						<div class="g-card-title-1">Фреймлайт (Framelight)</div>
+						<div class="title_border2"></div>
+					</div>
+				</div>
+				<div class="g-card-txt">Тонкие световые панели с серебристым клик профилем.</div>
+				<div class="g-card-bg"></div>
+			</div>
+		</a>
+		<a href="[[~33]]">
+			<div class="group g-card">
+				<div class="g-card-cont-pic" >
+					<img src="../docs/images/Light-panel/all1.jpg" alt="WindowsBox" class="g-card-pic">
+				</div>
+				<div class="g-card-title-cont">
+					<div class="g-card-title">
+						<div class="g-card-title-1">Уличный (Windows Box)</div>
+						<div class="title_border2"></div>
+					</div>
+				</div>
+				<div class="g-card-txt">Световые панели с защитой от влаги, пыли и кражи постера.</div>
+				<div class="g-card-bg"></div>
+			</div>
+		</a>
+		<a href="[[~33]]">
+			<div class="group g-card">
+				<div class="g-card-cont-pic" >
+					<img src="../docs/images/Light-panel/all1.jpg" alt="litBox" class="g-card-pic">
+				</div>
+				<div class="g-card-title-cont">
+					<div class="g-card-title">
+						<div class="g-card-title-1">Лайт бокс (lite Box)</div>
+						<div class="title_border2"></div>
+					</div>
+				</div>
+				<div class="g-card-txt">Световые короба стандартной формы.</div>
+				<div class="g-card-bg"></div>
+			</div>
+		</a>
+	</div>
+	<section id="contact" class="contacts-sec">
+		<div class="title_flex">
+			<div class="title_border"></div>
+			<div class="sec_title">КОНТАКТЫ</div>
+		</div>
+		<div class="contact-content">
+			<div class="contact-content-1">
+				<div class="contact-content-2">
+					<div class="adress">
+						г.Санкт-Петербург, ул. Седова, д. 13, оф. 215
+					</div>
+					<div class="mt-10">
+						<div class="tel-mail">
+							<p> <a href="tel:+78123390971">
+								+7 (812) 339-09-71
+							</a>
+							</p>
+							<p>
+								<a href="mailto:info@pksoyuz.ru">
+									info@pksoyuz.ru
+								</a>
+							</p>
+						</div>
+						<div class="mt-10">
+							<p class="text-lg text-black font-normal">Запросы на расчет стоимости работ можете направить по адресу: <a class="text-lg text-[rgba(13,62,105)] underline" href="mailto:zakaz@pksoyuz.ru">zakaz@pksoyuz.ru</a> </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-content-map">
+					<div id="container">
+						<div id="subcontainer">
+							<div id="map"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+</body>
+</html>

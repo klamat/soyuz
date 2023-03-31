@@ -1513,7 +1513,7 @@ placeholder:duration-500
 .formbtn{
 	@apply
 	py-2 px-6 mt-8
-
+	bg-[rgba(49,79,111)]
 	text-white
 	rounded
 	hover:bg-[rgba(18,84,144)]
@@ -2032,4 +2032,131 @@ bottom-0
 .accordion-item.active .accordion-content {
 	max-height: 500px;
 }
+/*----------------------presentation_titles-----------------------*/
+.p_title_1{
+	@apply
+	z-0
+text-center text-7xl
+	py-10
+	font-bold
+	mx-auto
 
+}
+.p_title_2{
+	@apply
+flex col-span-3
+	pb-5
+	text-3xl
+	font-bold
+	items-end
+	justify-end
+
+}
+/*.p_title_3{*/
+/*	@apply*/
+
+/*}*/
+.p_text_1{
+	@apply
+	text-base
+	text-end
+
+}
+.p_text_2{
+	@apply
+	text-base
+	text-start
+}
+.p_page{
+	@apply
+	relative
+flex flex-col
+	h-[860px] w-[1200px]
+	mx-auto
+	my-10
+	overflow-hidden
+
+}
+.p_page_1{
+	@apply
+	relative
+flex flex-col
+	h-[860px] w-[1200px]
+	mx-auto
+	mb-10
+	bg-white
+
+}
+.presentation{
+	@apply
+
+	z-[-3]
+}
+.p_page_t1{
+	@apply
+	p-10
+	rounded-sm
+	bg-[rgba(36,43,52)]/80
+}
+.p_grid{
+	@apply
+	z-10
+	h-full w-full
+grid grid-cols-3 grid-rows-3
+	gap-5
+}
+.p_head_logo{
+	@apply
+	z-[2]
+	relative
+	flex flex-col
+
+	h-[10%]
+	justify-between
+}
+.p_page_color{
+	@apply
+	absolute
+	h-full w-full
+	bg-white/20
+	z-[1]
+}
+.p_head_logo_logo{
+	@apply
+	absolute
+	h-full
+	left-5 top-0
+}
+.p_head_logo_logo2{
+	@apply
+	absolute
+	h-full
+	left-0
+}
+.p_head_logo_border{
+	@apply
+	flex
+	h-[15px] w-full
+	bg-[rgba(13,62,105)]
+}
+.p_head_content{
+	@apply
+	relative
+	flex
+	h-full
+	overflow-hidden
+}
+.p_head_txt{
+	@apply
+absolute
+	right-5
+	top-[15%]
+	text-[120%]
+	font-bold
+text-end
+}
+.p_bg_cont{
+	@apply
+	z-[0]
+	absolute flex flex-col  w-full h-full
+ }
