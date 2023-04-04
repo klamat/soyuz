@@ -133,9 +133,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	document.querySelectorAll('.size-a4')
 
 	
-	
-	
-	
+
 	
 	
 	
