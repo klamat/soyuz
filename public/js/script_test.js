@@ -130,9 +130,21 @@ window.addEventListener('DOMContentLoaded', function() {
 
 /*------------------------------------------calculator--------------------------------------*/
 
-	document.querySelectorAll('.size-a4')
+	document.querySelectorAll('.size-a4');
 
-	
+	const getFields = document.querySelectorAll('.features input');
+	let Summ = 0;
+	console.log('\n ', getFields, getFields.length);
+	getFields.forEach(inp => {
+		if (inp.checked) {
+
+			console.log('\n ', inp);
+
+			Summ += +inp.value;
+		}
+	});
+
+	console.log('\n ', Summ);
 
 	
 	
