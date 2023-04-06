@@ -123,14 +123,12 @@
 						<h3 class="text-xl font-bold mb-2">Варианты исполнения</h3>
 						<ul>
 							<li>
-								<input type="radio" id="one-sided"
-								       name="side" value="1000" checked>
-								<label for="size-custom">Односторонняя световая панель</label>
+								<input type="radio" id="one-sided" name="side" value="1000" checked>
+								<label for="one-sided">Односторонняя световая панель</label>
 							</li>
 							<li>
-								<input type="radio" id="double-sided"
-								       name="side" value="1500">
-								<label for="size-custom">Двухсторонняя световая панель</label>
+								<input type="radio" id="double-sided" name="side" value="1500">
+								<label for="double-sided">Двухсторонняя световая панель</label>
 							</li>
 
 						</ul>
@@ -139,12 +137,12 @@
 							<li>
 								<input type="radio" id="wall"
 								       name="edition" value="1000" checked>
-								<label for="size-custom">На стену</label>
+								<label for="wall">На стену</label>
 							</li>
 							<li>
 								<input type="radio" id="ceiling"
 								       name="edition" value="2000">
-								<label for="size-custom">Подвесной</label>
+								<label for="ceiling">Подвесной</label>
 							</li>
 						</ul>
 						<h3 class="text-xl font-bold">Дополнительные услуги</h3>
@@ -183,7 +181,7 @@
 						<div class="flex flex-row items-center">
 								<div class="counter-container py-2  mt-8 pr-10">
 									<label for="quantity" class="text-lg font-bold mr-2">Количество:</label>
-									<input type="number" name="quantity" id="quantity" value="1" min="1" class="w-20 py-1 px-3 border border-gray-400 rounded">
+									<input type="number" name="quantity" id="quantity" value="1" min="1" step="1" class="w-20 py-1 px-3 border border-gray-400 rounded">
 								</div>
 								<button class="formbtn">ОТПРАВИТЬ ЗАЯВКУ</button>
 							</div>

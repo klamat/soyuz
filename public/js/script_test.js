@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 	/*------------------------------------ end Accordion------------------------------------*/
-	
+
 
 /*end Slider All*/
 
@@ -131,17 +131,45 @@ window.addEventListener('DOMContentLoaded', function() {
 /*------------------------------------------calculator--------------------------------------*/
 
 
+	// Функция расчета калькулятора
+	const CalculatorCostHandler = () => {
 
+		console.log('\n wow', );
+
+		// массив всех чекбоксов
+		const getFields = document.querySelectorAll('.features input');
+
+		// Сумма расчета финальная
+		let FinalCost = 0;
+
+		// Количество элементов
+		const quantity = +document.getElementById('quantity').value;
+
+		// перебор всех полей в getFields
+		getFields.forEach(inp => {
+
+			// если просмтриваемое поле выбрано, то FinalCost прибавляем inp.value переведя его в число символом +n
+			if (inp.checked) FinalCost += +inp.value;
+		});
+
+		// возвращаем получившийся результат FinalCost в калькулятор с округлением до копеек
+		document.getElementById('total-price').innerText = Math.round((FinalCost * quantity) * 100) / 100;
+	}
+	window.CalculatorCostHandler = CalculatorCostHandler;
+	CalculatorCostHandler();
 
 	const getFields = document.querySelectorAll('.features input');
+	// чтобы не ебаться и не прописывать каждому чекбоксу запускающую расчет функции, пропишем все одинаковую функцию, т.к. делать она будет одно и то-же
+	getFields.forEach(field => field.setAttribute('onclick', 'CalculatorCostHandler()'));
 
-let summ = 0;
+	// document.querySelectorAll('.size-a4');
 
 
-	
 
-	
-/*-------------------------------------End DOMContentLoaded---------------------------------*/
+
+
+
+	/*-------------------------------------End DOMContentLoaded---------------------------------*/
 });
 
 // const getFields = document.querySelectorAll('.features input');
