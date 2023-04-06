@@ -130,24 +130,31 @@ window.addEventListener('DOMContentLoaded', function() {
 
 /*------------------------------------------calculator--------------------------------------*/
 
-	document.querySelectorAll('.size-a4');
+
+
 
 	const getFields = document.querySelectorAll('.features input');
-	let Summ = 0;
-	console.log('\n ', getFields, getFields.length);
-	getFields.forEach(inp => {
-		if (inp.checked) {
 
-			console.log('\n ', inp);
+let summ = 0;
 
-			Summ += +inp.value;
-		}
-	});
-
-	console.log('\n ', Summ);
 
 	
-	
+
 	
 /*-------------------------------------End DOMContentLoaded---------------------------------*/
 });
+
+// const getFields = document.querySelectorAll('.features input');
+//
+// let Summ = 0;
+//
+// console.log('\n ', getFields, getFields.length);
+//
+// getFields.forEach(inp => {
+// 	if (inp.checked) {
+// 		Summ += +inp.value;
+// 	}
+//
+//
+// });
+// console.log('\n summ chkd', Summ);

@@ -35,7 +35,7 @@ h3{
 	@apply
 	z-[1010]
 	fixed w-full
-	bg-white/80
+	bg-white/90
 	shadow-md
 }
 .nav-logo-sm{
@@ -170,15 +170,20 @@ h3{
 }
 .nav-main-menu-button{
 	@apply
-	flex flex-row items-center w-full cursor-pointer
-	border-b border-gray-400 hover:border-[rgba(13,62,105)]
+	flex flex-row
+	w-full
+	items-center
+	cursor-pointer
+	border-b-2 border-gray-400
+	hover:border-[rgba(13,62,105)]
 	transform transition duration-500 ease-in-out whitespace-nowrap
 	md:py-1
 	md:px-2
 	md:text-left
 	text-base
 	font-semibold
-	text-[rgba(13,62,105)]
+	text-gray-500
+	hover:text-[rgba(13,62,105)]
 }
 .nav-arrow{
 	@apply
@@ -2031,8 +2036,8 @@ bottom-0
 
 .accordion-item.active .accordion-content {
 	max-height: 500px;
-}
-/*----------------------presentation_titles-----------------------*/
+}/*
+!*----------------------presentation-----------------------*!
 .p_title_1{
 	@apply
 	z-0
@@ -2052,10 +2057,10 @@ flex col-span-3
 	justify-end
 
 }
-/*.p_title_3{*/
-/*	@apply*/
+!*.p_title_3{*!
+!*	@apply*!
 
-/*}*/
+!*}*!
 .p_text_1{
 	@apply
 	text-base
@@ -2159,4 +2164,4 @@ text-end
 	@apply
 	z-[0]
 	absolute flex flex-col  w-full h-full
- }
+ }*/
