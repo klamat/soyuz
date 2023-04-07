@@ -1,8 +1,33 @@
 /*Переключатель приемуществ*/
 window.addEventListener('DOMContentLoaded', function() {
+/*---------------------------------------------map-------------------------------------------*/
+	ymaps.ready(function() {
+		var myMap = new ymaps.Map('map', {
+			center: [59.897812, 30.405960],
+			zoom: 16
+		});
 
+		var myPlacemark = new ymaps.Placemark(
+			[59.897195, 30.407198],
+			{
+				hintContent: 'ПК СОЮЗ',
 
+				balloonContent: 'ООО "ПК "СОЮЗ" Производство рекламной продукции от А до Я.'
+			},{
+				iconLayout: 'default#imageWithContent',
+				iconImageHref: '../docs/images/logo_maps.svg',
+				iconImageSize: [80, 40],
+				iconImageOffset: [-25, -45],
 
+				iconContentLayout: ymaps.templateLayoutFactory.createClass(
+					'<div style="color: #000; font-weight: bold;">$[properties.iconCaption]</div>'
+				)
+			});
+
+		myMap.geoObjects.add(myPlacemark);
+
+	});
+	/*---------------------------------------------end map-------------------------------------------*/
 
 		let sliderCont = document.querySelector('.slideContainer');
 		sliderCont.classList.add('h-auto');
@@ -136,7 +161,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 		//создаем контейнер с содержимым калькулятора, для того чтобы обращаться к нему и делать проверку на наличие его на странице
 		const calculator = document.querySelector('.features');
-		
+
 		//проверяем существует ли калькулятор
 		if (calculator) {
 
@@ -167,7 +192,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	// чтобы не ебаться и не прописывать каждому чекбоксу запускающую расчет функции, пропишем все одинаковую функцию, т.к. делать она будет одно и то-же
 	getFields.forEach(field => field.setAttribute('onclick', 'CalculatorCostHandler()'));
 
-	// document.querySelectorAll('.size-a4');
+
 
 
 
@@ -177,17 +202,3 @@ window.addEventListener('DOMContentLoaded', function() {
 	/*-------------------------------------End DOMContentLoaded---------------------------------*/
 });
 
-// const getFields = document.querySelectorAll('.features input');
-//
-// let Summ = 0;
-//
-// console.log('\n ', getFields, getFields.length);
-//
-// getFields.forEach(inp => {
-// 	if (inp.checked) {
-// 		Summ += +inp.value;
-// 	}
-//
-//
-// });
-// console.log('\n summ chkd', Summ);

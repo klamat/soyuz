@@ -391,12 +391,57 @@ h3{
 	rounded-lg
 }
 
+
+
 .advant-pic-cont{
 	@apply
+	relative
 	w-full h-full
-
 }
 
+.advant-right-item{
+	@apply
+	absolute
+	top-0 right-0
+	w-full h-full
+	bg-cover
+	rounded-md
+}
+
+.advant-right-item1{
+	@apply
+	advant-right-item
+	lg:bg-[top_right_410px]
+	bg-[url('../docs/images/advant/advant-1.1.jpg')]
+}
+.advant-right-item2{
+	@apply
+	advant-right-item
+
+	lg:bg-[top_right_540px]
+	bg-[url('../docs/images/advant/advant-2.jpg')]
+}
+.advant-right-item3{
+	@apply
+	advant-right-item
+
+	lg:bg-[top_left_350px]
+	bg-[url('../docs/images/advant/advant-4.jpg')]
+}
+.advant-right-item4{
+	@apply
+	advant-right-item
+
+	lg:bg-[top_right_250px]
+	bg-[url('../docs/images/advant/advant-3.jpg')]
+}
+.advant-right-item5{
+	@apply
+	advant-right-item
+
+	lg:bg-[top_right_260px]
+	bg-[url('../docs/images/advant/advant-5.jpg')]
+}
 
 .advant-pic-animation-c{
 	@apply
@@ -1221,9 +1266,50 @@ max-w-screen-xl mx-auto
 
 }
 
+/*--------------------modalWindow--------------------*/
 
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
 
+.animated.faster {
+	-webkit-animation-duration: 500ms;
+	animation-duration: 500ms;
+}
 
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+/*--------------------end_modalWindow--------------------*/
 /*Refactored*/
 
 

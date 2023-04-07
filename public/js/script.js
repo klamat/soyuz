@@ -1,6 +1,6 @@
-/*Переключатель приемуществ*/
+
 window.addEventListener('DOMContentLoaded', function() {
-	ymaps.ready(function() {
+/*	ymaps.ready(function() {
 		var myMap = new ymaps.Map('map', {
 			center: [59.897812, 30.405960],
 			zoom: 16
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 		myMap.geoObjects.add(myPlacemark);
 
-	});
+	});*/
 
 
 
@@ -147,8 +147,56 @@ window.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 	});
-	/*------------------------------------ end Accordion------------------------------------*/
+	/*------------------------------------------------------------------------*/
+
+	const CalculatorCostHandler = () => {
+		const calculator = document.querySelector('.features');
+		if (calculator) {
+			const getFields = calculator.querySelectorAll('input');
+			let FinalCost = 0;
+			const quantity = +calculator.querySelector('#quantity').value;
+			getFields.forEach(inp => {
+				if (inp.checked) FinalCost += +inp.value;
+			});
+			calculator.querySelector('#total-price').innerText = Math.round((FinalCost * quantity) * 100) / 100;
+		}
+	}
+	window.CalculatorCostHandler = CalculatorCostHandler;
+	CalculatorCostHandler();
+	const getFields = document.querySelectorAll('.features input');
+	getFields.forEach(field => field.setAttribute('onclick', 'CalculatorCostHandler()'));
+/*-----------------------------------------------------------------------------*/
+	const modal = document.querySelector('.main-modal');
+	const closeButton = document.querySelectorAll('.modal-close');
+
+	const modalClose = () => {
+		modal.classList.remove('fadeIn');
+		modal.classList.add('fadeOut');
+		setTimeout(() => {
+			modal.style.display = 'none';
+		}, 500);
+	}
+
+	window.openModal = () => {
+		modal.classList.remove('fadeOut');
+		modal.classList.add('fadeIn');
+		modal.style.display = 'flex';
+	}
+
+	for (let i = 0; i < closeButton.length; i++) {
+
+		const elements = closeButton[i];
+
+		elements.onclick = (e) => modalClose();
+
+		modal.style.display = 'none';
+
+		window.onclick = function (event) {
+			if (event.target == modal) modalClose();
+		}
+	}
+
 });
 
-/*end Slider All*/
+
 
