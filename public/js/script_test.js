@@ -134,26 +134,31 @@ window.addEventListener('DOMContentLoaded', function() {
 	// Функция расчета калькулятора
 	const CalculatorCostHandler = () => {
 
-		console.log('\n wow', );
+		//создаем контейнер с содержимым калькулятора, для того чтобы обращаться к нему и делать проверку на наличие его на странице
+		const calculator = document.querySelector('.features');
+		
+		//проверяем существует ли калькулятор
+		if (calculator) {
 
-		// массив всех чекбоксов
-		const getFields = document.querySelectorAll('.features input');
+			// массив всех чекбоксов
+			const getFields = calculator.querySelectorAll('input');
 
-		// Сумма расчета финальная
-		let FinalCost = 0;
+			// Сумма расчета финальная
+			let FinalCost = 0;
 
-		// Количество элементов
-		const quantity = +document.getElementById('quantity').value;
+			// Количество элементов
+			const quantity = +calculator.querySelector('#quantity').value;
 
-		// перебор всех полей в getFields
-		getFields.forEach(inp => {
+			// перебор всех полей в getFields
+			getFields.forEach(inp => {
 
-			// если просмтриваемое поле выбрано, то FinalCost прибавляем inp.value переведя его в число символом +n
-			if (inp.checked) FinalCost += +inp.value;
-		});
+				// если просмтриваемое поле выбрано, то FinalCost прибавляем inp.value переведя его в число символом +n
+				if (inp.checked) FinalCost += +inp.value;
+			});
 
-		// возвращаем получившийся результат FinalCost в калькулятор с округлением до копеек
-		document.getElementById('total-price').innerText = Math.round((FinalCost * quantity) * 100) / 100;
+			// возвращаем получившийся результат FinalCost * quantity в калькулятор с округлением до копеек
+			calculator.querySelector('#total-price').innerText = Math.round((FinalCost * quantity) * 100) / 100;
+		}
 	}
 	window.CalculatorCostHandler = CalculatorCostHandler;
 	CalculatorCostHandler();
