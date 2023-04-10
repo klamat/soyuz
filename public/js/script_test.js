@@ -1,6 +1,6 @@
 /*Переключатель приемуществ*/
 window.addEventListener('DOMContentLoaded', function() {
-	/*---------------------------------------------map-------------------------------------------*/
+/*---------------------------------------------map-------------------------------------------*/
 	/*ymaps.ready(function() {
 		var myMap = new ymaps.Map('map', {
 			center: [59.897812, 30.405960],
@@ -29,7 +29,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	});*/
 	/*---------------------------------------------end map-------------------------------------------*/
 
-
+		let sliderCont = document.querySelector('.slideContainer');
+		sliderCont.classList.add('h-auto');
 
 
 
@@ -63,49 +64,47 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 	/*Slider All*/
-	let sliderCont = document.querySelector('.slideContainer');
-	if(sliderCont){
-		sliderCont.classList.add('h-auto');
-		let showSlide = 0;
-		let slides = document.querySelectorAll('.slide');
 
-		window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
-			showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
-			activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
-		}
-		window.clickRight = () => { // запускаем функцию clickRight из DOM дерева
-			showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
-			activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
-		}
-		window.currentSlide = (n) => {
-			showSlide = +n;
-			activeSlide(showSlide);
-		}
-		const activeSlide = () => { // запускаем функцию activeSlide из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
-			let dots = '';
-			if (showSlide < 0) showSlide = (slides.length - 1); // иначе если num меньше 0, то showSlide = количеству слайдов
-			else if (showSlide > (slides.length - 1)) showSlide = 0; // если num больше количества слайдов, то showSlide = 0
+	let showSlide = 0;
+	let slides = document.querySelectorAll('.slide');
 
-			slides.forEach((slide, id) => {
-				if (showSlide === id) {
-					slide.classList.remove('hidden');// тот что соответствует выбранному числу showSlide убираем hidden
-					slide.classList.remove('slideTranslate');
-					// slide.classList.add('fade');
-
-					dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
-				} else {
-					slide.classList.add('hidden');// всем добавил hidden
-					// slide.classList.add('slideTranslate');
-					slide.classList.add('fade');
-					// slide.classList.add('z-[900]');
-					dots += '<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
-				}
-
-			});
-			document.querySelector('.dotsArea').innerHTML = dots;
-		}
+	window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
+		showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
+		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
+	}
+	window.clickRight = () => { // запускаем функцию clickRight из DOM дерева
+		showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
+		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
+	}
+	window.currentSlide = (n) => {
+		showSlide = +n;
 		activeSlide(showSlide);
 	}
+	const activeSlide = () => { // запускаем функцию activeSlide из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
+		let dots = '';
+		if (showSlide < 0) showSlide = (slides.length - 1); // иначе если num меньше 0, то showSlide = количеству слайдов
+		else if (showSlide > (slides.length - 1)) showSlide = 0; // если num больше количества слайдов, то showSlide = 0
+
+		slides.forEach((slide, id) => {
+			if (showSlide === id) {
+				slide.classList.remove('hidden');// тот что соответствует выбранному числу showSlide убираем hidden
+				slide.classList.remove('slideTranslate');
+				// slide.classList.add('fade');
+
+				dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
+			} else {
+				slide.classList.add('hidden');// всем добавил hidden
+				// slide.classList.add('slideTranslate');
+				slide.classList.add('fade');
+				// slide.classList.add('z-[900]');
+				dots += '<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
+			}
+
+		});
+		document.querySelector('.dotsArea').innerHTML = dots;
+	}
+	activeSlide(showSlide);
+
 	setInterval(() => {
 		showSlide = showSlide + 1;
 		activeSlide(showSlide);
@@ -151,10 +150,10 @@ window.addEventListener('DOMContentLoaded', function() {
 	/*------------------------------------ end Accordion------------------------------------*/
 
 
-	/*end Slider All*/
+/*end Slider All*/
 
 
-	/*------------------------------------------calculator--------------------------------------*/
+/*------------------------------------------calculator--------------------------------------*/
 
 
 	// Функция расчета калькулятора
@@ -231,200 +230,6 @@ for (let i = 0; i < closeButton.length; i++) {
 }
 
 
-/*
-
-	let XMC = function (object) {
-		this.bodyID = object.bodyID;
-		this.body = null;
-		this.backgroundLayerID = object.backgroundLayerID;
-		this.backgroundLayer = null;
-		this.selector = object.selector;
-		this.selectorValue = object.selectorValue;
-		this.btnCloseId = object.btnId;
-		this.btnClose = null;
-
-		if('styleBg' in object){
-			this.styleBg = object.styleBg;
-		}
-
-		if('styleBody' in object){
-			this.styleBody = object.styleBody;
-		}
-
-		if('btnStyle' in object){
-			this.styleBtn = object.btnStyle;
-		}
-
-		if('content' in object){
-			this.content = object.content;
-		} else {
-			console.error('content not found');
-		}
-
-		if('classListBg' in object){
-			this.classListBg = object.classListBg;
-		}
-
-		if('classListBody' in object){
-			this.classListBody = object.classListBody;
-		}
-
-		if('classListBtn' in object){
-			this.classListBtn = object.classListBtn;
-		}
-
-
-
-		this.delegateClick();
-	};
-	XMC.prototype.initBackground = function () {
-		if(this.backgroundLayer === null){
-			this.backgroundLayer = document.createElement('div');
-			this.backgroundLayer.id = this.backgroundLayerID;
-			document.body.appendChild(this.backgroundLayer);
-			this.btnClose = document.createElement('div');
-			this.btnClose.id = this.btnCloseId;
-			this.btnClose.innerText = 'x';
-			this.backgroundLayer.appendChild(this.btnClose);
-
-			if(this.styleBg !== null){
-				this.bgStyle();
-			}
-
-			if(this.classListBg !== null){
-				this.setClasses(this.classListBg, this.backgroundLayer);
-			}
-			if(this.classListBtn){
-				this.setClasses(this.classListBtn, this.btnClose);
-			}
-
-			if(this.styleBtn !== null){
-				this.btnStyle();
-			}
-
-		}
-
-		this.backgroundLayer.style.display = 'flex';
-		return this;
-	};
-	XMC.prototype.bgStyle = function () {
-		var mapSt = Object.keys(this.styleBg);
-		var mf = this;
-		mapSt.map(function (key) {
-			mf.backgroundLayer.style[key] = mf.styleBg[key];
-		})
-	};
-	XMC.prototype.btnStyle = function () {
-		var mapSt = Object.keys(this.styleBtn);
-		var mf = this;
-		mapSt.map(function (key) {
-			mf.btnClose.style[key] = mf.styleBtn[key];
-		})
-	}
-	XMC.prototype.initTarget = function () {
-		if(this.body === null){
-			this.body = document.createElement('div');
-			this.body.id = this.bodyID;
-			this.backgroundLayer.appendChild(this.body);
-
-
-			this.body.innerHTML = this.content;
-
-
-			if(this.styleBody !== null){
-				this.bodyStyle();
-			}
-
-			if(this.classListBody){
-				this.setClasses(this.classListBody, this.body);
-			}
-
-		}
-		this.body.style.display = 'flex';
-		return this;
-	};
-	XMC.prototype.bodyStyle = function () {
-		var mapSt = Object.keys(this.styleBody);
-		var mf = this;
-		mapSt.map(function (key) {
-			mf.body.style[key] = mf.styleBody[key];
-		})
-	}
-	XMC.prototype.show = function () {
-		this.initBackground();
-		this.initTarget();
-	};
-	XMC.prototype.close = function () {
-		this.backgroundLayer.style.display = 'none';
-		this.body.style.display = 'none';
-	};
-	XMC.prototype.delegateClick = function () {
-		var mf = this;
-		window.addEventListener('click', function (event) {
-			if(event.target.hasAttribute(mf.selector) && event.target.getAttribute(mf.selector) === mf.selectorValue ){
-				mf.show();
-				mf.delegateClose();
-			}
-		}, mf, false);
-	};
-	XMC.prototype.delegateClose = function(){
-		if(this.btnClose !== null){
-			var btn = this.btnClose;
-			var mf = this;
-			btn.addEventListener('click', function () {
-				mf.close();
-			}, mf);
-		}
-	};
-	XMC.prototype.setClasses = function (classes, element) {
-		classes.map(function(className) {
-			element.classList.add(className);
-		});
-	}
-
-
-	new XMC({
-		bodyID: 'rara',
-		backgroundLayerID: 'lusia',
-		selector: 'data-type',
-		selectorValue: 'openModalForm',
-		btnId: 'fbgmfClose',
-		content: '<div><h2>Заголовок</h2><p>Текст</p></div>',
-		classListBg: ['zuzu', 'zaza'],
-		classListBody: ['zuzu', 'zaza2'],
-		classListBtn: ['zuzu', 'zaza3'],
-		styleBg: {
-			top: '0',
-			left:'0',
-			right: '0',
-			bottom: '0',
-			position: 'fixed',
-			background: '#00000090',
-			justifyContent: 'center',
-			alignItems: 'center',
-			zIndex: '6'
-		},
-		styleBody: {
-			minWidth: '200px',
-			minHeight: '200px',
-			background: '#ffffff',
-			justifyContent: 'center',
-			alignItems: 'center',
-		},
-		btnStyle: {
-			width: '40px',
-			height: "40px",
-			background: '#ffffff',
-			display: 'flex',
-			justifyContent: 'center',
-			alignItems: 'center',
-			position: 'absolute',
-			top: '5%',
-			right: '5%',
-			cursor: 'pointer'
-		}
-	});
-*/
 
 
 	/*-------------------------------------End DOMContentLoaded---------------------------------*/
