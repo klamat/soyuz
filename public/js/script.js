@@ -1,31 +1,39 @@
 
 window.addEventListener('DOMContentLoaded', function() {
-/*	ymaps.ready(function() {
-		var myMap = new ymaps.Map('map', {
-			center: [59.897812, 30.405960],
-			zoom: 16
-		});
 
-		var myPlacemark = new ymaps.Placemark(
-			[59.897195, 30.407198],
-			{
-				hintContent: 'ПК СОЮЗ',
+	import { Fancybox } from '@fancyapps/ui';
+	import '@fancyapps/ui/dist/fancybox/fancybox.css';
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		//
+	});
 
-				balloonContent: 'ООО "ПК "СОЮЗ" Производство рекламной продукции от А до Я.'
-			},{
-				iconLayout: 'default#imageWithContent',
-				iconImageHref: './docs/images/logo_maps.svg',
-				iconImageSize: [80, 40],
-				iconImageOffset: [-25, -45],
 
-				iconContentLayout: ymaps.templateLayoutFactory.createClass(
-					'<div style="color: #000; font-weight: bold;">$[properties.iconCaption]</div>'
-				)
+	/*	ymaps.ready(function() {
+			var myMap = new ymaps.Map('map', {
+				center: [59.897812, 30.405960],
+				zoom: 16
 			});
 
-		myMap.geoObjects.add(myPlacemark);
+			var myPlacemark = new ymaps.Placemark(
+				[59.897195, 30.407198],
+				{
+					hintContent: 'ПК СОЮЗ',
 
-	});*/
+					balloonContent: 'ООО "ПК "СОЮЗ" Производство рекламной продукции от А до Я.'
+				},{
+					iconLayout: 'default#imageWithContent',
+					iconImageHref: './docs/images/logo_maps.svg',
+					iconImageSize: [80, 40],
+					iconImageOffset: [-25, -45],
+
+					iconContentLayout: ymaps.templateLayoutFactory.createClass(
+						'<div style="color: #000; font-weight: bold;">$[properties.iconCaption]</div>'
+					)
+				});
+
+			myMap.geoObjects.add(myPlacemark);
+
+		});*/
 
 
 

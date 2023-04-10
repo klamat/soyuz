@@ -1,6 +1,6 @@
 /*Переключатель приемуществ*/
 window.addEventListener('DOMContentLoaded', function() {
-/*---------------------------------------------map-------------------------------------------*/
+	/*---------------------------------------------map-------------------------------------------*/
 	/*ymaps.ready(function() {
 		var myMap = new ymaps.Map('map', {
 			center: [59.897812, 30.405960],
@@ -29,10 +29,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	});*/
 	/*---------------------------------------------end map-------------------------------------------*/
 
-		let sliderCont = document.querySelector('.slideContainer');
-		sliderCont.classList.add('h-auto');
-
-
+	let sliderCont = document.querySelector('.slideContainer');
+	sliderCont.classList.add('h-auto');
 
 
 	let getButtons = document.querySelectorAll('[data-type="ml"] button');
@@ -50,12 +48,11 @@ window.addEventListener('DOMContentLoaded', function() {
 			});
 
 			getPictures.forEach((picture) => {
-				if (picture.dataset.id === el.dataset.id){
+				if (picture.dataset.id === el.dataset.id) {
 					picture.classList.add('advant-pic-animation-o');
 					picture.classList.remove('advant-pic-animation-c')
 
-				}
-				else {
+				} else {
 					picture.classList.add('advant-pic-animation-c')
 					picture.classList.remove('advant-pic-animation-o');
 				}
@@ -67,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	let showSlide = 0;
 	let slides = document.querySelectorAll('.slide');
-
+if (slides){
 	window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
 		showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
 		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
@@ -109,7 +106,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		showSlide = showSlide + 1;
 		activeSlide(showSlide);
 	}, 8000)
-
+}
 	/*------------------------------------Accordion------------------------------------*/
 	// select all accordion items
 	const accordionItems = document.querySelectorAll('.accordion-item');

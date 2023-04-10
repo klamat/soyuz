@@ -11,13 +11,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.tailwindcss.com"></script>
+
 	<script src="../js/script_test.js"></script>
+
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link href="../dist/output.css" rel="stylesheet">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 </head>
 
 
@@ -110,6 +114,37 @@
 			<div class="title_border4"></div>
 		</div>
 		<!--Modal-->
+
+
+
+		<div>
+			<a
+				data-fancybox="gallery"
+				data-src="https://lipsum.app/id/2/1024x768"
+				data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+			>
+				<img src="https://lipsum.app/id/2/200x150" />
+			</a>
+
+			<a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+				<img src="https://lipsum.app/id/3/200x150" />
+			</a>
+
+			<a data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
+				<img src="https://lipsum.app/id/4/200x150" />
+			</a>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		<script>
+			Fancybox.bind('[data-fancybox="gallery"]', {
+				//
+			});
+		</script>
+
+
+
+
+
 
 		<div class="gallery-Astramarin-ext">
 			<div class="">
