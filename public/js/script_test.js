@@ -29,10 +29,6 @@ window.addEventListener('DOMContentLoaded', function() {
 	});*/
 	/*---------------------------------------------end map-------------------------------------------*/
 
-	let sliderCont = document.querySelector('.slideContainer');
-	sliderCont.classList.add('h-auto');
-
-
 	let getButtons = document.querySelectorAll('[data-type="ml"] button');
 	let getLayers = document.querySelectorAll('[data-type="cl"] [data-id]');
 	let getPictures = document.querySelectorAll('[data-type="pl"] [data-id]')
@@ -61,52 +57,56 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 	/*Slider All*/
+	let sliderCont = document.querySelector('.slideContainer');
+	if(sliderCont){
+		sliderCont.classList.add('h-auto');
 
-	let showSlide = 0;
-	let slides = document.querySelectorAll('.slide');
-if (slides){
-	window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
-		showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
-		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
-	}
-	window.clickRight = () => { // запускаем функцию clickRight из DOM дерева
-		showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
-		activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
-	}
-	window.currentSlide = (n) => {
-		showSlide = +n;
+		let showSlide = 0;
+		let slides = document.querySelectorAll('.slide');
+
+		window.clickLeft = () => { // запускаем функцию clickLeft из DOM дерева
+			showSlide = showSlide - 1; // берем объявленную переменную showSlide и вычитаем из нее 1
+			activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
+		}
+		window.clickRight = () => { // запускаем функцию clickRight из DOM дерева
+			showSlide = showSlide + 1; // берем объявленную переменную showSlide и прибавляем к ней 1
+			activeSlide(showSlide); // запускаем функцию activeSlide и передаем в нее результат манипуляций с showSlide
+		}
+		window.currentSlide = (n) => {
+			showSlide = +n;
+			activeSlide(showSlide);
+		}
+		const activeSlide = () => { // запускаем функцию activeSlide из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
+			let dots = '';
+			if (showSlide < 0) showSlide = (slides.length - 1); // иначе если num меньше 0, то showSlide = количеству слайдов
+			else if (showSlide > (slides.length - 1)) showSlide = 0; // если num больше количества слайдов, то showSlide = 0
+
+			slides.forEach((slide, id) => {
+				if (showSlide === id) {
+					slide.classList.remove('hidden');// тот что соответствует выбранному числу showSlide убираем hidden
+					slide.classList.remove('slideTranslate');
+					// slide.classList.add('fade');
+
+					dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
+				} else {
+					slide.classList.add('hidden');// всем добавил hidden
+					// slide.classList.add('slideTranslate');
+					slide.classList.add('fade');
+					// slide.classList.add('z-[900]');
+					dots += '<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
+				}
+
+			});
+			document.querySelector('.dotsArea').innerHTML = dots;
+		}
+
 		activeSlide(showSlide);
+
+		setInterval(() => {
+			showSlide = showSlide + 1;
+			activeSlide(showSlide);
+		}, 8000)
 	}
-	const activeSlide = () => { // запускаем функцию activeSlide из JS, где num, это число переданное в эту функцию из строк 30, 34 - результат манипуляций с showSlide
-		let dots = '';
-		if (showSlide < 0) showSlide = (slides.length - 1); // иначе если num меньше 0, то showSlide = количеству слайдов
-		else if (showSlide > (slides.length - 1)) showSlide = 0; // если num больше количества слайдов, то showSlide = 0
-
-		slides.forEach((slide, id) => {
-			if (showSlide === id) {
-				slide.classList.remove('hidden');// тот что соответствует выбранному числу showSlide убираем hidden
-				slide.classList.remove('slideTranslate');
-				// slide.classList.add('fade');
-
-				dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
-			} else {
-				slide.classList.add('hidden');// всем добавил hidden
-				// slide.classList.add('slideTranslate');
-				slide.classList.add('fade');
-				// slide.classList.add('z-[900]');
-				dots += '<span type="dots1" class="dot" onclick="currentSlide(' + id + ')"></span>';
-			}
-
-		});
-		document.querySelector('.dotsArea').innerHTML = dots;
-	}
-	activeSlide(showSlide);
-
-	setInterval(() => {
-		showSlide = showSlide + 1;
-		activeSlide(showSlide);
-	}, 8000)
-}
 	/*------------------------------------Accordion------------------------------------*/
 	// select all accordion items
 	const accordionItems = document.querySelectorAll('.accordion-item');
@@ -147,10 +147,10 @@ if (slides){
 	/*------------------------------------ end Accordion------------------------------------*/
 
 
-/*end Slider All*/
+	/*end Slider All*/
 
 
-/*------------------------------------------calculator--------------------------------------*/
+	/*------------------------------------------calculator--------------------------------------*/
 
 
 	// Функция расчета калькулятора
@@ -196,39 +196,47 @@ if (slides){
 
 
 
-	const modal = document.querySelector('.main-modal');
-const closeButton = document.querySelectorAll('.modal-close');
+/*	const modal = document.querySelector('.main-modal');
+	const closeButton = document.querySelectorAll('.modal-close');
 
-const modalClose = () => {
-	modal.classList.remove('fadeIn');
-	modal.classList.add('fadeOut');
-	setTimeout(() => {
-		modal.style.display = 'none';
-	}, 500);
-}
-
-window.openModal = () => {
-	modal.classList.remove('fadeOut');
-	modal.classList.add('fadeIn');
-	modal.style.display = 'flex';
-}
-
-for (let i = 0; i < closeButton.length; i++) {
-
-	const elements = closeButton[i];
-
-	elements.onclick = (e) => modalClose();
-
-	modal.style.display = 'none';
-
-	window.onclick = function (event) {
-		if (event.target == modal) modalClose();
+	const modalClose = () => {
+		modal.classList.remove('fadeIn');
+		modal.classList.add('fadeOut');
+		setTimeout(() => {
+			modal.style.display = 'none';
+		}, 500);
 	}
-}
+
+	window.openModal = () => {
+		modal.classList.remove('fadeOut');
+		modal.classList.add('fadeIn');
+		modal.style.display = 'flex';
+	}
+
+	for (let i = 0; i < closeButton.length; i++) {
+
+		const elements = closeButton[i];
+
+		elements.onclick = (e) => modalClose();
+
+		modal.style.display = 'none';
+
+		window.onclick = function (event) {
+			if (event.target == modal) modalClose();
+		}
+	}*/
 
 
 
+	/*-----------------------------------------------fancybox-----------------------------------------------*/
+/*	const ggal = document.querySelectorAll('.g-gallery')
+	if(ggal){
+		Fancybox.bind('[data-fancybox="gallery"]', {
+		//
+	});
 
+	}*/
+	/*-----------------------------------------endFancybox-----------------------------------------*/
 	/*-------------------------------------End DOMContentLoaded---------------------------------*/
 });
 

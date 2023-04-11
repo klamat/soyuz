@@ -13,6 +13,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 
 	<script src="../js/script_test.js"></script>
+	<script src="../js/fancy.js"></script>
 
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link href="../dist/output.css" rel="stylesheet">
@@ -108,375 +109,167 @@
 			<p>Производственная компания «СОЮЗ» выполняет любые поставленные задачи профессионально, добросовестно, в согласованные сроки, с гарантией качества.</p>
 		</div>
 	</div>
-	<div class="py-5">
+	<div class="py-5 ">
 		<div class="gcl-1">
 			<div class="title-4">Г А Л Е Р Е Я</div>
 			<div class="title_border4"></div>
 		</div>
-		<!--Modal-->
 
 
-
-		<div>
-			<a
-				data-fancybox="gallery"
-				data-src="https://lipsum.app/id/2/1024x768"
-				data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
-			>
-				<img src="https://lipsum.app/id/2/200x150" />
-			</a>
-
-			<a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
-				<img src="https://lipsum.app/id/3/200x150" />
-			</a>
-
-			<a data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
-				<img src="https://lipsum.app/id/4/200x150" />
-			</a>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-		<script>
-			Fancybox.bind('[data-fancybox="gallery"]', {
-				//
-			});
-		</script>
-
-
-
-
-
-
-		<div class="gallery-Astramarin-ext">
-			<div class="">
-				<button onclick="openModal()" class=''>
-					<div class="group g-card" >
-						<div class="g-card-cont-pic" >
-							<img src="../docs/images/ourpojecs/astramarine/astra_main.jpg" alt="astramarine" class="g-card-pic">
-						</div>
-						<div class="g-card-title-cont">
-							<div class="g-card-title">
-								<div class="g-card-title-1">ЖК Astramarine</div>
-								<div class="title_border2"></div>
-							</div>
-						</div>
-						<div class="g-card-txt">Экстерьер</div>
-						<div class="g-card-bg"></div>
-					</div>
-				</button>
-			</div>
-			<div class="main-modal fixed w-full h-full inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-			     style="background: rgba(0,0,0,.7);">
-				<div
-					class="flex w-[90%] modal-container bg-white mx-auto shadow-lg z-50">
-					<div class="modal-content py-4 text-left px-6">
-						<!--Title-->
-						<div class="flex justify-between items-center pb-3">
-							<p class="text-2xl font-bold">Экстерьер</p>
-							<div class="modal-close cursor-pointer z-50">
-								<svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-								     viewBox="0 0 18 18">
-									<path
-										d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-									</path>
-								</svg>
-							</div>
-						</div>
-						<!--Body-->
-						<div class="slideContainer">
-							<div class="buttonArea">
-								<button class="slideButton" onclick="clickLeft()">❮</button>
-								<button class="slideButton" onclick="clickRight()">❯</button>
-								<span class="dotsArea"></span>
-							</div>
-							<div class="slideBody">
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-2.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-7.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-8.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-10.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-11.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-12.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-13.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-14.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-15.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-
-							</div>
-						</div>
-
-					</div>
+		<div class="py-5 px-3">
+			<div class="g-card-title-g">I N T E R I O R</div>
+			<div class="g-gallery">
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-1.jpg">
+					<!--data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"-->
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-1.jpg"  />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-2.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-2.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-3.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-3.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-4.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-4.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-5.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-5.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery" data-src="../docs/images/ourpojecs/astramarine/int/astra-int-6.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-6.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-7.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-7.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-8.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-8.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-9.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-9.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-10.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-10.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-11.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-11.jpg" />
+				</div>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/int/astra-int-12.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-12.jpg" />
 				</div>
 			</div>
 		</div>
 
-
-	<!--	<div class="gallery-Astramarin-int">
-			<div class="">
-				<button onclick="openModal()" class=''>
-					<div class="group g-card" >
-						<div class="g-card-cont-pic" >
-							<img src="../docs/images/ourpojecs/astramarine/astra_main.jpg" alt="astramarine" class="g-card-pic">
-						</div>
-						<div class="g-card-title-cont">
-							<div class="g-card-title">
-								<div class="g-card-title-1">ЖК Astramarine</div>
-								<div class="title_border2"></div>
-							</div>
-						</div>
-						<div class="g-card-txt">Интерьер</div>
-						<div class="g-card-bg"></div>
-					</div>
-				</button>
-			</div>
-			<div class="main-modal fixed w-full h-full inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-			     style="background: rgba(0,0,0,.7);">
-				<div
-					class="flex w-[90%] modal-container bg-white mx-auto shadow-lg z-50">
-					<div class="modal-content py-4 text-left px-6">
-						&lt;!&ndash;Title&ndash;&gt;
-						<div class="flex justify-between items-center pb-3">
-							<p class="text-2xl font-bold">Интерьер</p>
-							<div class="modal-close cursor-pointer z-50">
-								<svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-								     viewBox="0 0 18 18">
-									<path
-										d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-									</path>
-								</svg>
-							</div>
-						</div>
-						&lt;!&ndash;Body&ndash;&gt;
-						<div class="slideContainer">
-							<div class="buttonArea">
-								<button class="slideButton" onclick="clickLeft()">❮</button>
-								<button class="slideButton" onclick="clickRight()">❯</button>
-								<span class="dotsArea"></span>
-							</div>
-							<div class="slideBody">
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-2.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-7.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-8.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-10.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-11.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-12.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-13.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-14.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-15.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-								<div class="slide">
-									<img src="../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg" class="" style="width:100%">
-									<div class="slideText"></div>
-								</div>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>-->
-
-		<!--endModal-->
-
-
-
-		<div class="clr2 py-5">
+		<div class="clr2 py-5 px-3">
 			<div class="g-card-title-w">
 				E X T E R I O R
 			</div>
 			<div class="g-gallery">
-				<div class="group g-card-2" href="/">
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-1.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-1.jpg" alt=""/></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-1.jpg">
+					<!--data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"-->
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-1.jpg"  />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-2.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-2.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-2.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-2.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-3.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close.">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-3.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-3.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-3.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-4.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-4.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-4.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-4.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-5.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-5.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-5.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-5.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery" data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-7.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-7.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-7.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-7.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-8.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-8.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-8.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-8.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-10.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-10.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-10.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-10.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-11.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-11.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-11.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-11.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-12.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-12.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-12.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-12.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-13.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-13.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-13.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-13.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-14.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-14.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-14.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-14.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-15.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-15.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-15.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-15.jpg" />
 				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg" alt="" /></a>
-				</div>
-			</div>
-		</div>
-		<div class="clr1 py-5">
-			<div class="g-card-title-g">I N T E R I O R</div>
-			<div class="g-gallery">
-				<div class="group g-card-2" href="/">
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-1.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-1.jpg" alt=""/></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-2.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-2.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-3.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close.">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-3.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-4.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-4.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-5.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-5.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-6.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-6.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-7.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-7.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-8.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-8.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-9.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-9.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-10.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-10.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-11.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-11.jpg" alt="" /></a>
-				</div>
-				<div class="group g-card-2" href="/" >
-					<a class="g-card-cont-pic-2" href="../docs/images/ourpojecs/astramarine/int/astra-int-12.jpg" data-lightbox="example-set" data-title="">
-						<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/int/astra-int-12.jpg" alt="" /></a>
+				<div class="group g-card-2"
+				     data-fancybox="gallery"
+				     data-src="../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg">
+					<img class="g-card-pic" src="../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg" />
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div>
 </body>
