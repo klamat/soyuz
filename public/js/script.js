@@ -33,15 +33,23 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	let navButtons = document.querySelectorAll('[data-type="navButtons"] [data-id]');
 	let navDrops = document.querySelectorAll('[data-type="navDrops"] [data-id]');
-
+	console.log(
+		'\n navDrops', navDrops,
+	);
+	console.log(
+		'\n navButtons', navButtons,
+	);
+/*
 	navButtons.forEach((el)=>{
 		el.addEventListener('click',() => {
 			navDrops.forEach((drops)=>{
-				if(drops.dataset.id === el.dataset.id) drops.classlist.add('scale-100');
-
+				console.log(
+					'\n drops', drops,
+				);
 			})
 		})
 	});
+*/
 
 
 
