@@ -60,7 +60,10 @@ h3{
 	@apply
 	z-[102]
 	flex flex-wrap items-center
-	w-full px-2 mx-auto
+	w-full
+	px-2
+	m-2
+	mx-auto
 	max-w-screen-xl
 }
 .nav-content-1{
