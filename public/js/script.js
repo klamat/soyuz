@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	console.log(
 		'\n navButtons', navButtons,
 	);
-/*
+
 	navButtons.forEach((el)=>{
 		el.addEventListener('click',() => {
 			navDrops.forEach((drops)=>{
@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			})
 		})
 	});
-*/
+
 
 
 
