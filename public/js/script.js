@@ -41,14 +41,25 @@ window.addEventListener('DOMContentLoaded', function() {
 	);
 
 	navButtons.forEach((el)=>{
+		el.addEventListener('mouseenter',() => {
+			navDrops.forEach((drops)=>{
+				if (drops.dataset.id === el.dataset.id) drops.classList.add ('nav-menu-us-o');
+				else drops.classList.remove('nav-menu-us-o')
+			});
+		});
 		el.addEventListener('click',() => {
 			navDrops.forEach((drops)=>{
-				console.log(
-					'\n drops', drops,
-				);
-			})
-		})
+				if (drops.dataset.id === el.dataset.id) drops.classList.toggle ('nav-menu-us-o');
+			});
+		});
+		el.addEventListener('mouseleave',() => {
+			navDrops.forEach((drops)=>{
+				if (drops.dataset.id === el.dataset.id) drops.classList.remove ('nav-menu-us-o');
+			});
+		});
+
 	});
+
 
 
 
