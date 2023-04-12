@@ -33,7 +33,7 @@ h3{
 }
 .navbar{
 	@apply
-	z-[1010]
+	z-[99]
 	fixed w-full
 	bg-white/90
 	shadow-md
@@ -265,9 +265,9 @@ h3{
 
 .nav-menu-us-o{
 	@apply
+	z-[100]
 	scale-y-100 transition duration-150 ease-in-out origin-top
 }
-
 
 .nav-drop-2{
 	@apply

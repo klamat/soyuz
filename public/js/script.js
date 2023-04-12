@@ -28,37 +28,83 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	});
 	/*---------------------------------------------end map-------------------------------------------*/
-/*----------------------------navbar------------------------------*/
+
+	/*NavbarGPT*/
+/*	const menuBtn = document.querySelector('.menu button');
+	const menuList = document.querySelector('.menu ul');
+
+	menuBtn.addEventListener('click', () => {
+		menuList.classList.toggle('active');
+	});
+
+	menuList.addEventListener('mouseleave', () => {
+		menuList.classList.remove('active');
+	});
+
+	document.addEventListener('click', (e) => {
+		if (!menuList.contains(e.target) && !menuBtn.contains(e.target)) {
+			menuList.classList.remove('active');
+		}
+	});*/
+
+
+
+
+	/*----------------------------navbar------------------------------*/
 
 
 	let navButtons = document.querySelectorAll('[data-type="navButtons"] [data-id]');
 	let navDrops = document.querySelectorAll('[data-type="navDrops"] [data-id]');
-	console.log(
-		'\n navDrops', navDrops,
-	);
-	console.log(
-		'\n navButtons', navButtons,
-	);
+
+
+
 
 	navButtons.forEach((el)=>{
 		el.addEventListener('mouseenter',() => {
 			navDrops.forEach((drops)=>{
 				if (drops.dataset.id === el.dataset.id) drops.classList.add ('nav-menu-us-o');
 				else drops.classList.remove('nav-menu-us-o')
+				drops.addEventListener('mouseleave',() =>{
+					drops.classList.remove('nav-menu-us-o')
+				})
+			});
+			el.addEventListener('click',() => {
+				navDrops.forEach((drops)=>{
+					if (drops.dataset.id === el.dataset.id) drops.classList.toggle ('nav-menu-us-o');
+				});
 			});
 		});
-		el.addEventListener('click',() => {
-			navDrops.forEach((drops)=>{
-				if (drops.dataset.id === el.dataset.id) drops.classList.toggle ('nav-menu-us-o');
-			});
-		});
-		el.addEventListener('mouseleave',() => {
-			navDrops.forEach((drops)=>{
-				if (drops.dataset.id === el.dataset.id) drops.classList.remove ('nav-menu-us-o');
-			});
-		});
-
 	});
+
+
+
+
+/*	const navMenuCloseBg = () =>{
+		const navMenuClose = document.querySelectorAll('navMenuClose');
+		if (navMenuClose){
+			navMenuClose.forEach((el)=>{
+				console.log('\n ', el);
+				el.addEventListener('click',() => {
+					navDrops.forEach((drops)=>{
+						drops.classList.remove('nav-menu-us-o')
+					});
+				})
+			});
+		}
+}
+
+window.navMenuCloseBg = navMenuCloseBg;
+	navMenuCloseBg()*/
+
+
+	/*
+	navMenuClose.forEach((el)=> {
+		el.addEventListener('mouseenter', () => {
+			navDrops.forEach((drops) => {
+				drops.classList.remove('nav-menu-us-o');
+			});
+		});
+	});*/
 
 
 
