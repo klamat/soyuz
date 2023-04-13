@@ -54,31 +54,34 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	let navButtons = document.querySelectorAll('[data-type="navButtons"] [data-id]');
 	let navDrops = document.querySelectorAll('[data-type="navDrops"] [data-id]');
-	let navArrows = document.querySelectorAll('[data]')
+
 	navButtons.forEach((el)=>{
-		el.addEventListener('mouseenter',() => {
-			let arrowReverse = document.querySelectorAll('[name="buttArow"]')
-			console.log('\n ', arrowReverse);
-			arrowReverse.forEach((el) =>{
-				el.classList.add('hover-nav-arrow')
-			})
+		el.addEventListener('mouseenter',(event) => {
+			console.log('\n ', event.target);
+			const svg = event.target.querySelector('svg')
+			svg.classList.add('hover-nav-arrow')
 			navDrops.forEach((drops)=>{
 				if (drops.dataset.id === el.dataset.id) drops.classList.add ('nav-menu-us-o');
 				else drops.classList.remove('nav-menu-us-o')
 				drops.addEventListener('mouseleave',() =>{
 					drops.classList.remove('nav-menu-us-o')
-					arrowReverse.forEach((el) =>{
-						el.classList.remove('hover-nav-arrow')
-					})
+					svg.classList.remove('hover-nav-arrow')
 				})
-			});
-			el.addEventListener('click',() => {
-				navDrops.forEach((drops)=>{
-					if (drops.dataset.id === el.dataset.id) drops.classList.toggle ('nav-menu-us-o');
-				});
-			});
+			})
 		});
+		el.addEventListener('click',() => {
+			navDrops.forEach((drops)=>{
+				if (drops.dataset.id === el.dataset.id) drops.classList.toggle ('nav-menu-us-o');
+			});
+			svg.forEach((el) =>{
+				el.classList.remove('hover-nav-arrow')
+			})
+		});
+
+
 	});
+
+
 
 
 
