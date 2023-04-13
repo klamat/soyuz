@@ -162,7 +162,7 @@ h3{
 .nav-menu-button{
 	@apply
 	flex flex-row items-center w-full
-	md:py-1
+	md:py-2
 	md:px-2
 	md:text-left
 	cursor-pointer
@@ -180,7 +180,7 @@ h3{
 	border-b-2 border-gray-400
 	hover:border-[rgba(13,62,105)]
 	transform transition duration-500 ease-in-out whitespace-nowrap
-	md:py-1
+	md:py-2
 	md:px-2
 	md:text-left
 	text-base
@@ -216,6 +216,7 @@ h3{
 	@apply
 	absolute
 	flex flex-col md:flex-row md:flex-wrap
+	p-5
 	justify-start items-start
 	md:w-auto w-full h-auto mx-auto
 	top-14 md:top-0 right-0 left-0
@@ -225,7 +226,7 @@ h3{
 	rounded-b-sm
 	transform
 	scale-y-0
-	translate-y-12
+	translate-y-[55px]
 	transition duration-150 ease-in-out origin-top
 }
 .nav-menu-pro-o{
@@ -235,8 +236,10 @@ h3{
 .nav-menu-us{
 	@apply
 	z-[100]
-	flex flex-wrap justify-start items-start absolute
+	absolute
+	flex flex-wrap justify-start items-start
 	md:w-[560px] w-full h-auto mx-auto
+	p-5
 	top-[75px] md:top-0 right-0
 	overflow-hidden
 	bg-gray-100
@@ -244,7 +247,8 @@ h3{
 	transform
 	scale-y-0
 
-	md:translate-y-12
+	md:translate-y-[55px]
+
 	transition duration-150 ease-in-out origin-top
 }
 
@@ -252,6 +256,7 @@ h3{
 	@apply
 	z-[100]
 	flex flex-wrap justify-start items-start absolute
+	p-5
 	md:w-[320px] w-full h-auto mx-auto
 	top-[130px] md:top-0 right-0
 		overflow-hidden
@@ -259,7 +264,7 @@ h3{
 	/*border-b-2 border-[rgba(13,62,105)]*/ rounded-b-sm
 	transform
 	scale-y-0
-	md:translate-y-12
+	md:translate-y-[55px]
 	transition duration-150 ease-in-out origin-top
 }
 
