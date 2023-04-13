@@ -14,6 +14,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.1/cdn.min.js" defer></script> <!--accordion-->
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link href="../dist/output.css" rel="stylesheet">
+	<script src="../js/script.js"></script>
+	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
@@ -36,32 +38,42 @@
 					</div>
 					<div class="mt-5">
 						<div class="tel-mail">
-							<p>
-								<a href="tel:+78123390971">
-								+7 (812) 339-09-71
+							<a href="tel:+78123390971">
+								+7 (812) 339-09-71</a>
+							<a href="tel:+79692040904">
+								+7 (969) 204-09-04
 							</a>
-							</p>
-							<p>
-								<a href="mailto:info@pksoyuz.ru">
-									info@pksoyuz.ru
-								</a>
-							</p>
+							<a href="mailto:info@pksoyuz.ru">
+								info@pksoyuz.ru</a>
 						</div>
-						<p class="mt-5">Приглашение к участию в тендерах просим направлять по адресу: <br><a class="text-lg text-[rgba(13,62,105)] underline" href="mailto:zakaz@pksoyuz.ru">zakaz@pksoyuz.ru</a> </p>
+
 					</div>
 				</div>
 				<div class="contact-content-3">
-					<p class="">Предложения по снабжению и организации услуг просим направлять по адресу: <br>
+					<p class="pt-4 md:pt-0">Приглашение к участию в тендерах просим направлять по адресу: <br>
+						<a class="text-lg text-[rgba(13,62,105)] underline" href="mailto:zakaz@pksoyuz.ru">zakaz@pksoyuz.ru</a>
+					</p>
+					<p class="py-4">Предложения по снабжению и организации услуг просим направлять по адресу: <br>
 						<a class="text-lg text-[rgba(13,62,105)] underline" href="mailto:snab@pksoyuz.ru">snab@pksoyuz.ru</a> </p>
-					<p class="pt-5">По вопросам трудоустройства можете направить резюме по адресу: <br>
+					<p class="">По вопросам трудоустройства можете направить резюме по адресу: <br>
 						<a class="text-lg text-[rgba(13,62,105)] underline" href="mailto:zakaz@pksoyuz.ru">job@pksoyuz.ru</a> </p>
 				</div>
 			</div>
 		</div>
 	</section>
+	<div class="contact-content-map">
+		<div id="container">
+			<div id="subcontainer">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
 
 	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf671e37a6444263fd7c8c1d1df3170b0ff7c54de9551be46bfa0ea945ad64d6&amp;width=100%25&amp;height=357&amp;lang=ru_RU&amp;scroll=true"></script>
 </div>
+-->
 
 <!--	<div class="flex w-full bg-[rgba(237,237,237)] justify-center">
 
