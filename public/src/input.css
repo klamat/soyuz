@@ -551,6 +551,12 @@ font-weight: 400;
 	@apply
 	flex h-96 lg:h-72 w-full lg:w-1/2 p-2 lg:p-0 lg:pl-5
 }
+.content-map{
+	@apply
+	flex h-96 w-full
+}
+
+
 .adress{
 	@apply
 	flex col-span-2 text-lg text-black font-normal w-full
@@ -2131,7 +2137,20 @@ tit1
 
 .accordion-item.active .accordion-content {
 	max-height: 500px;
-}/*
+}
+.social{
+	@apply
+	flex flex-row
+	w-[50%]
+	gap-5
+	my-[1rem]
+
+}
+
+
+
+
+/*
 !*----------------------presentation-----------------------*!
 .p_title_1{
 	@apply

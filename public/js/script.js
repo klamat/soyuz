@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
 				balloonContent: 'ООО "ПК "СОЮЗ" Производство рекламной продукции от А до Я.'
 			},{
 				iconLayout: 'default#imageWithContent',
-				iconImageHref: '../docs/images/logo_maps.svg',
+				iconImageHref: './docs/images/Logo/LogoMaps.svg',
 				iconImageSize: [80, 40],
 				iconImageOffset: [-25, -45],
 
@@ -60,6 +60,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		/*	console.log('\n ', event.target);*/
 			let svg = event.target.querySelector('svg')
 			svg.classList.add('hover-nav-arrow')
+
+
 			navDrops.forEach((drops)=>{
 				if (drops.dataset.id === el.dataset.id) drops.classList.add ('nav-menu-us-o');
 				else drops.classList.remove('nav-menu-us-o')
