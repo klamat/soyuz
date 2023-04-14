@@ -2141,12 +2141,18 @@ tit1
 .social{
 	@apply
 	flex flex-row
-	w-[50%]
+	mt-5
+	md:mt-0
+	md:ml-5
 	gap-5
-	my-[1rem]
 
 }
-
+.telSocial{
+	@apply
+	flex flex-col
+	md:flex-row
+	md:items-center
+}
 
 
 

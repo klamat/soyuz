@@ -1,29 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48mm" height="48.3172mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 0.0698 0.0702"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30mm" height="30mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 0.0565 0.0565">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#125490;stroke-width:0.0001;stroke-miterlimit:22.9256}
-    .fil1 {fill:#0D3E69}
-    .fil2 {fill:white}
-    .fil0 {fill:#0D3E69;fill-rule:nonzero}
+    .fil0 {fill:#25A3E1}
+    .fil1 {fill:white}
    ]]>
   </style>
  </defs>
- <g id="Слой_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_1536319559456">
-   <path class="fil0" d="M-0 0.0702l0 -0.0091c0.0094,0 0.0451,0 0.0698,0l0 0.0091 -0.0698 0z"/>
-   <path class="fil0" d="M-0 0l0 0.0091c0.0221,0 0.0542,0 0.0698,0l0 -0.0091 -0.0698 0z"/>
-  </g>
-  <g id="_1536319560128">
-   <circle class="fil1" cx="0.0349" cy="0.0352" r="0.0218"/>
-   <path class="fil2 str0" d="M0.0387 0.0311l-0.01 0.0067c-0.001,0.0007 -0.0022,0.0009 -0.0034,0.0005l-0.0041 -0.0013c-0.0003,-0.0001 -0.0006,-0.0004 -0.0006,-0.0008 -0,-0.0004 0.0002,-0.0007 0.0005,-0.0008l0.0229 -0.0095c0.0004,-0.0002 0.001,-0.0003 0.0013,-0 0.0004,0.0003 0.0003,0.0008 0.0002,0.0012l-0.0027 0.0179c-0.0001,0.0007 -0.0005,0.0012 -0.0012,0.0015 -0.0006,0.0003 -0.0013,0.0002 -0.0019,-0.0002l-0.0078 -0.0054c-0.0003,-0.0002 -0.0005,-0.0005 -0.0005,-0.0008 -0,-0.0004 0.0001,-0.0007 0.0003,-0.0009l0.0076 -0.0072c0.0002,-0.0002 0.0002,-0.0005 0.0001,-0.0008 -0.0002,-0.0002 -0.0005,-0.0003 -0.0008,-0.0001z"/>
+ <g id="tgIcon">
+  <g id="_1536321939840">
+   <circle class="fil0" cx="0.0282" cy="0.0282" r="0.0282"/>
+   <path class="fil1" d="M0.0331 0.0229l-0.013 0.0087c-0.0014,0.0009 -0.0029,0.0011 -0.0044,0.0006l-0.0053 -0.0017c-0.0004,-0.0001 -0.0007,-0.0005 -0.0008,-0.001 -0,-0.0005 0.0002,-0.0009 0.0007,-0.0011l0.0297 -0.0123c0.0005,-0.0002 0.0012,-0.0003 0.0017,-0 0.0005,0.0003 0.0004,0.0011 0.0003,0.0016l-0.0036 0.0231c-0.0001,0.0009 -0.0007,0.0016 -0.0015,0.002 -0.0008,0.0004 -0.0017,0.0003 -0.0025,-0.0002l-0.0101 -0.007c-0.0004,-0.0003 -0.0006,-0.0006 -0.0006,-0.0011 -0,-0.0005 0.0001,-0.0009 0.0005,-0.0012l0.0098 -0.0093c0.0003,-0.0003 0.0003,-0.0007 0.0001,-0.001 -0.0002,-0.0003 -0.0007,-0.0004 -0.001,-0.0002z"/>
   </g>
  </g>
 </svg>
