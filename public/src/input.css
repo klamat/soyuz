@@ -12,7 +12,7 @@ font-weight: 400;
 }
 .navbar{
 	@apply
-	z-[99]
+	z-[100]
 	fixed w-full
 	bg-white/90
 	shadow-md
@@ -37,7 +37,7 @@ font-weight: 400;
 }
 .nav-content{
 	@apply
-	z-[102]
+	z-[101]
 	flex flex-wrap items-center
 	w-full
 	px-2
@@ -169,7 +169,23 @@ font-weight: 400;
 	@apply
 	flex
 	flex-col
+}
+.burgerTitle{
+	@apply
+	tit1
+	mt-2
 
+}
+.burgerTitle2{
+	@apply
+
+	mt-2
+	ml-4
+}
+.burgerButton{
+	@apply
+mt-2
+	ml-8
 }
 /*------------------------------endBurger------------------------------*/
 .nav-button{
@@ -2061,14 +2077,14 @@ placeholder:duration-500
 }
 .buttonArea{
 	@apply
-	z-[98]
+	z-[3]
 	absolute
 	flex flex-row w-full h-full
 	justify-between items-center
 }
 .dotsArea {
 	@apply
-	z-[98]
+	z-[3]
 	absolute
 	flex flex-row
 	w-full mx-auto
