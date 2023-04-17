@@ -84,37 +84,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-/*	const navMenuCloseBg = () =>{
-		const navMenuClose = document.querySelectorAll('navMenuClose');
-		if (navMenuClose){
-			navMenuClose.forEach((el)=>{
-				console.log('\n ', el);
-				el.addEventListener('click',() => {
-					navDrops.forEach((drops)=>{
-						drops.classList.remove('nav-menu-us-o')
-					});
-				})
-			});
-		}
-}
-
-window.navMenuCloseBg = navMenuCloseBg;
-	navMenuCloseBg()*/
-
-
-	/*
-	navMenuClose.forEach((el)=> {
-		el.addEventListener('mouseenter', () => {
-			navDrops.forEach((drops) => {
-				drops.classList.remove('nav-menu-us-o');
-			});
-		});
-	});*/
-
-
-
-
-
+	const menuBtn = document.querySelector('.burgerMenu');
+	menuBtn.addEventListener('click' , () => document.body.classList.toggle('active-burger'));
 
 
 /*--------------------------endNavbar----------------------------*/

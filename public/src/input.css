@@ -21,7 +21,7 @@ font-weight: 400;
 	@apply
 	block h-12 mr-3 py-1
 }
-@media (min-width: 800px) {
+@media (min-width: 850px) {
 	.nav-logo-sm {
 		display: none;
 	}
@@ -30,7 +30,7 @@ font-weight: 400;
 	@apply
 	hidden h-12 mr-1 py-1
 }
-@media (min-width: 800px) {
+@media (min-width: 850px) {
 	.nav-logo-xl {
 		display: block;
 	}
@@ -59,10 +59,26 @@ font-weight: 400;
 	md:items-center
 	md:w-auto
 }
+
 .nav-txt{
 	@apply
-	text-sm lg:text-base text-gray-900
+	hidden
+	text-sm
+	text-gray-900
+
 }
+@media (min-width: 400px) {
+	.nav-txt{
+		@apply
+		block
+	}}
+@media (min-width: 880px) {
+	.nav-txt{
+		@apply
+		block
+		text-base
+	}}
+
 .nav-tel{
 	@apply
 	scale-90 hover:scale-100 hover:text-[rgba(13,62,105)]  duration-150 ease-in-out origin-top
@@ -71,10 +87,91 @@ font-weight: 400;
 	@apply
 	scale-90 hover:scale-100 hover:text-[rgba(13,62,105)] duration-150 ease-in-out origin-bottom
 }
-.nav-b-cont{
+.navControl{
+	@apply
+	hidden
+	md:flex
+	flex-row
+	items-center
+	text-sm
+
+}
+@media (min-width: 880px) {
+	.navControl{
+		@apply
+		text-base
+	}}
+.navButtonCont {
 	@apply
 	flex flex-col w-auto h-auto
 }
+/*------------------------------Burger------------------------------*/
+.burgerMenu{
+	@apply
+	md:hidden
+}
+
+
+.burgerMenu {
+
+	width: 40px;
+	height: 48px;
+	position: relative;
+	z-index:115;
+	overflow: hidden;
+	cursor:pointer;
+}
+.burgerMenu span {
+	width: 48px;
+	height: 4.5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0D3E69;
+	transition: all 0.5s;
+}
+.burgerMenu span:nth-of-type(2) {
+	top: calc(50% - 16px);
+}
+.burgerMenu span:nth-of-type(3) {
+	top: calc(50% + 16px);
+}
+
+.active-burger .burgerMenu span:nth-of-type(1) {
+	display: none;
+}
+.active-burger .burgerMenu span:nth-of-type(2) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(45deg);
+}
+.active-burger .burgerMenu span:nth-of-type(3) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.menu {
+	z-index: 112;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background: #FFFFFF;
+	transform: translateX(100%);
+	transition: transform 0.5s;
+}
+.active-burger .menu {
+	transform: translateX(0);
+}
+.mobMenu{
+	@apply
+	flex
+	flex-col
+
+}
+/*------------------------------endBurger------------------------------*/
 .nav-button{
 	@apply
 	flex flex-row items-center justify-between md:justify-start w-full
@@ -308,8 +405,17 @@ font-weight: 400;
 }
 .about-sec{
 	@apply
+	hidden
 	h-auto w-full
 }
+@media (min-width: 400px){
+	.about-sec{
+		@apply
+		block
+		h-auto w-full
+	}
+	}
+
 .about-grid{
 	@apply
 	grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 gap-10 px-2 pb-10 max-w-screen-xl mx-auto
@@ -1955,14 +2061,14 @@ placeholder:duration-500
 }
 .buttonArea{
 	@apply
-	z-[1000]
+	z-[98]
 	absolute
 	flex flex-row w-full h-full
 	justify-between items-center
 }
 .dotsArea {
 	@apply
-	z-[1000]
+	z-[98]
 	absolute
 	flex flex-row
 	w-full mx-auto
