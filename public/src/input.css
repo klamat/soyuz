@@ -10,6 +10,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 font-weight: 400;
 }
+body {
+	@apply
+	overflow-hidden
+}
 .navbar{
 	@apply
 	z-[114]
@@ -159,6 +163,7 @@ font-weight: 400;
 	justify-between
 	w-screen
 	h-screen
+	overflow-scroll
 
 }
 .menu {
@@ -2271,8 +2276,91 @@ tit1
 	md:flex-row
 	md:items-center
 }
+/*-----------------Design section-----------------*/
+
+.designSection{
+	@apply
+	relative
+	max-w-screen-xl
+	flex
+	h-full
+	w-[100%]
+	justify-center
+	items-center
+	px-3
+
+	mx-auto
+}
+.bgText{
+	@apply
+	absolute
+	z-[1]
+	select-none
+	mx-auto
+	text-[250px]
+	text-center
+	font-bold
+	text-[rgba(249,249,249)]
+	mx-auto
+}
+.bgText{
+
+	text-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15);
+}
+.designContent{
+	@apply
+	z-[2]
+	flex
+	pb-10
+	mx-auto
+	md:flex-row
+	md:justify-center
+	flex-col
+
+}
+.designBorder{
+	@apply
+	flex
+	z-[2]
+	md:w-[4px]
+	md:h-[300px]
+	w-full
+	h-[4px]
+	bg-red-600
+	md:mx-5
+	my-5
+}
+.designContLeft{
+	@apply
+	flex
+	md:w-[40%]
+	text-justify
+	pt-5
+}
+.designContRight{
+	@apply
+	flex
+	md:w-[40%]
+	text-justify
+	items-end
+	pb-5
+}
+/*---------------end Design section---------------*/
+
+/*----------------Maintance section----------------*/
+.bgMaintance{
+	@apply
+	bgText
+	text-[50px]
+}
+.bgMaintance{
+
+	text-shadow: 0px 1px 40px rgba(0, 0, 0, 0.15);
+}
 
 
+
+/*--------------end Maintance section--------------*/
 
 /*
 !*----------------------presentation-----------------------*!
