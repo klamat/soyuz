@@ -12,7 +12,7 @@ font-weight: 400;
 }
 .navbar{
 	@apply
-	z-[100]
+	z-[114]
 	fixed w-full
 	bg-white/90
 	shadow-md
@@ -109,6 +109,7 @@ font-weight: 400;
 .burgerMenu{
 	@apply
 	md:hidden
+
 }
 
 
@@ -123,7 +124,7 @@ font-weight: 400;
 }
 .burgerMenu span {
 	width: 48px;
-	height: 4.5px;
+	height: 4px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -151,17 +152,29 @@ font-weight: 400;
 }
 
 .menu {
+	@apply
+	clr1
+	flex
+	flex-col
+	justify-between
+	w-screen
+	h-screen
+
+}
+.menu {
 	z-index: 112;
 	position: fixed;
-	top: 60px;
+	top: 0px;
 	left: 0;
-	width: 100%;
-	height: 100%;
+/*	width: 100%;
+	height: 100%;*/
+/*	margin-top: px;*/
 	padding: 15px;
-	background: #FFFFFF;
+/*	background: #FFFFFF;*/
 	transform: translateX(100%);
 	transition: transform 0.5s;
 }
+
 .active-burger .menu {
 	transform: translateX(0);
 }
@@ -169,6 +182,7 @@ font-weight: 400;
 	@apply
 	flex
 	flex-col
+	mb-4
 }
 .burgerTitle{
 	@apply
@@ -184,8 +198,27 @@ font-weight: 400;
 }
 .burgerButton{
 	@apply
-mt-2
+	mt-2
 	ml-8
+}
+
+.burgerAcc{
+	@apply
+	border-none
+}
+.burgerLogo{
+	@apply
+	flex flex-col
+}
+.burgerContacts{
+	@apply
+	flex
+	flex-col
+	justify-between
+	items-start
+	mt-2
+	tit2
+	w-[50%]
 }
 /*------------------------------endBurger------------------------------*/
 .nav-button{
