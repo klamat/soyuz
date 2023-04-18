@@ -218,7 +218,7 @@ font-weight: 400;
 	items-start
 	mt-2
 	tit2
-	w-[50%]
+	w-[70%]
 }
 /*------------------------------endBurger------------------------------*/
 .nav-button{
@@ -826,6 +826,7 @@ font-weight: 400;
 }
 .footer-tit{
 	@apply
+	z-[3]
 	text-lg text-white text-left font-bold mb-5
 }
 
@@ -1137,6 +1138,7 @@ max-w-screen-xl mx-auto
 }
 .one-block {
 	@apply
+	z-[3]
 	grid grid-cols-1
 }
 .two-block{
@@ -1164,6 +1166,11 @@ max-w-screen-xl mx-auto
 	relative
 	three-block px-5 md:px-20 py-10
 
+}
+.footerDots {
+	@apply
+	z-[2]
+	select-none absolute top-0 right-0
 }
 .rights{
 	@apply
@@ -1213,50 +1220,6 @@ max-w-screen-xl mx-auto
 	text-white
 
 }
-
-/*--------------------modalWindow--------------------*/
-/*
-.animated {
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-}
-
-.animated.faster {
-	-webkit-animation-duration: 500ms;
-	animation-duration: 500ms;
-}
-
-.fadeIn {
-	-webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
-}
-
-.fadeOut {
-	-webkit-animation-name: fadeOut;
-	animation-name: fadeOut;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeOut {
-	from {
-		opacity: 1;
-	}
-
-	to {
-		opacity: 0;
-	}
-}*/
 
 
 .slider-modal {
