@@ -148,7 +148,7 @@ window.addEventListener('DOMContentLoaded', function() {
 					slide.classList.remove('slideTranslate');
 					// slide.classList.add('fade');
 
-					dots += '<span type="dots1" class="dot active" onclick="currentSlide(' + id + ')"></span>';
+					dots += '<span type="dots1" class="dot activeDot" onclick="currentSlide(' + id + ')"></span>';
 				} else {
 					slide.classList.add('hidden');// всем добавил hidden
 					// slide.classList.add('slideTranslate');

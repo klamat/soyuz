@@ -1145,7 +1145,13 @@ max-w-screen-xl mx-auto
 }
 .two-block{
 	@apply
-	grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-16 py-5
+	z-[2]
+	grid grid-cols-1
+	md:grid-cols-2
+	gap-5
+	md:gap-16
+	py-5
+
 }
 
 @media (min-width: 768px){
@@ -1476,7 +1482,7 @@ max-w-screen-xl mx-auto
 /*small_red*/
 .title_border2 {
 	@apply
-	flex h-[2px] w-11 md:w-[60px]
+	flex h-[3px] w-11 md:w-[60px]
 	mr-2 mb-5
 	clr4
 	-translate-y-[8px]
@@ -2154,7 +2160,7 @@ tit1
 
 }
 /*.active,*/
-.active{
+.activeDot{
 	@apply
 	clr2
 }
@@ -2209,14 +2215,15 @@ tit1
 	border-[rgba(49,79,111)]
 }
 
-.accordion-item.active {
+/*.accordion-item.active {
 	background-color: rgba(237,237,237,1);
 
-}
-.maintance{
+}*/
+/*.nobg{
 	@apply
 	bg-transparent !important
-}
+}*/
+
 .accordion-item-header {
 	@apply
 	flex
@@ -2306,6 +2313,10 @@ tit1
 .bgText{
 	text-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15);
 }
+.textWhiteShadow{
+	color: #ffffff;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
 .bgDesign{
 	@apply
 	bgText
@@ -2339,34 +2350,127 @@ tit1
 .designContLeft{
 	@apply
 	flex
-	md:w-[40%]
+	md:w-[50%]
 	text-justify
 	pt-5
 }
 .designContRight{
 	@apply
 	flex
-	md:w-[40%]
+	md:w-[50%]
 	text-justify
 	items-end
 	pb-5
 }
-/*---------------end Design section---------------*/
+/*---------------end Design page---------------*/
 
-/*----------------Maintance section----------------*/
+/*----------------Maintance page----------------*/
 .bgMaintance{
 	@apply
 	bgText
-
 }
 .bgMaintance{
-	font-size: 15vw;
+	font-size: 13vw;
+}
+
+/*--------------end Maintance section--------------*/
+/*-------------------Office page-------------------*/
+.bgOffice{
+	@apply
+	hidden
+	md:block
+	absolute
+	z-[1]
+	select-none
+	font-bold
+	text-[rgba(249,249,249)]
+	-bottom-[13%]
+	right-0
+}
+.bgOffice{
+	color: #ffffff;
+	text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+	font-size: 6vw;
+}
+.bgOfficeCont{
+	@apply
+	flex
+	w-full
+	h-full
+	bg-center
+}
+.officeCont{
+	@apply
+	flex
+	md:justify-start
+	items-end
+	max-w-screen-xl
+	mx-auto
+	md:mt-10
+	h-[600px]
+	bg-[url('../docs/images/ourpojecs/astramarine/ext/astra-ext-6.jpg')]
+	bg-cover
+	md:bg-center
+	bg-[left_-150px_top_0px]
+}
+.officeContainer1{
+	@apply
+	relative
+	md:my-20
+	mb-10
+	h-[700px]
+	max-w-screen-xl
+	mx-auto
+	bg-cover
+	bg-center
+	bg-[url('../docs/images/ourpojecs/astramarine/ext/astra-ext-9.jpg')]
+}
+.officeContainer2{
+	@apply
+	relative
+	md:my-20
+	mb-10
+	h-[700px]
+	max-w-screen-xl
+	mx-auto
+	bg-cover
+	bg-center
+	bg-[url('../docs/images/ourpojecs/astramarine/ext/astra-ext-16.jpg')]
+}
+.officeBanner{
+	@apply
+	flex
+	md:w-1/2
+	m-10
+	text-white
+	text-base
+	font-extrabold
+	text-justify
+}
+.officeBanner{
+	text-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+}
+.officeQblock{
+	@apply
+	md:absolute
+	md:flex
+	md:h-[300px] w-[600px]
+	md:top-[20%] -right-[5%]
+	w-full
+}
+.officeQblock2{
+	@apply
+	md:absolute
+	md:bottom-[15%] left-[3%]
+	md:flex
+	md:h-[300px] w-[600px]
+	w-full
+
 
 }
 
+/*-----------------end Office page-----------------*/
 
-
-/*--------------end Maintance section--------------*/
 
 /*
 !*----------------------presentation-----------------------*!
