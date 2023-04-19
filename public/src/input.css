@@ -10,10 +10,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 font-weight: 400;
 }
-body {
-	@apply
-	overflow-hidden
-}
+
 .navbar{
 	@apply
 	z-[114]
@@ -2216,6 +2213,10 @@ tit1
 	background-color: rgba(237,237,237,1);
 
 }
+.maintance{
+	@apply
+	bg-transparent !important
+}
 .accordion-item-header {
 	@apply
 	flex
@@ -2297,15 +2298,20 @@ tit1
 	z-[1]
 	select-none
 	mx-auto
-	text-[250px]
 	text-center
 	font-bold
 	text-[rgba(249,249,249)]
 	mx-auto
 }
 .bgText{
-
 	text-shadow: 0px 1px 30px rgba(0, 0, 0, 0.15);
+}
+.bgDesign{
+	@apply
+	bgText
+}
+.bgDesign{
+	font-size: 20vw;
 }
 .designContent{
 	@apply
@@ -2351,11 +2357,11 @@ tit1
 .bgMaintance{
 	@apply
 	bgText
-	text-[50px]
+
 }
 .bgMaintance{
+	font-size: 15vw;
 
-	text-shadow: 0px 1px 40px rgba(0, 0, 0, 0.15);
 }
 
 

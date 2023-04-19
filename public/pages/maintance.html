@@ -9,6 +9,7 @@
  <!--accordion-->
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 	<link href="../dist/output.css" rel="stylesheet">
+	<script src="../js/script_test.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
@@ -16,6 +17,7 @@
 <!--*********-->
 <body>
 <div class="pt-10">
+
 	<div class="title_flex">
 		<div class="title_border"></div>
 		<div class="sec_title">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</div>
@@ -34,32 +36,45 @@
 			MAINTANCE
 		</div>
 	</div>
-	<div class="designSection">
-		<div class="designContent">
-			<div class="designContLeft">
-				Сервисное обслуживание
-				рекламоносителя включает в себя:<br>
-
-
-					- профилактический осмотр<br>
+	<div class="accordion">
+		<div class="accordion-item maintance">
+			<div class="accordion-item-header">
+				<h2 class="accordion-item-title">Сервисное обслуживание
+					рекламоносителя:</h2>
+				<span class="accordion-arrow"></span>
+			</div>
+			<div class="accordion-content">
+				<p class="m-5">- профилактический осмотр<br>
 					- диагностика неисправностей<br>
 					- ремонт лицевой поверхности рекламоносителя<br>
 					- замена или ремонт светотехники и
 					отдельных элементов<br>
-					- аварийные выезды</div>
-			<div class="designBorder"></div>
-			<div class="designContRight">
-				Доступные варианты обслуживания:<br>
-
-					- Гарантийное обслуживание – полный	комплекс обслуживания вывески в случае изготовления вывески на нашем производстве.<br>
-					- Постгарантийное обслуживание – после окончания гарантийного обслуживания мы также оказываем услуги по диагностике и ремонту рекламоносителей.<br>
-					- Плановое обслуживание – в случае если вывеска изготовлена у стороннего производителя, мы можем предложить плановое обслуживание данной вывески, включающее в себя диагностику, ремонт и профилактические мероприятия.
+					- аварийные выезды
+				</p>
 			</div>
+		</div>
+		<div class="accordion-item maintance">
+			<div class="accordion-item-header">
+				<h2 class="accordion-item-title">Доступные варианты обслуживания:</h2>
+				<span class="accordion-arrow"></span>
+			</div>
+			<div class="accordion-content">
 
+					<ul class="m-5">
+						<li class="txt1b pt-2">Гарантийное обслуживание:</li>
+
+						<li>полный	комплекс обслуживания вывески в случае изготовления вывески на нашем производстве.</li>
+					<li  class="txt1b pt-2">Постгарантийное обслуживание:</li>
+						<li>после окончания гарантийного обслуживания мы также оказываем услуги по диагностике и ремонту рекламоносителей.</li>
+
+					<li  class="txt1b pt-2">Плановое обслуживание:</li>
+						<li class="">в случае если вывеска изготовлена у стороннего производителя, мы можем предложить плановое обслуживание данной вывески, включающее в себя диагностику, ремонт и профилактические мероприятия.</li>
+					</ul>
+			</div>
 		</div>
 
-
 	</div>
+
 </div>
 
 <!--*********-->
