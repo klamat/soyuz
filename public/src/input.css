@@ -2095,7 +2095,8 @@ placeholder:duration-500
 	m-5
 	justify-center
 bottom-0
-}.dotsArea {
+}
+.dotsArea {
 	 @apply
 absolute
 flex flex-row
