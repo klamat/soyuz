@@ -2476,4 +2476,116 @@ tit1
 }
 
 /*-----------------end Office page-----------------*/
+/*----------------roomNumbers page----------------*/
+.numbersHead{
+	@apply
+	flex
+	flex-col
+	md:flex-row
+	justify-end
+	md:justify-between
+	md:items-end
+	h-[200px]
+}
+.numbersTitle{
+	@apply
+	flex flex-col
+	justify-center
+	md:ml-[115px]
+}
+.numbersBlock1{
+	@apply
+	flex
+	flex-col
+	md:flex-row
+}
+
+.numbersContent{
+	@apply
+	flex
+	flex-col
+	md:flex-row
+	items-center
+	mt-10
+}
+.numbersPicsBlock{
+	@apply
+	grid
+	my-5
+	grid-cols-1
+	md:grid-cols-4
+	gap-5
+
+}
+/*
+.numbersPicsBlock{
+	@apply
+	flex
+	flex-col
+	md:flex-row
+
+	w-full
+	md:w-[23%]
+	justify-between
+	gap-5 my-5
+}*/
+.numbersTextArea{
+	@apply
+	px-3
+	md:px-0
+	w-[100%]
+	md:w-[70%]
+
+}
+.numbersTitleDescription{
+	@apply
+	hidden
+	md:block
+}
+.numberContentPic{
+	@apply
+	flex
+	object-cover
+	md:w-[25%]
+	mx-3
+	md:mx-0
+	md:mr-5
+}
+/*--------------end roomNumbers page--------------*/
+/*.blockMain {
+	@apply
+	grid
+	grid-cols-4
+	grid-rows-2
+
+
+
+	max-w-screen-xl
+	mx-auto
+	gap-5
+	my-5
+
+}
+.blockContent1Pic{
+	@apply
+
+	p-2
+	bg-blue-200
+}
+.blockText{
+	@apply
+
+
+	md:col-span-3
+	p-2
+	bg-blue-200
+}
+.blockContent2Pic{
+	@apply
+	flex
+	p-2
+	bg-blue-200
+}*/
+
+
 
