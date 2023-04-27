@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+
+	<title>ПК СОЮЗ</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="../dist/output.css" rel="stylesheet">
+	<script src="../js/script_test.js"></script>
+	<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+<body class="bg-gray-300">
+<div class="wrapper">
+	<div class="form">
+		<form action="#" id="form" class="form__body">
+			<h1 class="form__title">Отправка данных на почту</h1>
+			<div class="form__item">
+				<label for="formName" class="form__label _req">Name*:</label>
+				<input id="formName" type="text" name="name" class="form__input">
+			</div>
+			<div class="form__item">
+				<label for="formEmail" class="form__label _req _email">E-mail*:</label>
+				<input id="formEmail" type="text" name="email" class="form__input">
+			</div>
+			<div class="form__item">
+			<div class="form__label">Left or right</div>
+				<div class="options">
+					<div class="options__item">
+						<input id="formRight" type="radio" value="right" name="hand" class="options__input">
+						<label for="formRight" class="options__label"><span>right</span></label>
+					</div>
+					<div class="options__item">
+						<input id="formLeft" type="radio" value="left" name="hand" class="options__input">
+						<label for="formLeft" class="options__label"><span>left</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="form__item">
+				<label for="formMessage" class="form__label">Message:</label>
+				<textarea name="message" id="formMessage" class="form__input"></textarea>
+
+			</div>
+			<div class="form__item">
+				<div class="form__label">Age:</div>
+				<select name="age" class="select">
+					<option value="1" selected="selected">Step 1</option>
+					<option value="2">Step 2</option>
+					<option value="3">Step 3</option>
+
+				</select>
+			</div>
+			<div class="form__item">
+				<div class="form__label">attach file</div>
+				<div class="file">
+					<div class="file__item">
+						<input accept=".pdf, .word, .jpg" type="file" name="image" class="file__input">
+						<div class="file__button">Choose</div>
+					</div>
+					<div class="file__preview"></div>
+				</div>
+			</div>
+			<div class="form__item">
+				<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+				<label for="formAgreement" class="checkbox__label _req"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
+			</div>
+			<button type="submit" class="form__button">Отправить</button>
+		</form>
+	</div>
+</div>
+
+
+</body>
+</html>

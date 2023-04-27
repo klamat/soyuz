@@ -29,23 +29,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 	/*---------------------------------------------end map-------------------------------------------*/
 
-	/*NavbarGPT*/
-/*	const menuBtn = document.querySelector('.menu button');
-	const menuList = document.querySelector('.menu ul');
 
-	menuBtn.addEventListener('click', () => {
-		menuList.classList.toggle('active');
-	});
-
-	menuList.addEventListener('mouseleave', () => {
-		menuList.classList.remove('active');
-	});
-
-	document.addEventListener('click', (e) => {
-		if (!menuList.contains(e.target) && !menuBtn.contains(e.target)) {
-			menuList.classList.remove('active');
-		}
-	});*/
 
 
 
@@ -78,12 +62,6 @@ window.addEventListener('DOMContentLoaded', function() {
 			});
 		})
 	});
-
-
-
-
-
-
 	const menuBtn = document.querySelector('.burgerMenu');
 	menuBtn.addEventListener('click' , () => document.body.classList.toggle('active-burger'));
 
@@ -249,6 +227,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	const getFields = document.querySelectorAll('.features input');
 	// чтобы не ебаться и не прописывать каждому чекбоксу запускающую расчет функции, пропишем все одинаковую функцию, т.к. делать она будет одно и то-же
 	getFields.forEach(field => field.setAttribute('onclick', 'CalculatorCostHandler()'));
+
 
 
 
